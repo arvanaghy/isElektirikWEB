@@ -11,9 +11,12 @@ const AboutUs = () => {
                 <meta name="author" content="John Doesdfsf" />
             </Head>
             <WebSiteTRLayout>
-                <div className="flex flex-row text-3xl text-white" >Hakkimizda
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor qui? Quae ea pariatur vero quo modi. Et sed deleniti necessitatibus ipsam sequi inventore blanditiis possimus? Accusantium quidem dignissimos eaque.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta a quis optio eum culpa sit fugiat nostrum quasi enim aliquid est aperiam id debitis, laboriosam quidem quam laudantium aut nam!
+                <div className="flex flex-row text-3xl text-white" >Hakkimizda:
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facere nesciunt. Minima, corrupti laboriosam eligendi voluptas non illo aspernatur fugiat nam ad sint, ullam autem amet quisquam labore soluta magni.
+                </p>
+                
                 </div>
             </WebSiteTRLayout>
         </>
