@@ -201,7 +201,7 @@ const TopBarTR = () => {
                 </div>
             </div>
             {isLanguageSelectorOpen && (
-                <div className="absolute hidden md:inline-block left-8 top shadow-lg opacity-90 top-[5.5vh] z-50 bg-slate-100 rounded-lg">
+                <div className="absolute hidden md:inline-block left-8 top shadow-lg opacity-90 top-[5.5vh] z-[60] bg-slate-100 rounded-lg">
                     <ul className="p-1">
                         <li className="p-2 transition-all duration-200 hover:font-extrabold hover:bg-slate-200">
                             <Link

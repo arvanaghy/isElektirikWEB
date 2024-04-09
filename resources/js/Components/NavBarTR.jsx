@@ -1,10 +1,16 @@
 import { Link } from "@inertiajs/react";
 import React, { useEffect, useState } from "react";
 import logo from "../../../public/images/ful-logo.png";
+import { usePage } from "@inertiajs/react";
+
 
 const NavBarTR = () => {
     const [isPageScrolledDown, setIsPageScrolledDown] = useState(false);
     const [isNavbarMenuOpen, setIsNavbarMenuOpen] = useState(false);
+    const [isLanguageToggled, setIsLanguageToggled] = useState(false);
+    const { url } = usePage();
+
+
 
     const scrollSpy = () => {
         if (window.scrollY > 0) {
@@ -18,16 +24,15 @@ const NavBarTR = () => {
         addEventListener("scroll", () => {
             scrollSpy();
         });
-        removeEventListener("scroll", () => {});
+        removeEventListener("scroll", () => { });
     }, []);
 
     return (
         <>
             <div className="hidden min-h-[10vh] items-center justify-end w-full z-50 lg:flex lg:flex-col lg:flex-wrap lg:sticky top-0  shadow-md shadow-gray-300 bg-[#f3f2f2]">
                 <div
-                    className={`flex flex-row items-center mt-3 mb-4 justify-center space-x-4 transition-all duration-900  ${
-                        isPageScrolledDown ? " scale-90" : " scale-100"
-                    }`}
+                    className={`flex flex-row items-center mt-3 mb-4 justify-center space-x-4 transition-all duration-900  ${isPageScrolledDown ? " scale-90" : " scale-100"
+                        }`}
                 >
                     <Link href="/tr" className="w-64">
                         <div>
@@ -67,9 +72,8 @@ const NavBarTR = () => {
                 </div>
                 <div className="place-items-end">
                     <ul
-                        className={`flex flex-row flex-wrap items-center justify-center space-x-12 text-lg ${
-                            isPageScrolledDown ? "scale-90" : "scale-100"
-                        } `}
+                        className={`flex flex-row flex-wrap items-center justify-center space-x-12 text-lg ${isPageScrolledDown ? "scale-90" : "scale-100"
+                            } `}
                     >
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-[#f3f2f2] hover:border-b-green-600">
                             <Link
@@ -111,7 +115,7 @@ const NavBarTR = () => {
                     </ul>
                 </div>
             </div>
-            <div className="fixed flex flex-col w-full bg-gray-300 shadow-lg md:hidden shadow-gray-500/50 min-h-[5vh] p-2 z-50">
+            <div className="fixed flex flex-col w-screen bg-gray-300 shadow-lg md:hidden shadow-gray-500/50 w-full min-h-[5vh] p-2 z-50">
                 <div className="z-50 flex flex-row flex-wrap items-center justify-between w-full">
                     <div className="flex flex-row items-center justify-start w-2/5">
                         <img src={logo} alt="is elektiric" />
@@ -213,7 +217,7 @@ const NavBarTR = () => {
                 </div>
                 {isNavbarMenuOpen && (
                     <div className="relative top-2 flex flex-col flex-wrap md:hidden w-full min-h-[95vh] bg-gray-300 p-2 z-50">
-                        <ul className="w-full">
+                        <ul className="w-full space-y-2">
                             <li>
                                 <Link href="/tr/about-us">About us</Link>
                             </li>
@@ -230,8 +234,16 @@ const NavBarTR = () => {
                                 <Link href="/tr/e-catalog">E-Catalog</Link>
                             </li>
                         </ul>
-                        <ul className="w-full text-white bg-black">
-                            <li>language</li>
+                        <ul className="w-full text-white bg-gray-600 mt-2 px-1 py-2 rounded">
+                            <li onClick={() => setIsLanguageToggled((prev) => !prev)} >language</li>
+                            {isLanguageToggled && (
+                                <li className="px-3 text-sm py-2"><Link href={
+                                    "" + url.replace("/tr", "") == ""
+                                        ? "/"
+                                        : url.replace("/tr", "")
+                                } >  English</Link> </li>
+
+                            )}
                             <li>favorites</li>
                             <li> login</li>
                         </ul>
