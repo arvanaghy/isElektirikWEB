@@ -6,9 +6,9 @@ const PhoneCallButton = () => {
     return (
         <div
             onClick={() => setIsOpen((prev) => !prev)}
-            className="fixed cursor-pointer bottom-[3%] right-[6%] m-w-10 m-h-10 bg-white shadow shadow-black rounded animate-bounce transition-all duration-300 delay-700"
+            className="fixed cursor-pointer bottom-[3%] right-[6%] w-10 h-10 bg-white shadow shadow-black rounded overflow-hidden shadow shadow-white/50"
         >
-            <div className="absolute bottom-0 right-0 bg-green-300 rounded">
+            <div className="bg-green-300 rounded">
                 <svg
                     className="w-10 h-10 p-2"
                     viewBox="0 0 24 24"
@@ -42,9 +42,10 @@ const PhoneCallButton = () => {
                     </g>
                 </svg>
             </div>
-            <div className="relative">
-
+            <div className="">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque dolore obcaecati nihil nobis soluta repellendus tempore quas, ea ipsa adipisci tenetur culpa. Quis dolorum fugiat, ut eaque suscipit non soluta.
             </div>
+
         </div>
     );
 };
