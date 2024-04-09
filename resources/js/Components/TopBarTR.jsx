@@ -161,7 +161,7 @@ const TopBarTR = () => {
                                 ></path>{" "}
                             </g>
                         </svg>
-                        Favorite Projects
+                        Favori Projeler
                     </Link>
                     <Link
                         href="/login"
