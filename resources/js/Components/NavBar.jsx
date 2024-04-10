@@ -34,7 +34,7 @@ const NavBar = () => {
                     className={`flex flex-row items-center mt-3 mb-4 justify-center space-x-4 transition-all duration-900  ${isPageScrolledDown ? " scale-90" : " scale-100"
                         }`}
                 >
-                    <Link href="/tr" className="w-64">
+                    <Link href="/" className="w-64">
                         <div>
                             <img src={logo} alt="is elektirik" />
                         </div>
@@ -77,7 +77,7 @@ const NavBar = () => {
                     >
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/tr/about-us"
+                                href="/about-us"
                                 className="inline-block pb-1"
                             >
                                 About Us
@@ -85,7 +85,7 @@ const NavBar = () => {
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/tr/contact-us"
+                                href="/contact-us"
                                 className="inline-block pb-1"
                             >
                                 Contact Us
@@ -93,20 +93,20 @@ const NavBar = () => {
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/tr/projects"
+                                href="/projects"
                                 className="inline-block pb-1"
                             >
                                 Our Projects
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
-                            <Link href="/tr/blog" className="inline-block pb-1">
+                            <Link href="/blog" className="inline-block pb-1">
                                 Blog
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/tr/e-catalog"
+                                href="/e-catalog"
                                 className="inline-block pb-1"
                             >
                                 E-Catalog
@@ -219,19 +219,19 @@ const NavBar = () => {
                     <div className="relative top-2 flex flex-col flex-wrap md:hidden w-full min-h-[95vh] bg-gray-300 p-2 z-50">
                         <ul className="w-full space-y-2">
                             <li>
-                                <Link href="/tr/about-us">Hakkimizda</Link>
+                                <Link href="/about-us">Hakkimizda</Link>
                             </li>
                             <li>
-                                <Link href="/tr/contact-us">Bize Ulasin</Link>
+                                <Link href="/contact-us">Bize Ulasin</Link>
                             </li>
                             <li>
-                                <Link href="/tr/projects">Projelerimiz</Link>
+                                <Link href="/projects">Projelerimiz</Link>
                             </li>
                             <li>
-                                <Link href="/tr/blog">Blog</Link>
+                                <Link href="/blog">Blog</Link>
                             </li>
                             <li>
-                                <Link href="/tr/e-catalog">E-Catalog</Link>
+                                <Link href="/e-catalog">E-Catalog</Link>
                             </li>
                         </ul>
                         <ul className="w-full text-white bg-gray-600 mt-2 px-1 py-2 rounded">
@@ -338,7 +338,6 @@ const NavBar = () => {
                         <p>
                         login
                         </p>
-                                
                                 </li>
                         </ul>
                     </div>

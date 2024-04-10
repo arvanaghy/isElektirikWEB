@@ -128,7 +128,7 @@ const TopBar = () => {
                 </div>
                 <div className="flex flex-row items-center justify-end w-full space-x-2">
                     <Link
-                        href="/tr/projects"
+                        href="/projects"
                         className="flex flex-row items-center justify-center float-right transition-all duration-300 ease-in-out hover:underline"
                     >
                         <svg
@@ -208,11 +208,11 @@ const TopBar = () => {
                                 className="px-2 font-bold"
                                 href={
                                     "" + url.replace("/", "") == ""
-                                        ? "/"
-                                        : url.replace("/", "")
+                                        ? "/tr"
+                                        : "/tr" + url.replace("/", "")
                                 }
                             >
-                                English
+                                Turkce
                             </Link>
                         </li>
                     </ul>
