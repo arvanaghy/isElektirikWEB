@@ -59,7 +59,7 @@ const Welcome = () => {
                             className="z-10 text-5xl font-extrabold tracking-tight text-center text-white lg:text-8xl drop-shadow-md shadow-black text-pretty"
                             ref={heroSectioTitle}
                         >
-                            Is Electiric Ve Muhandislik
+                            Is Elektirik Ve Muhandislik
                         </h1>
                     </div>
                     <div
