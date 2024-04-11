@@ -1,103 +1,86 @@
+import React, { useRef } from "react";
 import WebSiteENLayout from "@/Components/WebSiteENLayout";
-import { Link, Head } from "@inertiajs/react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { TextPlugin } from "gsap/TextPlugin";
-import { useRef, useState } from "react";
+import { Head } from "@inertiajs/react";
 
-export default function Welcome({ url, language , message }) {
-    gsap.registerPlugin(TextPlugin);
-    let tl = gsap.timeline({ defaults: { ease: "elastic.inOut", duration: 2 } });
+const Welcome = () => {
+    gsap.registerPlugin(useGSAP);
 
-    const box = useRef(null);
-    const box2 = useRef(null);
-    const container = useRef(null);
+    const heroSectioTitle = useRef(null);
+    const scrollDown = useRef(null);
+    const heroContainer = useRef(null);
 
     useGSAP(() => {
-        gsap.set(box2.current,{y:-200 , opacity: 0});
-        tl.to(box.current, {
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-            opacity: 1,
-            y: 0,
-            duration: 3.2,
-        }).to(box2.current, {
-            opacity: 1,
-            y: -150,
-            yoyo: true,
-            repeat: -1,
-            duration: 2.2,
-        });
+        gsap.fromTo(
+            heroSectioTitle.current,
+            {
+                y: 100,
+                opacity: 1,
+            },
+            {
+                opacity: 1,
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                duration: 5.2,
+                ease: "elastic.inOut",
+                y: 0,
+            }
+        );
+        gsap.fromTo(
+            scrollDown.current,
+            {
+                y: -5,
+                opacity: 0.9,
+            },
+            {
+                opacity: 1,
+                duration: 2.2,
+                y: 20,
+                repeat: -1,
+                yoyo: true,
+                ease: "linear.inOut",
+            }
+        );
     });
-
     return (
         <>
-            <Head title="Home">
+            <Head title="welcome">
                 <meta name="description" content="Free Web tutorialasdasds" />
                 <meta name="keywords" content="HTML, CSS, JavaScript" />
                 <meta name="author" content="John Doesdfsf" />
             </Head>
             <WebSiteENLayout>
-                <div className="" ref={container}>
-                    <section className="h-screen flex fle-col flex-wrap p-12 text-2xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
-                        <div className="justify-center w-full my-auto font-extrabold text-center text-transparent translate-y-full border-separate border-black bg-clip-text bg-gradient-to-r bg-transparentitems-center text-7xl drop-shadow-sm shadow-black" ref={box}>
-                            IS ELEKTRIK Ve Muhandis
-                        </div>
-                        <div className="items-center self-end justify-center w-full text-2xl font-bold text-center -translate-y-full " ref={box2}>
-                                Scroll Down 
-                        </div>
-                    </section>
-
-                    <p className="p-12 text-2xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veritatis corporis ratione minus, ipsam enim nulla
-                        magnam? Deleniti commodi, accusamus non ut molestias
-                        fuga dolor earum assumenda consequatur quae iusto.
-                        Dolore.
+                <section
+                    className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('..//images/hero.jpg')] bg-cover bg-center bg-no-repeat"
+                    ref={heroContainer}
+                >
+                    <div className="min-h-[73vh]  flex flex-col items-center justify-center">
+                        <h1
+                            className="z-10 text-5xl font-extrabold tracking-tight text-center text-white lg:text-8xl drop-shadow-md shadow-black text-pretty"
+                            ref={heroSectioTitle}
+                        >
+                            Is Elektirik Ve Muhandislik
+                        </h1>
+                    </div>
+                    <div
+                        className="text-white min-h-[10vh] font-extrabold text-xl"
+                        ref={scrollDown}
+                    >
+                        Scroll Down
+                    </div>
+                </section>
+                <section className="flex flex-col items-center justify-center p-8 text-center bg-white min-h-96"> 
+                    <p className="text-4xl text-transparent px-96 bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Voluptate deserunt aliquam expedita velit
+                        consequatur soluta, obcaecati dolorem praesentium
+                        doloribus omnis similique inventore aspernatur, ea
+                        dolorum ab. Ipsum quos temporibus et 
                     </p>
-                    <p className="p-12 text-2xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veritatis corporis ratione minus, ipsam enim nulla
-                        magnam? Deleniti commodi, accusamus non ut molestias
-                        fuga dolor earum assumenda consequatur quae iusto.
-                        Dolore.
-                    </p>
-                    <p className="p-12 text-2xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veritatis corporis ratione minus, ipsam enim nulla
-                        magnam? Deleniti commodi, accusamus non ut molestias
-                        fuga dolor earum assumenda consequatur quae iusto.
-                        Dolore.
-                    </p>
-                    <p className="p-12 text-2xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veritatis corporis ratione minus, ipsam enim nulla
-                        magnam? Deleniti commodi, accusamus non ut molestias
-                        fuga dolor earum assumenda consequatur quae iusto.
-                        Dolore.
-                    </p>
-                    <p className="p-12 text-2xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veritatis corporis ratione minus, ipsam enim nulla
-                        magnam? Deleniti commodi, accusamus non ut molestias
-                        fuga dolor earum assumenda consequatur quae iusto.
-                        Dolore.
-                    </p>
-                    <p className="p-12 text-2xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veritatis corporis ratione minus, ipsam enim nulla
-                        magnam? Deleniti commodi, accusamus non ut molestias
-                        fuga dolor earum assumenda consequatur quae iusto.
-                        Dolore.
-                    </p>
-                    <p className="p-12 text-2xl" data-aos="zoom-in">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veritatis corporis ratione minus, ipsam enim nulla
-                        magnam? Deleniti commodi, accusamus non ut molestias
-                        fuga dolor earum assumenda consequatur quae iusto.
-                        Dolore.
-                    </p>
-                </div>
+                </section>
             </WebSiteENLayout>
         </>
     );
-}
+};
+
+export default Welcome;
