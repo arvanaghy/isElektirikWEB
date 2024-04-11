@@ -6,10 +6,10 @@ import PhoneCallButton from "@/Components/PhoneCallButton";
 import BackToTopButton from "@/Components/BackToTopButton";
 const WebSiteTRLayout = ({ children }) => {
     return (
-        <div className="w-screen overflow-hidden h-full text-white bg-slate-800 ">
+        <div className=" bg-slate-800 ">
             <TopBarTR />
             <NavBarTR />
-            <main className="min-h-[75vh] md:min-h-[70vh] w-screen bg-slate-800 overflow-hidden">
+            <main className="min-h-[75vh] md:min-h-[70vh] bg-slate-800 overflow-hidden">
                 {children}
             </main>
             <BackToTopButton />

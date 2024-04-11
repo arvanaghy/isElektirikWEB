@@ -11,6 +11,7 @@ const Welcome = () => {
     const scrollDown = useRef(null);
     const heroContainer = useRef(null);
     const aboutSection = useRef(null);
+    const tl = gsap.timeline();
 
     useGSAP(() => {
         gsap.fromTo(
@@ -42,6 +43,21 @@ const Welcome = () => {
                 ease: "linear.inOut",
             }
         );
+
+        tl.fromTo(
+            aboutSection.current,
+            {
+                y: 100,
+                opacity: 1,
+            },
+            {
+                opacity: 1,
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                duration: 5.2,
+                ease: "elastic.inOut",
+                y: 0,
+            }
+        );
     });
     return (
         <>
@@ -71,8 +87,8 @@ const Welcome = () => {
                         Scroll Down
                     </div>
                 </section>
-                <section className="flex flex-col items-center justify-center p-8 text-center bg-white min-h-96" ref={aboutSection}>
-                    <p className="text-4xl text-transparent px-96 bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+                <section className="flex flex-col items-center justify-center p-8 text-center bg-white min-h-96" >
+                    <p className="text-4xl text-transparent px-96 bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={aboutSection}>
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Voluptate deserunt aliquam expedita velit
                         consequatur soluta, obcaecati dolorem praesentium
