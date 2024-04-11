@@ -6,9 +6,14 @@ const PhoneCallButton = () => {
     return (
         <div
             onClick={() => setIsOpen((prev) => !prev)}
-            className="fixed cursor-pointer bottom-[3%] right-[6%] w-10 h-10 bg-white shadow shadow-black rounded overflow-hidden shadow shadow-white/50"
+            className="fixed flex flex-col flex-wrap cursor-pointer bottom-4 right-16  rounded overflow-hidden "
         >
-            <div className="bg-green-300 rounded">
+            <div className={` ${isOpen ? ' flex flex-col items-center justify-center' : 'hidden'} w-12 h-32 bg-gray-300 mb-4 rounded overflow-hidden space-y-2 p-2 text-center flex-wrap`}>
+                <div className="">
+                    
+                </div>
+            </div>
+            <div className="w-12 flex items-center justify-center w-full h-full bg-green-300 rounded">
                 <svg
                     className="w-10 h-10 p-2"
                     viewBox="0 0 24 24"
@@ -42,11 +47,10 @@ const PhoneCallButton = () => {
                     </g>
                 </svg>
             </div>
-            <div className="">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque dolore obcaecati nihil nobis soluta repellendus tempore quas, ea ipsa adipisci tenetur culpa. Quis dolorum fugiat, ut eaque suscipit non soluta.
-            </div>
 
-        </div>
+
+
+        </div >
     );
 };
 

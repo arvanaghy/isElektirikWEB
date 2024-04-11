@@ -115,7 +115,7 @@ const NavBarTR = () => {
                     </ul>
                 </div>
             </div>
-            <div className="fixed flex flex-col w-screen bg-gray-300 shadow-lg md:hidden shadow-gray-500/50 min-h-[5vh] p-2 z-50">
+            <div className="fixed flex flex-col w-screen overflow-hidden top-0 bg-gray-300 shadow-lg md:hidden shadow-gray-500/50 min-h-[5vh] p-2 z-50">
                 <div className="z-50 flex flex-row flex-wrap items-center justify-between w-full">
                     <div className="flex flex-row items-center justify-start w-2/5">
                         <img src={logo} alt="is elektiric" />
