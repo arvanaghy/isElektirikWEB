@@ -88,7 +88,7 @@ const NavBarTR = () => {
                                 href="/tr/contact-us"
                                 className="inline-block pb-1"
                             >
-                                Bize Ulasın
+                                iletisim
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
@@ -222,7 +222,7 @@ const NavBarTR = () => {
                                 <Link href="/tr/about-us">Hakkimizda</Link>
                             </li>
                             <li>
-                                <Link href="/tr/contact-us">Bize Ulasin</Link>
+                                <Link href="/tr/contact-us">iletisim</Link>
                             </li>
                             <li>
                                 <Link href="/tr/projects">Projelerimiz</Link>
