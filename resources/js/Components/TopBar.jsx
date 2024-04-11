@@ -209,7 +209,7 @@ const TopBar = () => {
                                 href={
                                     "" + url.replace("/", "") == ""
                                         ? "/tr"
-                                        : "/tr" + url.replace("/", "")
+                                        : "/tr/" + url.replace("/", "")
                                 }
                             >
                                 Turkce
