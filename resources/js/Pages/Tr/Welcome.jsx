@@ -10,6 +10,7 @@ const Welcome = () => {
     const heroSectioTitle = useRef(null);
     const scrollDown = useRef(null);
     const heroContainer = useRef(null);
+    const aboutSection = useRef(null);
 
     useGSAP(() => {
         gsap.fromTo(
@@ -63,19 +64,20 @@ const Welcome = () => {
                         </h1>
                     </div>
                     <div
-                        className="text-white min-h-[10vh] font-extrabold text-xl"
+                        className="text-white min-h-[10vh] font-extrabold text-xl text-center cursor-pointer hover:text-pink-500 transition-colors duration-300 cursor-pointer"
                         ref={scrollDown}
+                        onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth" })}
                     >
                         Scroll Down
                     </div>
                 </section>
-                <section className="flex flex-col items-center justify-center p-8 text-center bg-white min-h-96"> 
+                <section className="flex flex-col items-center justify-center p-8 text-center bg-white min-h-96" ref={aboutSection}>
                     <p className="text-4xl text-transparent px-96 bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Voluptate deserunt aliquam expedita velit
                         consequatur soluta, obcaecati dolorem praesentium
                         doloribus omnis similique inventore aspernatur, ea
-                        dolorum ab. Ipsum quos temporibus et 
+                        dolorum ab. Ipsum quos temporibus et
                     </p>
                 </section>
             </WebSiteTRLayout>
