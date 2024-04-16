@@ -73,7 +73,7 @@ const FooterTR = () => {
             </div>
         </div>
         <div className="w-[80%] border-t border-white text-center mt-8 pt-3 z-10">
-            <p>Copyright © 2024</p>
+            <p>Copyright© All Right's Reserved <span><a href="#" className="hover:animate-pulse duration-300 hover:text-green-500 hover:scale-100">İs Elektrik</a></span> 2024</p>
         </div>
         <img className="absolute right-0 bottom-0 object-left-bottom w-full lg:w-[50%] z-5 lg:h-[75%]  opacity-40  " src="../../images/footerbg.png" />
     </div>
