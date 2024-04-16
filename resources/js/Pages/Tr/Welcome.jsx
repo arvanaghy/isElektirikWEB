@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import WebSiteTRLayout from "@/Components/WebSiteTRLayout";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Head } from "@inertiajs/react";
+import { Head, Link } from "@inertiajs/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Welcome = () => {
@@ -216,7 +216,7 @@ const Welcome = () => {
                     <div
                         className="text-white min-h-[10vh] font-extrabold text-xl text-center cursor-pointer hover:text-pink-500 transition-colors duration-300 cursor-pointer"
                         ref={scrollDown}
-                        onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth" , inline: "nearest" , top: 500 })}
+                        onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth", inline: "nearest", top: 500 })}
                     >
                         Scroll Down
                     </div>
@@ -264,7 +264,9 @@ const Welcome = () => {
 
                 {/* about */}
                 <section className="flex flex-col items-center justify-center p-8 text-center bg-white min-h-[30vh]" ref={aboutSection} >
-                    <p className="text-4xl text-transparent  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
+                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
+                    <hr width="30%" className="border-2 border-pink-500 " />
+                    <p className="text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
                         İs elektrik & mühendislik 2017 yılında İstanbul kemerburgazda kurulmuş elektrik proje ve taahhüt hizmetleri alanında uzun yıllar çalışmış konuttan ENDÜSTRİYEL tesis vs bir çok proje bitirmiş. Amacımız müşterilerimize her koşulda en iyi ve kaliteli hizmeti sunmaktır
                     </p>
                 </section>
@@ -281,24 +283,24 @@ const Welcome = () => {
 
 
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
-                    <div className="w-full flex flex-row justify-center">
-                        <div className="w-1/2 p-4 flex flex-col items-center justify-center min-h-[65vh]">
+                    <div className="w-full flex flex-wrap  flex-row justify-center">
+                        <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[65vh]">
                             <p className="text-4xl first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
                         </div>
-                        <div className="w-1/2 relative">
+                        <div className="w-full lg:w-1/2 relative">
 
                             <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1Replace} />
                             <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
 
                         </div>
                     </div>
-                    <div className="w-full flex flex-row items-center justify-center bg-gray-900">
-                        <div className="w-1/2">
+                    <div className="w-full flex flex-wrap flex-row items-center justify-center bg-gray-900">
+                        <div className="w-full lg:w-1/2">
                             <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
                         </div>
-                        <div className="w-1/2 p-4">
+                        <div className="w-full lg:w-1/2 p-4">
                             <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
@@ -321,22 +323,22 @@ const Welcome = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col items-center justify-center py-8 text-center bg-white min-h-[90vh] " >
-                    <div className="w-full flex flex-row items-center justify-center">
-                        <div className="w-1/2 p-4">
+                <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh] " >
+                    <div className="w-full flex-wrap flex flex-row items-center justify-center">
+                        <div className="w-full lg:w-1/2 p-4">
                             <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
                         </div>
                     </div>
-                    <div className="w-full flex flex-row items-center justify-center bg-gray-900">
-                        <div className="w-1/2">
+                    <div className="w-full flex flex-wrap flex-row items-center justify-center bg-gray-900">
+                        <div className="w-full lg:w-1/2">
                             <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
                         </div>
-                        <div className="w-1/2 p-4">
+                        <div className="w-full lg:w-1/2 p-4">
                             <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
@@ -347,18 +349,16 @@ const Welcome = () => {
 
                 {/* Our Projects Section */}
                 <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
-                    <div className="w-full  bg-white flex flex-row items-center justify-between px-2 py-4">
-                        <h3 className="text-4xl text-black flex flex-row items-center justify-center "> Our Projects</h3>
-                        <div className=" flex flex-row items-center justify-center gap-4 ">
-                            <button className="bg-green-500 text-white px-4 py-2 rounded">prev</button>
-                            <button className="bg-red-500 text-white px-4 py-2 rounded">next</button>
-                        </div>
+                    <div className="w-full flex-wrap bg-white flex flex-row items-center justify-between px-12 py-4">
+                        <h3 className="text-4xl text-black flex flex-row items-center justify-center border-b-2 pb-5 border-green-500 "> Our Projects</h3>
+                        <Link href="#" className="text-2xl text-green-500">
+                            show All
+                        </Link>
                     </div>
-                    <div class="grid lg:grid-cols-4 lg:gap-4 grid-cols-1 space-y-5 lg:space-y-0">
-                        <div class="col-span-1">
-                            <img src="image1.jpg" alt="Our Commitments" class="w-full h-auto rounded-lg" />
-                            <h2 class="text-lg font-bold">Our Commitments</h2>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
+                    <div class="grid lg:grid-cols-4 lg:gap-4 grid-cols-1 space-y-5 lg:space-y-0 px-5">
+                        <div class="col-span-1 relative ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg"  alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black " />
+                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black ">Our Commitments</h2>
                         </div>
 
                         <div class="col-span-1">
@@ -380,7 +380,6 @@ const Welcome = () => {
                         </div>
                     </div>
                 </section>
-
             </WebSiteTRLayout>
         </>
     );
