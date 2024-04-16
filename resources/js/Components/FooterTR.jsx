@@ -3,7 +3,7 @@ import logo from "../../../public/images/ful-logo.png";
 
 const FooterTR = () => {
     return (
-        <div className="min-h-[15vh] py-8 px-6 bg-black w-full flex flex-col justify-center items-center text-white">
+        <div className="relative min-h-[15vh] py-8 px-6 bg-black w-full flex flex-col justify-center items-center text-white">
         <div className="flex lg:flex-row flex-col w-full lg:space-x-8 space-y-5">
             <div className="w-full lg:w-4/12">
                 <img src={logo} className="w-[30%] invert" />
@@ -75,7 +75,7 @@ const FooterTR = () => {
         <div className="w-[80%] border-t border-white text-center mt-8 pt-3">
             <p>Copyright</p>
         </div>
-        <img class="w-full object-contain min-h-0" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" />
+        <img className="absolute right-0 bottom-0 object-left-bottom w-full lg:w-[50%] lg:h-[75%]  opacity-40  " src="../../images/footerbg.png" />
     </div>
     );
 };

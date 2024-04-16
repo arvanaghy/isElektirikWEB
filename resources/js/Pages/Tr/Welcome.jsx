@@ -121,9 +121,9 @@ const Welcome = () => {
             },
             {
                 opacity: 1,
+                y: 0,
                 duration: 3,
                 ease: "elastic.inOut",
-                y: 0,
                 scrollTrigger: {
                     trigger: aboutSectionTitle.current,
                     toggleActions: "play none none reverse",
@@ -202,12 +202,12 @@ const Welcome = () => {
                     className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat"
                     ref={heroContainer}
                 >
-                    <div className="min-h-[73vh] flex flex-col items-center justify-center">
+                    <div className="min-h-[90vh] lg:min-h-[73vh] flex flex-col items-center justify-center">
                         <h1
-                            className="z-10 text-5xl font-extrabold tracking-tight text-center leading-relaxed text-white lg:text-8xl drop-shadow-md shadow-black text-pretty"
+                            className="z-10 text-5xl font-extrabold tracking-tight flex flex-col lg:flex-row text-center leading-relaxed text-white lg:text-8xl drop-shadow-md shadow-black text-pretty"
                             ref={heroSectioTitle}
                         >
-                            <span className="mx-1 " ref={heroSectioTitle1}> is </span>
+                            <span className="mx-1" ref={heroSectioTitle1}> is </span>
                             <span className="mx-1 text-green-500 drop-shadow-lg shadow-green-900" ref={heroSectioTitle2}>Elektrik</span>
                             <span className="mx-1" ref={heroSectioTitle3}> & </span>
                             <span className="" ref={heroSectioTitle4}> Mühendislik</span>
@@ -273,10 +273,10 @@ const Welcome = () => {
 
                 {/* Slogan Section */}
                 <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
-                    <h2 className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={clientsSection}>
+                    <h2 className="text-8xl pb-8 text-transparent  text-white" ref={clientsSection}>
                         Slogan Here
                     </h2>
-                    <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+                    <p className="text-5xl pt-5 text-transparent  text-white text-green-500 drop-shadow-2xl shadow-black">
                         now is ielek
                     </p>
                 </section>
@@ -284,7 +284,7 @@ const Welcome = () => {
 
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
                     <div className="w-full flex flex-wrap  flex-row justify-center">
-                        <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[65vh]">
+                        <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
                             <p className="text-4xl first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
@@ -292,13 +292,14 @@ const Welcome = () => {
                         <div className="w-full lg:w-1/2 relative">
 
                             <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1Replace} />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt=""  className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
 
                         </div>
                     </div>
                     <div className="w-full flex flex-wrap flex-row items-center justify-center bg-gray-900">
-                        <div className="w-full lg:w-1/2">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
+                        <div className="relative w-full lg:w-1/2">
+                        <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " />
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " />
                         </div>
                         <div className="w-full lg:w-1/2 p-4">
                             <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
