@@ -199,191 +199,191 @@ const Welcome = () => {
             <WebSiteTRLayout>
                 {/* Is Electrik ve Muhendislik Hero Section */}
                 <section
-                    className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat"
-                    ref={heroContainer}
+                    className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat backdrop-filter "
+                ref={heroContainer}
                 >
-                    <div className="min-h-[73vh] flex flex-col items-center justify-center">
-                        <h1
-                            className="z-10 text-5xl font-extrabold tracking-tight text-center leading-relaxed text-white lg:text-8xl drop-shadow-md shadow-black text-pretty"
-                            ref={heroSectioTitle}
-                        >
-                            <span className="mx-1 " ref={heroSectioTitle1}> is </span>
-                            <span className="mx-1 text-green-500 drop-shadow-lg shadow-green-900" ref={heroSectioTitle2}>Elektrik</span>
-                            <span className="mx-1" ref={heroSectioTitle3}> & </span>
-                            <span className="" ref={heroSectioTitle4}> Mühendislik</span>
-                        </h1>
-                    </div>
-                    <div
-                        className="text-white min-h-[10vh] font-extrabold text-xl text-center cursor-pointer hover:text-pink-500 transition-colors duration-300 cursor-pointer"
-                        ref={scrollDown}
-                        onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth" , inline: "nearest" , top: 500 })}
+                <div className="min-h-[73vh] flex flex-col items-center justify-center">
+                    <h1
+                        className="z-10 text-5xl font-extrabold tracking-tight text-center leading-relaxed text-white lg:text-8xl drop-shadow-md shadow-black text-pretty"
+                        ref={heroSectioTitle}
                     >
-                        Scroll Down
-                    </div>
-                </section>
+                        <span className="mx-1 " ref={heroSectioTitle1}> is </span>
+                        <span className="mx-1 text-green-500 drop-shadow-lg shadow-green-900" ref={heroSectioTitle2}>Elektrik</span>
+                        <span className="mx-1" ref={heroSectioTitle3}> & </span>
+                        <span className="" ref={heroSectioTitle4}> Mühendislik</span>
+                    </h1>
+                </div>
+                <div
+                    className="text-white min-h-[10vh] font-extrabold text-xl text-center cursor-pointer hover:text-pink-500 transition-colors duration-300 cursor-pointer"
+                    ref={scrollDown}
+                    onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth", inline: "nearest", top: 500 })}
+                >
+                    Scroll Down
+                </div>
+            </section>
 
-                {/* our clients */}
-                <section className="flex flex-col items-center justify-center bg-white py-16 px-16 ">
-                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
-                    <hr width="30%" className="border-2 border-pink-500 " />
-                    <div className="grid lg:grid-cols-8 grid-cols-1 space-y-4 lg:space-y-0 lg:gap-8 pt-6 items-center justify-center " >
-                        <div className="px-2" ref={clients1} >
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
-                        </div>
-                        <div className="px-2" ref={clients2}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
-                        </div>
-                        <div className="px-2" ref={clients3}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
-                        </div>
-                        <div className="px-2" ref={clients4}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
-                        </div>
-                        <div className="px-2" ref={clients5} >
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
-                        </div>
-                        <div className="px-2" ref={clients6}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
-                        </div>
-                        <div className="px-2" ref={clients7}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
-                        </div>
-                        <div className="px-2" ref={clients8}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
-                        </div>
+            {/* our clients */}
+            <section className="flex flex-col items-center justify-center bg-white py-16 px-16 ">
+                <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
+                <hr width="30%" className="border-2 border-pink-500 " />
+                <div className="grid lg:grid-cols-8 grid-cols-1 space-y-4 lg:space-y-0 lg:gap-8 pt-6 items-center justify-center " >
+                    <div className="px-2" ref={clients1} >
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
+                        <h4 className="text-center py-2">Lorem ipsum dolor</h4>
                     </div>
-                </section>
+                    <div className="px-2" ref={clients2}>
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
+                        <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                    </div>
+                    <div className="px-2" ref={clients3}>
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
+                        <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                    </div>
+                    <div className="px-2" ref={clients4}>
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
+                        <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                    </div>
+                    <div className="px-2" ref={clients5} >
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
+                        <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                    </div>
+                    <div className="px-2" ref={clients6}>
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
+                        <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                    </div>
+                    <div className="px-2" ref={clients7}>
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
+                        <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                    </div>
+                    <div className="px-2" ref={clients8}>
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
+                        <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                    </div>
+                </div>
+            </section>
 
-                {/* about */}
-                <section className="flex flex-col items-center justify-center p-8 text-center bg-white min-h-[30vh]" ref={aboutSection} >
+            {/* about */}
+            <section className="flex flex-col items-center justify-center p-8 text-center bg-white min-h-[30vh]" ref={aboutSection} >
                 <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
-                    <hr width="30%" className="border-2 border-pink-500 " />
-                    <p className="text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
-                        İs elektrik & mühendislik 2017 yılında İstanbul kemerburgazda kurulmuş elektrik proje ve taahhüt hizmetleri alanında uzun yıllar çalışmış konuttan ENDÜSTRİYEL tesis vs bir çok proje bitirmiş. Amacımız müşterilerimize her koşulda en iyi ve kaliteli hizmeti sunmaktır
-                    </p>
-                </section>
+                <hr width="30%" className="border-2 border-pink-500 " />
+                <p className="text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
+                    İs elektrik & mühendislik 2017 yılında İstanbul kemerburgazda kurulmuş elektrik proje ve taahhüt hizmetleri alanında uzun yıllar çalışmış konuttan ENDÜSTRİYEL tesis vs bir çok proje bitirmiş. Amacımız müşterilerimize her koşulda en iyi ve kaliteli hizmeti sunmaktır
+                </p>
+            </section>
 
-                {/* Slogan Section */}
-                <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
-                    <h2 className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={clientsSection}>
-                        Slogan Here
+            {/* Slogan Section */}
+            <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
+                <h2 className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={clientsSection}>
+                    Slogan Here
+                </h2>
+                <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+                    now is ielek
+                </p>
+            </section>
+
+
+            <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
+                <div className="w-full flex flex-wrap  flex-row justify-center">
+                    <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[65vh]">
+                        <p className="text-4xl first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
+                        </p>
+                    </div>
+                    <div className="w-full lg:w-1/2 relative">
+
+                        <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1Replace} />
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
+
+                    </div>
+                </div>
+                <div className="w-full flex flex-wrap flex-row items-center justify-center bg-gray-900">
+                    <div className="w-full lg:w-1/2">
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
+                    </div>
+                    <div className="w-full lg:w-1/2 p-4">
+                        <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            {/* Our Missions Section */}
+            <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh] " >
+                <div className="w-[90%] h-[80vh] flex items-center justify-center bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat" ref={missionSection} >
+                    <h2 className="text-4xl text-transparent flex flex-col space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+                        <div>
+                            Our missions are to:
+                        </div>
+                        <div className="text-4xl">
+                            Lorem ipsum dolor sit amet.
+                        </div>
                     </h2>
-                    <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
-                        now is ielek
-                    </p>
-                </section>
+                </div>
+            </section>
 
-
-                <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
-                    <div className="w-full flex flex-wrap  flex-row justify-center">
-                        <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[65vh]">
-                            <p className="text-4xl first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
-                            </p>
-                        </div>
-                        <div className="w-full lg:w-1/2 relative">
-
-                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1Replace} />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
-
-                        </div>
+            <section className="flex flex-col items-center justify-center py-8 text-center bg-white min-h-[90vh] " >
+                <div className="w-full flex-wrap flex flex-row items-center justify-center">
+                    <div className="w-full lg:w-1/2 p-4">
+                        <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
+                        </p>
                     </div>
-                    <div className="w-full flex flex-wrap flex-row items-center justify-center bg-gray-900">
-                        <div className="w-full lg:w-1/2">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
-                        </div>
-                        <div className="w-full lg:w-1/2 p-4">
-                            <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
-                            </p>
-                        </div>
-
+                    <div className="w-full lg:w-1/2">
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
                     </div>
-                </section>
-
-                {/* Our Missions Section */}
-                <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh] " >
-                    <div className="w-[90%] h-[80vh] flex items-center justify-center bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat" ref={missionSection} >
-                        <h2 className="text-4xl text-transparent flex flex-col space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
-                            <div>
-                                Our missions are to:
-                            </div>
-                            <div className="text-4xl">
-                                Lorem ipsum dolor sit amet.
-                            </div>
-                        </h2>
+                </div>
+                <div className="w-full flex flex-row items-center justify-center bg-gray-900">
+                    <div className="w-full lg:w-1/2">
+                        <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
                     </div>
-                </section>
-
-                <section className="flex flex-col items-center justify-center py-8 text-center bg-white min-h-[90vh] " >
-                    <div className="w-full flex-wrap flex flex-row items-center justify-center">
-                        <div className="w-full lg:w-1/2 p-4">
-                            <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
-                            </p>
-                        </div>
-                        <div className="w-full lg:w-1/2">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
-                        </div>
+                    <div className="w-full lg:w-1/2 p-4">
+                        <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
+                        </p>
                     </div>
-                    <div className="w-full flex flex-row items-center justify-center bg-gray-900">
-                        <div className="w-full lg:w-1/2">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
-                        </div>
-                        <div className="w-full lg:w-1/2 p-4">
-                            <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
-                            </p>
-                        </div>
 
+                </div>
+            </section>
+
+            {/* Our Projects Section */}
+            <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
+                <div className="w-full  bg-white flex flex-row items-center justify-between px-2 py-4">
+                    <h3 className="text-4xl text-black flex flex-row items-center justify-center "> Our Projects</h3>
+                    <div className=" flex flex-row items-center justify-center gap-4 ">
+                        <button className="bg-green-500 text-white px-4 py-2 rounded">prev</button>
+                        <button className="bg-red-500 text-white px-4 py-2 rounded">next</button>
                     </div>
-                </section>
-
-                {/* Our Projects Section */}
-                <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
-                    <div className="w-full  bg-white flex flex-row items-center justify-between px-2 py-4">
-                        <h3 className="text-4xl text-black flex flex-row items-center justify-center "> Our Projects</h3>
-                        <div className=" flex flex-row items-center justify-center gap-4 ">
-                            <button className="bg-green-500 text-white px-4 py-2 rounded">prev</button>
-                            <button className="bg-red-500 text-white px-4 py-2 rounded">next</button>
-                        </div>
+                </div>
+                <div class="grid lg:grid-cols-4 lg:gap-4 grid-cols-1 space-y-5 lg:space-y-0">
+                    <div class="col-span-1">
+                        <img src="image1.jpg" alt="Our Commitments" class="w-full h-auto rounded-lg" />
+                        <h2 class="text-lg font-bold">Our Commitments</h2>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
                     </div>
-                    <div class="grid lg:grid-cols-4 lg:gap-4 grid-cols-1 space-y-5 lg:space-y-0">
-                        <div class="col-span-1">
-                            <img src="image1.jpg" alt="Our Commitments" class="w-full h-auto rounded-lg" />
-                            <h2 class="text-lg font-bold">Our Commitments</h2>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
-                        </div>
 
-                        <div class="col-span-1">
-                            <img src="image2.jpg" alt="Our Sustainability Report" class="w-full h-auto rounded-lg" />
-                            <h2 class="text-lg font-bold">Our Sustainability Report</h2>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
-                        </div>
-
-                        <div class="col-span-1">
-                            <img src="image3.jpg" alt="Electricity 4.0: Powering the New Electric World" class="w-full h-auto rounded-lg" />
-                            <h2 class="text-lg font-bold">Electricity 4.0: Powering the New Electric World</h2>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
-                        </div>
-
-                        <div class="col-span-1">
-                            <img src="image4.jpg" alt="Energy & Environment" class="w-full h-auto rounded-lg" />
-                            <h2 class="text-lg font-bold">Energy & Environment</h2>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
-                        </div>
+                    <div class="col-span-1">
+                        <img src="image2.jpg" alt="Our Sustainability Report" class="w-full h-auto rounded-lg" />
+                        <h2 class="text-lg font-bold">Our Sustainability Report</h2>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
                     </div>
-                </section>
 
-            </WebSiteTRLayout>
+                    <div class="col-span-1">
+                        <img src="image3.jpg" alt="Electricity 4.0: Powering the New Electric World" class="w-full h-auto rounded-lg" />
+                        <h2 class="text-lg font-bold">Electricity 4.0: Powering the New Electric World</h2>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
+                    </div>
+
+                    <div class="col-span-1">
+                        <img src="image4.jpg" alt="Energy & Environment" class="w-full h-auto rounded-lg" />
+                        <h2 class="text-lg font-bold">Energy & Environment</h2>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
+                    </div>
+                </div>
+            </section>
+
+        </WebSiteTRLayout >
         </>
     );
 };

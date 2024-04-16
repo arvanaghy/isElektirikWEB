@@ -36,7 +36,10 @@ const NavBarTR = () => {
                 >
                     <Link href="/tr" className="w-64">
                         <div>
-                            <img src={logo} alt="is elektirik" />
+                            <img 
+                            src={logo} 
+                            alt="is elektirik"
+                            className="backdrop-filter backdrop-hue-rotate-90" />
                         </div>
                     </Link>
 
