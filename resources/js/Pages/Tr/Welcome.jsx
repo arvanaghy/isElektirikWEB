@@ -349,7 +349,7 @@ const Welcome = () => {
 
                 {/* Our Projects Section */}
                 <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
-                    <div className="w-full flex-wrap bg-white flex flex-row items-center justify-between px-8 py-4">
+                    <div className="w-full flex-wrap bg-white flex flex-row items-center justify-between px-12 py-4">
                         <h3 className="text-4xl text-black flex flex-row items-center justify-center border-b-2 pb-5 border-green-500 "> Our Projects</h3>
                         <Link href="#" className="text-2xl text-green-500">
                             show All
@@ -357,8 +357,8 @@ const Welcome = () => {
                     </div>
                     <div class="grid lg:grid-cols-4 lg:gap-4 grid-cols-1 space-y-5 lg:space-y-0 px-5">
                         <div class="col-span-1 relative ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg"  alt="Our Commitments" class="w-full h-52 rounded-lg" />
-                            <h2 class="text-lg font-bold absloute top-0">Our Commitments</h2>
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg"  alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black " />
+                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black ">Our Commitments</h2>
                         </div>
 
                         <div class="col-span-1">
