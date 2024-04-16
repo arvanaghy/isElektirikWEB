@@ -5,18 +5,18 @@ const PhoneCallButton = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsOpen(false);
-        }, 5000);
+        }, 50000);
     })
 
     return (
         <div
             onClick={() => setIsOpen((prev) => !prev)}
-            className="w-12 fixed flex flex-col flex-wrap cursor-pointer bottom-4 right-16  rounded overflow-hidden "
+            className="w-24 fixed flex flex-col cursor-pointer bottom-4 right-16 rounded overflow-hidden "
         >
-            <div className={` ${isOpen ? ' flex flex-col items-center justify-center' : 'hidden'} h-32 bg-gray-300 mb-4 rounded overflow-hidden space-y-2 p-2 text-center flex-wrap`}>
-                <div className=" flex flex-row items-center justify-center border-b-1 border-gray-300 rounded-full">
+            <div className={` ${isOpen ? 'flex flex-row w-24 h-10 space-x-2 justify-center align-middle items-center content-center my-auto ' : 'hidden'}  bg-gray-300 mb-2 rounded overflow-hidden text-center`}>
+                <div className="pr-3 border-r-2 border-gray-400 hover:scale-110">
                     <svg
-                        className="w-8 h-8 p-1 "
+                        className="w-5 h-5 "
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -48,11 +48,11 @@ const PhoneCallButton = () => {
                         </g>
                     </svg>
                 </div>
-                <div className="flex flex-row items-center justify-center border-b-1 border-gray-300 rounded-full">
-                    <svg className="w-8 h-8 p-1 " viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M84.7925 257.334C1.81069 106.044 237.525 -11.6463 321.16 119.453C396.366 237.339 251.357 391.573 150.736 312.145" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M89.5909 265.912C34.5405 357.344 49.8143 347.445 133.267 311.303" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M170.381 113.42C60.1005 141.74 240.793 341.184 288.582 236.047" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M177.338 175.365C186.032 197.073 208.905 214.528 227.906 227.195" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M177.338 126.062C187.693 143.231 203.319 159.586 178.602 168.412" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M285.431 228.46C262.184 210.573 250.584 200.134 232.965 225.301" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+                <div className="hover:scale-110">
+                    <svg className="w-7 h-7" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M84.7925 257.334C1.81069 106.044 237.525 -11.6463 321.16 119.453C396.366 237.339 251.357 391.573 150.736 312.145" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M89.5909 265.912C34.5405 357.344 49.8143 347.445 133.267 311.303" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M170.381 113.42C60.1005 141.74 240.793 341.184 288.582 236.047" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M177.338 175.365C186.032 197.073 208.905 214.528 227.906 227.195" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M177.338 126.062C187.693 143.231 203.319 159.586 178.602 168.412" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M285.431 228.46C262.184 210.573 250.584 200.134 232.965 225.301" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
                 </div>
             </div>
-            <div className=" flex items-center justify-center bg-green-300 shadow shadow-gray-500/50 rounded-full hover:scale-110 hover:opacity-100 opacity-80">
+            <div className=" flex flex-row items-center justify-center bg-green-300 shadow shadow-gray-500/50 rounded-xl hover:opacity-100 opacity-80">
                 <svg
                     className="w-10 h-10 p-2"
                     viewBox="0 0 24 24"
@@ -85,6 +85,9 @@ const PhoneCallButton = () => {
                         ></path>{" "}
                     </g>
                 </svg>
+                <p className="text-sm  mr-2 shadow-xl">
+                    Ulasim
+                </p>
             </div>
         </div >
     );
