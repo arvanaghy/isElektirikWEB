@@ -4,8 +4,8 @@ import logo from "../../../public/images/ful-logo.png";
 const FooterTR = () => {
     return (
         <div className="min-h-[15vh] py-8 px-6 bg-black w-full flex flex-col justify-center items-center text-white">
-            <div className="flex flex-row flex-wrap w-full space-x-6">
-                <div className="w-full lg:w-5/12">
+            <div className="flex lg:flex-row flex-col w-full lg:space-x-8 space-y-5">
+                <div className="w-full lg:w-4/12">
                     <img src={logo} className="w-[30%] invert" />
                     <p className="py-4 text-justify">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -15,20 +15,18 @@ const FooterTR = () => {
                         dolore? Eaque!
                     </p>
                 </div>
-                <div className="flex flex-row items-center justify-end w-6/12">
-                    <div className="w-4/12">
-                        <p className="text-lg font-extrabold">Usefull Links</p>
+                <div className="w-full lg:w-4/12 flex flex-col">
+                        <p className="text-xl lg:text-center font-extrabold">Useful Links</p>
                         <ul className="space-y-2">
-                            <li>link</li>
-                            <li>link</li>
-                            <li>link</li>
-                            <li>link</li>
-                            <li>link</li>
+                            <li className="lg:text-center hover:cursor-pointer hover:scale-110 hover:opacity-70 hover:duration-100 hover:ease-in-out">link</li>
+                            <li className="lg:text-center hover:cursor-pointer hover:scale-110 hover:opacity-70 hover:duration-100 hover:ease-in-out">link</li>
+                            <li className="lg:text-center hover:cursor-pointer hover:scale-110 hover:opacity-70 hover:duration-100 hover:ease-in-out">link</li>
+                            <li className="lg:text-center hover:cursor-pointer hover:scale-110 hover:opacity-70 hover:duration-100 hover:ease-in-out">link</li>
                         </ul>
-                    </div>
-                    <div className="w-6/12 flex flex-col space-y-5">
+                </div>
+                <div className="w-full lg:w-4/12 lg:space-y-5">
                         <p className="text-xl font-extrabold">Contact Us</p>
-                        <p> <span className="font-bold text-lg">Adress:</span>  skfdmsfjkjksdvvksd</p>
+                        <p> <span className=" font-bold text-lg">Adress:</span>  skfdmsfjkjksdvvksd</p>
                         <p><span className="font-bold text-lg">Telephone:</span> 2163562655</p>
                         <div className="flex flex-row space-x-5">
                             <div className="hover:cursor-pointer hover:scale-110 hover:opacity-70 hover:duration-100 hover:ease-in-out">
@@ -42,7 +40,6 @@ const FooterTR = () => {
                             </div>
                         </div>
 
-                    </div>
                 </div>
             </div>
             <div className="w-[80%] border-t border-white text-center mt-8 pt-3">
