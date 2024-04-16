@@ -292,7 +292,7 @@ const Welcome = () => {
                         <div className="w-full lg:w-1/2 relative">
 
                             <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1Replace} />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt=""  className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
 
                         </div>
                     </div>
