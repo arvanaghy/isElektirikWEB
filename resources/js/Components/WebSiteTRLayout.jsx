@@ -7,12 +7,11 @@ import BackToTopButton from "@/Components/BackToTopButton";
 import SideScroll from "@/Components/SideScroll";
 const WebSiteTRLayout = ({ children }) => {
     return (
-        <div className=" bg-slate-800 ">
+        <div className="">
             <TopBarTR />
             <NavBarTR />
             <SideScroll />
-
-            <main className="min-h-[75vh] md:min-h-[70vh] bg-slate-800 overflow-hidden">
+            <main className="min-h-[75vh] md:min-h-[70vh] overflow-hidden">
                 {children}
             </main>
             <BackToTopButton />

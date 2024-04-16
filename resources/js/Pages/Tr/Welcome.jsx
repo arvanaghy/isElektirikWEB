@@ -345,7 +345,7 @@ const Welcome = () => {
                         </div>
 
                     </div>
-                </section>
+                </section> 
 
                 {/* Our Projects Section */}
                 <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
