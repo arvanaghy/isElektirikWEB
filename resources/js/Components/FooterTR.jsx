@@ -75,7 +75,7 @@ const FooterTR = () => {
         <div className="w-[80%] border-t border-white text-center mt-8 pt-3">
             <p>Copyright</p>
         </div>
-        <img className="absolute right-0 bottom-0  object-contain w-full lg:w-6/12  opacity-40  " src="https://www.se.com/ww/en/assets/v2/images/footer-background/900/image.jpg" />
+        <img className="absolute right-0 bottom-0 object-left-bottom w-full lg:w-[50%] lg:h-[75%]  opacity-40  " src="../../images/footerbg.png" />
     </div>
     );
 };
