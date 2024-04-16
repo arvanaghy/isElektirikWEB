@@ -28,7 +28,7 @@ const ContactUs = ({ status, canResetPassword }) => {
                     </div>
                     <div className="flex flex-row mx-8">
                         <div className="w-1/2 bg-white rounded-l-xl shadow-xl">
-                            {/* Form Section */}
+                            Form Section
                             <form onSubmit={submit} className="m-10 space-y-6">
                                 <p className="text-4xl">Contact Form</p>
                                 <div>

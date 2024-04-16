@@ -52,13 +52,13 @@ const FAQ = () => {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="w-full py-3 text-center text-black lg:w-1/3 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none">
-        <ul className="w-full space-y-7 ">
+      <div className="w-full lg:py-3 text-center text-black lg:w-1/3 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none">
+        <ul className="w-full lg:space-y-7 space-y-2 ">
           {faqsList.map((faq, idx) => (
             <li
               key={idx}
               onClick={() => handleFAQ(faq)}
-              className="cursor-pointer hover:scale-105 hover:opacity-80 text-2xl bg-[#f3f2f2] rounded-xl py-3 "
+              className="cursor-pointer hover:scale-105 hover:opacity-80 lg:text-2xl bg-[#f3f2f2] rounded-xl lg:py-3 py-1"
             >
               {faq.label}
             </li>

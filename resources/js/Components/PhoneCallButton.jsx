@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PhoneCallButton = () => {
     const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
+        setTimeout(() => {
+            setIsOpen(false);
+        }, 5000);
+    })
 
     return (
         <div
