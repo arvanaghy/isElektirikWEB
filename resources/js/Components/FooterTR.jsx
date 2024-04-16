@@ -54,7 +54,7 @@ const FooterTR = () => {
 
                     </ul>
             </div>
-            <div className="w-full lg:w-4/12 lg:space-y-5 text-center">
+            <div className="w-full lg:w-4/12 lg:space-y-5 text-center z-10">
                     <p className="text-xl font-extrabold w-10/12 lg:w-4/12 m-auto pb-2 border-b-[1px]  mb-4">Ulasim</p>
                     <p> <span className=" font-bold text-lg">Adres:</span>  skfdmsfjkjksdvvksd</p>
                     <p><span className="font-bold text-lg">Telefon:</span> 2163562655</p>
@@ -75,7 +75,7 @@ const FooterTR = () => {
         <div className="w-[80%] border-t border-white text-center mt-8 pt-3">
             <p>Copyright</p>
         </div>
-        <img className="absolute right-0 bottom-0 object-left-bottom w-full lg:w-[50%] lg:h-[75%]  opacity-40  " src="../../images/footerbg.png" />
+        <img className="absolute right-0 bottom-0 object-left-bottom w-full lg:w-[50%] z-5 lg:h-[75%]  opacity-40  " src="../../images/footerbg.png" />
     </div>
     );
 };
