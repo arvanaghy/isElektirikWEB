@@ -72,8 +72,8 @@ const FooterTR = () => {
 
             </div>
         </div>
-        <div className="w-[80%] border-t border-white text-center mt-8 pt-3">
-            <p>Copyright</p>
+        <div className="w-[80%] border-t border-white text-center mt-8 pt-3 z-10">
+            <p>Copyright © 2024</p>
         </div>
         <img className="absolute right-0 bottom-0 object-left-bottom w-full lg:w-[50%] z-5 lg:h-[75%]  opacity-40  " src="../../images/footerbg.png" />
     </div>
