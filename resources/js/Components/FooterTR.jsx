@@ -15,7 +15,7 @@ const FooterTR = () => {
                     dolore? Eaque!
                 </p>
             </div>
-            <div className="w-full lg:w-4/12">
+            <div className="w-full lg:w-4/12 z-10">
                     <p className="text-xl text-center font-extrabold w-10/12 lg:w-4/12 m-auto pb-2 border-b-[1px]  mb-4">Sayfalar</p>
                     <ul className="space-y-2 flex flex-col justify-items-center items-center">
                         
@@ -23,7 +23,7 @@ const FooterTR = () => {
                             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 7L15 12L10 17" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>  
-                            <a className=" lg:text-center hover:cursor-pointer hover:translate-x-2 hover:opacity-70 hover:duration-100 hover:ease-in-out">
+                            <a className=" lg:text-center hover:cursor-pointer hover:translate-x-2 hover:opacity-70 hover:duration-150 hover:ease-in-out">
                             link
                             </a>
                         </li>  
@@ -31,7 +31,7 @@ const FooterTR = () => {
                             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 7L15 12L10 17" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>  
-                            <a className=" lg:text-center hover:cursor-pointer hover:translate-x-2 hover:opacity-70 hover:duration-100 hover:ease-in-out">
+                            <a className=" lg:text-center hover:cursor-pointer hover:translate-x-2 hover:opacity-70 hover:duration-150 hover:ease-in-out">
                             link
                             </a>
                         </li>
@@ -39,7 +39,7 @@ const FooterTR = () => {
                             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 7L15 12L10 17" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>  
-                            <a className=" lg:text-center hover:cursor-pointer hover:translate-x-2 hover:opacity-70 hover:duration-100 hover:ease-in-out">
+                            <a className=" lg:text-center hover:cursor-pointer hover:translate-x-2 hover:opacity-70 hover:duration-150 hover:ease-in-out">
                             link
                             </a>
                         </li>
@@ -47,7 +47,7 @@ const FooterTR = () => {
                             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 7L15 12L10 17" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>  
-                            <a className=" lg:text-center hover:cursor-pointer hover:translate-x-2 hover:opacity-70 hover:duration-100 hover:ease-in-out">
+                            <a className=" lg:text-center hover:cursor-pointer hover:translate-x-2 hover:opacity-70 hover:duration-150 hover:ease-in-out">
                             link
                             </a>
                         </li>
