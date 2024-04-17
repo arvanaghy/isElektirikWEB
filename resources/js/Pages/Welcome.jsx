@@ -382,36 +382,28 @@ const Welcome = () => {
                     <hr width="30%" className="border-2 border-pink-500 " />
                     <div className="grid lg:grid-cols-8 grid-cols-2 lg:space-y-4 lg:space-y-0 gap-4 pt-6 items-center justify-between "  >
                         <div className="px-2" ref={clients1} >
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                            <img src="../../images/2.png" className="rounded-full shadow shadow-blue-700 " alt="" />
                         </div>
                         <div className="px-2" ref={clients2}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                            <img src="../../images/1.png" className="rounded-full shadow shadow-blue-700 " alt="" />
                         </div>
                         <div className="px-2" ref={clients3}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                            <img src="../../images/3.png" className="rounded-full shadow shadow-blue-700 " alt="" />
                         </div>
                         <div className="px-2" ref={clients4}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                            <img src="../../images/4.png" className="rounded-full shadow shadow-blue-700 " alt="" />
                         </div>
                         <div className="px-2" ref={clients5} >
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                            <img src="../../images/5.png" className="rounded-full shadow shadow-blue-700 " alt="" />
                         </div>
                         <div className="px-2" ref={clients6}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                            <img src="../../images/6.png" className="rounded-full shadow shadow-blue-700 " alt="" />
                         </div>
                         <div className="px-2" ref={clients7}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                            <img src="../../images/7.png" className="rounded-full shadow shadow-blue-700 " alt="" />
                         </div>
                         <div className="px-2" ref={clients8}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
-                            <h4 className="text-center py-2">Lorem ipsum dolor</h4>
+                            <img src="../../images/8.png" className="rounded-full shadow shadow-blue-700 " alt="" />
                         </div>
                     </div>
                 </section>
