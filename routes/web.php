@@ -39,6 +39,12 @@ Route::middleware(['auth', 'verified' , AdminMiddelware::class])->group(function
     Route::get('/add-project', function () {
         return Inertia::render('AddProject');
     })->name('addProject');
+    Route::get('/edit-call-info', function () {
+        return Inertia::render('EditCallInfo');
+    })->name('EditCallInfo');
+    Route::get('/edit-about-us', function () {
+        return Inertia::render('EditAboutUs');
+    })->name('EditAboutUs');
     
 });
 
