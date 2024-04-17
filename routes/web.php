@@ -48,6 +48,9 @@ Route::middleware(['auth', 'verified' , AdminMiddelware::class])->group(function
     Route::get('/edit-slogan', function () {
         return Inertia::render('EditSlogan');
     })->name('EditSlogan');
+    Route::get('/edit-features', function () {
+        return Inertia::render('EditFeatures');
+    })->name('EditFeatures');
     
 });
 

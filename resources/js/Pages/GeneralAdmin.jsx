@@ -135,109 +135,43 @@ const GeneralAdmin = ({auth}) => {
                         <table class="table-auto w-full">
                             <thead>
                                 <tr>
-                                <th class="px-4 py-2">Lang</th>
-                                <th class="w-1/2 px-4 py-2">Creator</th>
-                                <th class="w-1/4 px-4 py-2">Date Created</th>
-                                <th class="w-1/4 px-4 py-2">Date Modified</th>
-                                <th class="w-1/4 px-4 py-2">Opreation</th>
+                                <th class="px-4 py-2">Text EN</th>
+                                <th class="w-1/2 px-4 py-2">Text TR</th>
+                                <th class=" px-4 py-2">Opreation</th>
                                 </tr>
                             </thead>
                             <tbody className="">
-                                <tr>
-                                <td class="border px-4 py-2">EN</td>
-                                <td class="border px-4 py-2">Intro to CSS</td>
-                                <td class="border px-4 py-2">Adam</td>
-                                <td class="border px-4 py-2">858</td>
-                                <td class="border px-4 py-2">
-                                <button className="bg-[#a89732] w-full py-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</button>
+                            <tr>
+                                <td class="border px-4 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae consequatur commodi adipisci soluta recusandae in suscipit voluptas fugit, doloribus fugiat alias nesciunt dolore consequuntur atque placeat quisquam dignissimos eum.</td>
+                                <td class="border px-4 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae consequatur commodi adipisci soluta recusandae in suscipit voluptas fugit, doloribus fugiat alias nesciunt dolore consequuntur atque placeat quisquam dignissimos eum.</td>
+                                <td rowSpan={4} class="border px-4 py-2">
+                                <Link href={route('EditFeatures')} className="bg-[#a89732] w-full p-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</Link>
                                 </td>
-
-                                </tr>
-                                <tr>
-                                <td class="border px-4 py-2">TR</td>
-                                <td class="border px-4 py-2">Intro to CSS</td>
-                                <td class="border px-4 py-2">Adam</td>
-                                <td class="border px-4 py-2">858</td>
-                                <td class="border px-4 py-2">
-                                    <button className="bg-[#a89732] w-full py-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</button>
-                                </td>
-                                </tr>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae consequatur commodi adipisci soluta recusandae in suscipit voluptas fugit, doloribus fugiat alias nesciunt dolore consequuntur atque placeat quisquam dignissimos eum.</td>
+                                <td class="border px-4 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae consequatur commodi adipisci soluta recusandae in suscipit voluptas fugit, doloribus fugiat alias nesciunt dolore consequuntur atque placeat quisquam dignissimos eum.</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae consequatur commodi adipisci soluta recusandae in suscipit voluptas fugit, doloribus fugiat alias nesciunt dolore consequuntur atque placeat quisquam dignissimos eum.</td>
+                                <td class="border px-4 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae consequatur commodi adipisci soluta recusandae in suscipit voluptas fugit, doloribus fugiat alias nesciunt dolore consequuntur atque placeat quisquam dignissimos eum.</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae consequatur commodi adipisci soluta recusandae in suscipit voluptas fugit, doloribus fugiat alias nesciunt dolore consequuntur atque placeat quisquam dignissimos eum.</td>
+                                <td class="border px-4 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae consequatur commodi adipisci soluta recusandae in suscipit voluptas fugit, doloribus fugiat alias nesciunt dolore consequuntur atque placeat quisquam dignissimos eum.</td>
+                                
+                            </tr>
                             </tbody>
+                            <tfoot>
+                                asd
+                            </tfoot>
                             </table>
                             
                         </div>
-                        <div className="flex flex-col text-center items-center p-10">
-                            <h1 className="text-2xl w-1/2 border-b-[1px] border-green-500 mb-2">Projects</h1>
-                        <table class="table-auto w-full">
-                            <thead>
-                                <tr>
-                                <th class="px-4 py-2">Lang</th>
-                                <th class="w-1/2 px-4 py-2">Creator</th>
-                                <th class="w-1/4 px-4 py-2">Date Created</th>
-                                <th class="w-1/4 px-4 py-2">Date Modified</th>
-                                <th class="w-1/4 px-4 py-2">Opreation</th>
-                                </tr>
-                            </thead>
-                            <tbody className="">
-                                <tr>
-                                <td class="border px-4 py-2">EN</td>
-                                <td class="border px-4 py-2">Intro to CSS</td>
-                                <td class="border px-4 py-2">Adam</td>
-                                <td class="border px-4 py-2">858</td>
-                                <td class="border px-4 py-2">
-                                <button className="bg-[#a89732] w-full py-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</button>
-                                </td>
-
-                                </tr>
-                                <tr>
-                                <td class="border px-4 py-2">TR</td>
-                                <td class="border px-4 py-2">Intro to CSS</td>
-                                <td class="border px-4 py-2">Adam</td>
-                                <td class="border px-4 py-2">858</td>
-                                <td class="border px-4 py-2">
-                                    <button className="bg-[#a89732] w-full py-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</button>
-                                </td>
-                                </tr>
-                            </tbody>
-                            </table>
-                            
-                        </div>
-                        <div className="flex flex-col text-center items-center p-10">
-                            <h1 className="text-2xl w-1/2 border-b-[1px] border-green-500 mb-2">Footer</h1>
-                        <table class="table-auto w-full">
-                            <thead>
-                                <tr>
-                                <th class="px-4 py-2">Lang</th>
-                                <th class="w-1/2 px-4 py-2">Creator</th>
-                                <th class="w-1/4 px-4 py-2">Date Created</th>
-                                <th class="w-1/4 px-4 py-2">Date Modified</th>
-                                <th class="w-1/4 px-4 py-2">Opreation</th>
-                                </tr>
-                            </thead>
-                            <tbody className="">
-                                <tr>
-                                <td class="border px-4 py-2">EN</td>
-                                <td class="border px-4 py-2">Intro to CSS</td>
-                                <td class="border px-4 py-2">Adam</td>
-                                <td class="border px-4 py-2">858</td>
-                                <td class="border px-4 py-2">
-                                <button className="bg-[#a89732] w-full py-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</button>
-                                </td>
-
-                                </tr>
-                                <tr>
-                                <td class="border px-4 py-2">TR</td>
-                                <td class="border px-4 py-2">Intro to CSS</td>
-                                <td class="border px-4 py-2">Adam</td>
-                                <td class="border px-4 py-2">858</td>
-                                <td class="border px-4 py-2">
-                                    <button className="bg-[#a89732] w-full py-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</button>
-                                </td>
-                                </tr>
-                            </tbody>
-                            </table>
-                            
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
