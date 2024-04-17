@@ -17,13 +17,13 @@ const Welcome = () => {
     const heroContainer = useRef(null);
     const aboutSection = useRef(null);
     const aboutSectionTitle = useRef(null);
-    const clientsSection = useRef(null);
+
     const missionSection = useRef(null);
     const featureImage1 = useRef(null);
     const featureImage1Replace = useRef(null);
     const featureSection1 = useRef(null);
     const heroTimeLine = gsap.timeline();
-    const clientsTimeLine = gsap.timeline();
+
     const clients1 = useRef(null);
     const clients2 = useRef(null);
     const clients3 = useRef(null);
@@ -34,10 +34,31 @@ const Welcome = () => {
     const clients8 = useRef(null);
 
 
+
+
     const featureImage2 = useRef(null);
     const featureImage2Replace = useRef(null);
 
+    const featureImage3 = useRef(null);
+    const featureImage3Replace = useRef(null);
+
+    const featureImage4 = useRef(null);
+    const featureImage4Replace = useRef(null);
+
+    const productsSectionTitle = useRef(null);
+
     useGSAP(() => {
+
+        const clientsTimeLine = gsap.timeline(
+            {
+                scrollTrigger: {
+                    trigger: clients1.current,
+                    start: "top bottom",
+                    toggleActions: "play none none reverse",
+                    end: "bottom top",
+                }
+            }
+        );
 
         heroTimeLine.fromTo(
             heroSectioTitle1.current,
@@ -54,8 +75,7 @@ const Welcome = () => {
                 ease: "back.inOut",
                 y: 0,
             }
-        );
-        heroTimeLine.fromTo(
+        ).fromTo(
             heroSectioTitle2.current,
             {
                 y: 100,
@@ -70,8 +90,7 @@ const Welcome = () => {
                 duration: 0.5,
                 ease: "back.inOut",
             }
-        );
-        heroTimeLine.fromTo(
+        ).fromTo(
             heroSectioTitle3.current,
             {
                 display: "inline-block",
@@ -86,8 +105,7 @@ const Welcome = () => {
                 ease: "back.inOut",
                 y: 0,
             }
-        );
-        heroTimeLine.fromTo(
+        ).fromTo(
             heroSectioTitle4.current,
             {
                 y: 100,
@@ -109,48 +127,78 @@ const Welcome = () => {
             },
             {
                 opacity: 1,
-                duration: 5,
+                duration: 1,
                 ease: "back.inOut",
-                ScrollTrigger: {
-                    trigger: clientsSection.current,
-                    toggleActions: "play none none reverse",
-                    start: "top center",
-                    end: "bottom top",
-                }
             }
-        );
-        clientsTimeLine.fromTo(
+        ).fromTo(
             clients2.current,
             {
                 opacity: 0,
             },
             {
                 opacity: 1,
-                duration: 5,
+                duration: 1,
                 ease: "back.inOut",
-                ScrollTrigger: {
-                    trigger: clientsSection.current,
-                    toggleActions: "play none none reverse",
-                    start: "top center",
-                    end: "bottom top",
-                }
             }
-        );
-        clientsTimeLine.fromTo(
+        ).fromTo(
             clients3.current,
             {
                 opacity: 0,
             },
             {
                 opacity: 1,
-                duration: 5,
+                duration: 1,
                 ease: "back.inOut",
-                ScrollTrigger: {
-                    trigger: clientsSection.current,
-                    toggleActions: "play none none reverse",
-                    start: "top center",
-                    end: "bottom top",
-                }
+            }
+        ).fromTo(
+            clients4.current,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 1,
+                ease: "back.inOut",
+            }
+        ).fromTo(
+            clients5.current,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 1,
+                ease: "back.inOut",
+            }
+        ).fromTo(
+            clients6.current,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 1,
+                ease: "back.inOut",
+            }
+        ).fromTo(
+            clients7.current,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 1,
+                ease: "back.inOut",
+            }
+        ).fromTo(
+            clients8.current,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 1,
+                ease: "back.inOut",
             }
         );
 
@@ -265,6 +313,62 @@ const Welcome = () => {
             }
         );
 
+        gsap.fromTo(
+            featureImage3.current,
+            {
+                height: '100%',
+            },
+            {
+                height: 0,
+                duration: 3,
+                ease: "liner.inOut",
+                scrollTrigger: {
+                    trigger: featureImage3.current,
+                    toggleActions: "play none none reverse",
+                    start: "top center",
+                    end: "bottom top",
+                },
+            }
+        );
+
+        gsap.fromTo(
+            featureImage4.current,
+            {
+                height: '100%',
+            },
+            {
+                height: 0,
+                duration: 3,
+                ease: "liner.inOut",
+                scrollTrigger: {
+                    trigger: featureImage4.current,
+                    toggleActions: "play none none reverse",
+                    start: "top center",
+                    end: "bottom top",
+                },
+            }
+        );
+
+        gsap.fromTo(
+            productsSectionTitle.current,
+            {
+                opacity: 0,
+                y: 200,
+            },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 3,
+                ease: "elastic.inOut",
+                scrollTrigger: {
+                    trigger: productsSectionTitle.current,
+                    toggleActions: "play none none reverse",
+                    start: "top bottom",
+                    end: "bottom top",
+                },
+            }
+        );
+
 
 
     });
@@ -302,10 +406,10 @@ const Welcome = () => {
                 </section>
 
                 {/* our clients */}
-                <section className="flex flex-col items-center justify-center bg-white py-16 px-16 ">
+                <section className="flex flex-col items-center justify-center bg-white py-16 px-16" >
                     <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
                     <hr width="30%" className="border-2 border-pink-500 " />
-                    <div className="grid lg:grid-cols-8 grid-cols-1 space-y-4 lg:space-y-0 lg:gap-8 pt-6 items-center justify-center " ref={clientsSection} >
+                    <div className="grid lg:grid-cols-8 grid-cols-2 lg:space-y-4 lg:space-y-0 gap-4 pt-6 items-center justify-between "  >
                         <div className="px-2" ref={clients1} >
                             <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
                             <h4 className="text-center py-2">Lorem ipsum dolor</h4>
@@ -342,17 +446,17 @@ const Welcome = () => {
                 </section>
 
                 {/* about */}
-                <section className="flex flex-col items-center justify-center p-8 text-center bg-white min-h-[30vh]" ref={aboutSection} >
+                <section className="flex flex-col items-center justify-center pb-32 -16 px-12 text-center bg-white min-h-[30vh]" ref={aboutSection} >
                     <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
                     <hr width="30%" className="border-2 border-pink-500 " />
-                    <p className="text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
+                    <p className="text-xl text-justify lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
                         İs elektrik & mühendislik 2017 yılında İstanbul kemerburgazda kurulmuş elektrik proje ve taahhüt hizmetleri alanında uzun yıllar çalışmış konuttan ENDÜSTRİYEL tesis vs bir çok proje bitirmiş. Amacımız müşterilerimize her koşulda en iyi ve kaliteli hizmeti sunmaktır
                     </p>
                 </section>
 
                 {/* Slogan Section */}
                 <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
-                    <h2 className="text-7xl lg:text-8xl px-8 pb-8 text-transparent  text-white" ref={clientsSection}>
+                    <h2 className="text-7xl lg:text-8xl px-8 pb-8 text-transparent  text-white" >
                         Slogan Here
                     </h2>
                     <p className="text-3xl lg:text-5xl pt-5 text-transparent  text-white text-green-500 drop-shadow-2xl shadow-black">
@@ -362,8 +466,8 @@ const Welcome = () => {
 
 
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
-                    <div className="w-full flex flex-wrap flex-row justify-center">
-                        <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
+                    <div className="w-full flex flex-wrap flex-col lg:flex-row justify-center">
+                        <div className="w-full lg:w-1/2 p-4 flex flex-col flex-wrap items-center justify-center min-h-[70vh]">
                             <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
@@ -405,39 +509,45 @@ const Welcome = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh] " >
-                    <div className="w-full flex-wrap flex flex-row items-center justify-center">
-                        <div className="w-full lg:w-1/2 p-4">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+                <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
+                    <div className="w-full flex flex-wrap flex-row justify-center">
+                        <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
                         </div>
-                        <div className="w-full lg:w-1/2">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
+                        <div className="w-full lg:w-1/2 relative">
+                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage3Replace} />
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage3} />
                         </div>
                     </div>
-                    <div className="w-full flex flex-wrap flex-row items-center justify-center bg-gray-900">
-                        <div className="w-full lg:w-1/2">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
+                    <div className="w-full flex flex-wrap flex-row justify-center bg-gray-900">
+
+                        <div className="w-full lg:w-1/2 relative">
+                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt=""
+                                ref={featureImage4Replace}
+                                className="absolute top-0 left-0 h-full w-full " />
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "
+                                ref={featureImage4}
+                            />
                         </div>
-                        <div className="w-full lg:w-1/2 p-4">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl  text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
+                        <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
                         </div>
-
                     </div>
                 </section>
 
                 {/* Our Projects Section */}
                 <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
                     <div className="w-full flex-wrap bg-white flex flex-row items-center justify-between px-12 py-4">
-                        <h3 className="text-4xl text-black flex flex-row items-center justify-center border-b-2 pb-5 border-green-500 "> Our Projects</h3>
+                        <h3 className="text-4xl text-black flex flex-row items-center justify-center border-b-2 pb-5 border-green-500 " ref={productsSectionTitle}> Our Projects</h3>
                         <Link href="#" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
                             show All
                         </Link>
                     </div>
-                    <div class="grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-x-5 lg:space-y-0 px-5">
+                    <div class="grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-y-5 lg:space-x-5  lg:space-y-0 px-5">
                         <div class="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
                             <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
                             <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
