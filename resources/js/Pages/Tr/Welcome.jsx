@@ -273,40 +273,38 @@ const Welcome = () => {
 
                 {/* Slogan Section */}
                 <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
-                    <h2 className="text-8xl pb-8 text-transparent  text-white" ref={clientsSection}>
+                    <h2 className="text-7xl lg:text-8xl px-8 pb-8 text-transparent  text-white" ref={clientsSection}>
                         Slogan Here
                     </h2>
-                    <p className="text-5xl pt-5 text-transparent  text-white text-green-500 drop-shadow-2xl shadow-black">
+                    <p className="text-3xl lg:text-5xl pt-5 text-transparent  text-white text-green-500 drop-shadow-2xl shadow-black">
                         now is ielek
                     </p>
                 </section>
 
 
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
-                    <div className="w-full flex flex-wrap  flex-row justify-center">
+                    <div className="w-full flex flex-wrap flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <p className="text-4xl first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
                         </div>
                         <div className="w-full lg:w-1/2 relative">
-
                             <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1Replace} />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt=""  className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
-
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
                         </div>
                     </div>
-                    <div className="w-full flex flex-wrap flex-row items-center justify-center bg-gray-900">
-                        <div className="relative w-full lg:w-1/2">
-                        <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " />
+                    <div className="w-full flex flex-wrap flex-row justify-center bg-gray-900">
+
+                        <div className="w-full lg:w-1/2 relative">
+                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "  />
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "  />
                         </div>
-                        <div className="w-full lg:w-1/2 p-4">
-                            <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
+                        <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
                         </div>
-
                     </div>
                 </section>
 
@@ -327,7 +325,7 @@ const Welcome = () => {
                 <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh] " >
                     <div className="w-full flex-wrap flex flex-row items-center justify-center">
                         <div className="w-full lg:w-1/2 p-4">
-                            <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
                         </div>
@@ -340,46 +338,55 @@ const Welcome = () => {
                             <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="w-full h-full" />
                         </div>
                         <div className="w-full lg:w-1/2 p-4">
-                            <p className="text-4xl text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl  text-transparent  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 first-letter:text-7xl">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
                             </p>
                         </div>
 
                     </div>
-                </section> 
+                </section>
 
                 {/* Our Projects Section */}
                 <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
                     <div className="w-full flex-wrap bg-white flex flex-row items-center justify-between px-12 py-4">
                         <h3 className="text-4xl text-black flex flex-row items-center justify-center border-b-2 pb-5 border-green-500 "> Our Projects</h3>
-                        <Link href="#" className="text-2xl text-green-500">
+                        <Link href="#" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
                             show All
                         </Link>
                     </div>
-                    <div class="grid lg:grid-cols-4 lg:gap-4 grid-cols-1 space-y-5 lg:space-y-0 px-5">
-                        <div class="col-span-1 relative ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg"  alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black " />
-                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black ">Our Commitments</h2>
+                    <div class="grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-x-5 lg:space-y-0 px-5">
+                        <div class="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
+                        </div>
+                        <div class="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
 
-                        <div class="col-span-1">
-                            <img src="image2.jpg" alt="Our Sustainability Report" class="w-full h-auto rounded-lg" />
-                            <h2 class="text-lg font-bold">Our Sustainability Report</h2>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
+                        <div class="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
-
-                        <div class="col-span-1">
-                            <img src="image3.jpg" alt="Electricity 4.0: Powering the New Electric World" class="w-full h-auto rounded-lg" />
-                            <h2 class="text-lg font-bold">Electricity 4.0: Powering the New Electric World</h2>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
+                        <div class="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
-
-                        <div class="col-span-1">
-                            <img src="image4.jpg" alt="Energy & Environment" class="w-full h-auto rounded-lg" />
-                            <h2 class="text-lg font-bold">Energy & Environment</h2>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded">Read</button>
+                        <div class="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
+                        </div>
+                        <div class="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
                     </div>
+                    <div className=" pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">
+                        <Link href="#" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
+                            show All
+                        </Link>
+                    </div>
+
                 </section>
             </WebSiteTRLayout>
         </>
