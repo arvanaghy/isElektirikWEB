@@ -259,25 +259,6 @@ const Welcome = () => {
         );
 
         gsap.fromTo(
-            featureSection1.current,
-            {
-                opacity: 0,
-                y: 200,
-            },
-            {
-                opacity: 1,
-                duration: 3,
-                ease: "elastic.inOut",
-                y: 0,
-                scrollTrigger: {
-                    trigger: featureSection1.current,
-                    toggleActions: "play none none reverse",
-                    start: "top bottom",
-                    end: "bottom top",
-                },
-            }
-        );
-        gsap.fromTo(
             featureImage1.current,
             {
                 height: '100%',
@@ -370,7 +351,6 @@ const Welcome = () => {
         );
 
 
-
     });
     return (
         <>
@@ -449,7 +429,7 @@ const Welcome = () => {
                 <section className="flex flex-col items-center justify-center pb-32 -16 px-12 text-center bg-white min-h-[30vh]" ref={aboutSection} >
                     <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
                     <hr width="30%" className="border-2 border-pink-500 " />
-                    <p className="text-xl text-justify lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
+                    <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
                         İs elektrik & mühendislik 2017 yılında İstanbul kemerburgazda kurulmuş elektrik proje ve taahhüt hizmetleri alanında uzun yıllar çalışmış konuttan ENDÜSTRİYEL tesis vs bir çok proje bitirmiş. Amacımız müşterilerimize her koşulda en iyi ve kaliteli hizmeti sunmaktır
                     </p>
                 </section>
@@ -463,7 +443,6 @@ const Welcome = () => {
                         now is ielek
                     </p>
                 </section>
-
 
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
                     <div className="w-full flex flex-wrap flex-col lg:flex-row justify-center">
