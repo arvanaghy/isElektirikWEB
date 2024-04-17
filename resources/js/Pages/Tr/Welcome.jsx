@@ -492,7 +492,6 @@ const Welcome = () => {
                         </div>
                     </div>
                     <div className="w-full flex flex-wrap flex-row justify-center bg-gray-900">
-
                         <div className="w-full lg:w-1/2 relative">
                             <img src="../../images/362e0d4a-c7dc-42a4-ad7e-315b327404ca.jpeg" alt=""
                                 ref={featureImage4Replace}
