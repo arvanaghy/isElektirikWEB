@@ -165,11 +165,11 @@ const GeneralAdmin = ({auth}) => {
                             </tr>
                             </tbody>
                             <tfoot>
-                                asd
+                                ashgfsdchgazd 
                             </tfoot>
                             </table>
                             
-                        </div>
+                        </div> 
                         
                         
                     </div>

@@ -13,17 +13,15 @@ const Welcome = () => {
     const heroSectioTitle2 = useRef(null);
     const heroSectioTitle3 = useRef(null);
     const heroSectioTitle4 = useRef(null);
-    const scrollDown = useRef(null);
+    const scrollDown = useRef(null); 
     const heroContainer = useRef(null);
     const aboutSection = useRef(null);
     const aboutSectionTitle = useRef(null);
-
     const missionSection = useRef(null);
     const featureImage1 = useRef(null);
     const featureImage1Replace = useRef(null);
     const featureSection1 = useRef(null);
     const heroTimeLine = gsap.timeline();
-
     const clients1 = useRef(null);
     const clients2 = useRef(null);
     const clients3 = useRef(null);
@@ -32,19 +30,12 @@ const Welcome = () => {
     const clients6 = useRef(null);
     const clients7 = useRef(null);
     const clients8 = useRef(null);
-
-
-
-
     const featureImage2 = useRef(null);
     const featureImage2Replace = useRef(null);
-
     const featureImage3 = useRef(null);
     const featureImage3Replace = useRef(null);
-
     const featureImage4 = useRef(null);
     const featureImage4Replace = useRef(null);
-
     const productsSectionTitle = useRef(null);
 
     useGSAP(() => {
@@ -377,7 +368,7 @@ const Welcome = () => {
                         </h1>
                     </div>
                     <div
-                        className="text-white min-h-[10vh] font-extrabold text-xl text-center cursor-pointer hover:text-pink-500 transition-colors duration-300 cursor-pointer"
+                        className="text-white min-h-[10vh] font-extrabold text-xl text-center hover:text-pink-500 transition-colors duration-300 cursor-pointer"
                         ref={scrollDown}
                         onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth", inline: "nearest", top: 500 })}
                     >
@@ -387,7 +378,7 @@ const Welcome = () => {
 
                 {/* our clients */}
                 <section className="flex flex-col items-center justify-center bg-white py-16 px-16" >
-                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
+                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Musterilerimiz</h3>
                     <hr width="30%" className="border-2 border-pink-500 " />
                     <div className="grid lg:grid-cols-8 grid-cols-2 lg:space-y-4 lg:space-y-0 gap-4 pt-6 items-center justify-between "  >
                         <div className="px-2" ref={clients1} >
@@ -427,7 +418,7 @@ const Welcome = () => {
 
                 {/* about */}
                 <section className="flex flex-col items-center justify-center pb-32 -16 px-12 text-center bg-white min-h-[30vh]" ref={aboutSection} >
-                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
+                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Hakkimizda</h3>
                     <hr width="30%" className="border-2 border-pink-500 " />
                     <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
                         İs elektrik & mühendislik 2017 yılında İstanbul kemerburgazda kurulmuş elektrik proje ve taahhüt hizmetleri alanında uzun yıllar çalışmış konuttan ENDÜSTRİYEL tesis vs bir çok proje bitirmiş. Amacımız müşterilerimize her koşulda en iyi ve kaliteli hizmeti sunmaktır
@@ -521,7 +512,7 @@ const Welcome = () => {
                 {/* Our Projects Section */}
                 <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
                     <div className="w-full flex-wrap bg-white flex flex-row items-center justify-between px-12 py-4">
-                        <h3 className="text-4xl text-black flex flex-row items-center justify-center border-b-2 pb-5 border-green-500 " ref={productsSectionTitle}> Our Projects</h3>
+                        <h3 className="text-4xl text-black flex flex-row items-center justify-center border-b-2 pb-5 border-green-500 " ref={productsSectionTitle}> Projelerimiz</h3>
                         <Link href="#" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
                             show All
                         </Link>
@@ -555,11 +546,11 @@ const Welcome = () => {
                     </div>
                     <div className=" pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">
                         <Link href="#" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
-                            show All
+                            Hepsini Goster
                         </Link>
                     </div>
-
                 </section>
+                
             </WebSiteTRLayout>
         </>
     );
