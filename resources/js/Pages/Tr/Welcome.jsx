@@ -427,8 +427,8 @@ const Welcome = () => {
 
                 {/* Slogan Section */}
                 <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
-                    <h2 className="text-7xl lg:text-8xl px-8 pb-8 text-transparent  text-white" >
-                        Slogan Here
+                    <h2 className="text-7xl lg:text-6xl px-8 pb-8 text-transparent  text-white" >
+                        Eviniz ve Isiniz Icin Mukemmel Elektrik Cozumler
                     </h2>
                 </section>
 
