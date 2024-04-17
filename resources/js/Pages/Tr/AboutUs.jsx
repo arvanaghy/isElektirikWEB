@@ -79,7 +79,7 @@ const AboutUs = () => {
                 duration: 1,
                 ease: "power1.in",
                 x: 10,
-                scrollTrigger: {
+                scrollTrigger: { 
                     trigger: teamImage.current,
                     toggleActions: "play none none none",
                 },
