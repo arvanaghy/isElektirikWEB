@@ -36,6 +36,9 @@ Route::middleware(['auth', 'verified' , AdminMiddelware::class])->group(function
     Route::get('/contacts-admin', function () {
         return Inertia::render('ContactsAdmin');
     })->name('contactsAdmin');
+    Route::get('/add-project', function () {
+        return Inertia::render('AddProject');
+    })->name('addProject');
     
 });
 
