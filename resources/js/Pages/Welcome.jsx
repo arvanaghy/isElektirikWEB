@@ -468,8 +468,8 @@ const Welcome = () => {
                             <div>
                                 Our missions are to:
                             </div>
-                            <div className="text-4xl">
-                                Lorem ipsum dolor sit amet.
+                            <div className="text-4xl mx-10">
+                            Combining technical expertise, project management excellence, and a customer-centric approach, we unlock new possibilities.
                             </div>
                         </h2>
                     </div>
