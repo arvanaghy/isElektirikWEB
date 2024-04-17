@@ -13,7 +13,7 @@ const Welcome = () => {
     const heroSectioTitle2 = useRef(null);
     const heroSectioTitle3 = useRef(null);
     const heroSectioTitle4 = useRef(null);
-    const scrollDown = useRef(null); 
+    const scrollDown = useRef(null);
     const heroContainer = useRef(null);
     const aboutSection = useRef(null);
     const aboutSectionTitle = useRef(null);
@@ -428,15 +428,18 @@ const Welcome = () => {
                 {/* Slogan Section */}
                 <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
                     <h2 className="text-7xl lg:text-6xl px-8 pb-8 text-transparent  text-white" >
-                    Electrifying Solutions for Your Home and Business
+                        Electrifying Solutions for Your Home and Business
                     </h2>
                 </section>
 
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
                     <div className="w-full flex flex-wrap flex-col lg:flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col flex-wrap items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
+                                Reliable Service:
+                                Consistent, uninterrupted power delivery with minimal outages &
+                                Rapid response to restore power during outages
+
                             </p>
                         </div>
                         <div className="w-full lg:w-1/2 relative">
@@ -456,7 +459,11 @@ const Welcome = () => {
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
                             <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
+                                <ul>
+                                    <li> Customer-Centric Approach:</li>
+                                    <li> Affordable Costs</li>
+                                    <li>Flexible billing and payment options</li>
+                                </ul>
                             </p>
                         </div>
                     </div>
@@ -480,7 +487,11 @@ const Welcome = () => {
                     <div className="w-full flex flex-wrap flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
                             <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
+                                <ul>
+                                    <li>Responsive and Accessible Support:</li>
+                                    <li>24/7 availability through multiple channels (phone, email, chat, etc.)</li>
+                                    <li>Empowered and well-trained customer service representatives</li>
+                                </ul>
                             </p>
                         </div>
                         <div className="w-full lg:w-1/2 relative">
@@ -499,8 +510,12 @@ const Welcome = () => {
                             />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate deserunt aliquam expedita velit consequatur soluta, obcaecati dolorem praesentium doloribus omnis similique inventore aspernatur, ea dolorum ab. Ipsum quos temporibus et
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
+                                <ul>
+                                    <li>Experienced Team:</li>
+                                    <li>Multidisciplinary project managers with relevant credentials</li>
+                                    <li>Access to specialized technical experts and consultants</li>
+                                </ul>
                             </p>
                         </div>
                     </div>
