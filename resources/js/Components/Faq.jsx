@@ -67,7 +67,7 @@ const FAQ = () => {
       </div>
       {!open ? (
         <div className="flex items-center justify-center w-full py-3 space-y-5 text-center align-middle lg:rounded-l-lg lg:w-2/3 text-black ">
-          <p className="flex flex-row items-center justify-center my-auto align-middle ">
+          <p className="flex flex-row items-center justify-center my-auto align-middle px-3 ">
             6Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur accusamus laborum architecto, ab illum molestias quod voluptate aut commodi autem! Commodi animi accusantium maiores voluptatibus odio temporibus mollitia accusamus dolor!
           </p>
         </div>

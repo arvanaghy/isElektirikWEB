@@ -15,7 +15,7 @@ const FooterTR = () => {
                     dolore? Eaque!
                 </p>
             </div>
-            <div className="w-full lg:w-4/12">
+            <div className="w-full lg:w-4/12 z-10">
                     <p className="text-xl text-center font-extrabold w-10/12 lg:w-4/12 m-auto pb-2 border-b-[1px]  mb-4">Sayfalar</p>
                     <ul className="space-y-2 flex flex-col justify-items-center items-center">
                         
@@ -73,7 +73,11 @@ const FooterTR = () => {
             </div>
         </div>
         <div className="w-[80%] border-t border-white text-center mt-8 pt-3 z-10">
-            <p>Copyright© All Right's Reserved <span><a href="#" className="hover:animate-pulse duration-300 hover:text-green-500 hover:scale-100">İs Elektrik</a></span> 2024</p>
+            <p>Copyright© All Right's Reserved <span><a onClick={() => window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            })
+            } className="cursor-pointer hover:animate-pulse duration-300 hover:text-green-500 hover:scale-100">İs Elektrik</a></span> 2024</p>
         </div>
         <img className="absolute right-0 bottom-0 object-left-bottom w-full lg:w-[50%] z-5 lg:h-[75%]  opacity-40  " src="../../images/footerbg.png" />
     </div>

@@ -73,14 +73,14 @@ const AboutUs = () => {
                 },
             }
         );
-        gsap.from(
-            ourTeam.current,
+        gsap.to(
+            teamImage.current,
             {
                 duration: 1,
                 ease: "power1.in",
-                x: 500,
+                x: 10,
                 scrollTrigger: {
-                    trigger: ourTeam.current,
+                    trigger: teamImage.current,
                     toggleActions: "play none none none",
                 },
             }
