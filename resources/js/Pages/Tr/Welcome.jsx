@@ -33,6 +33,10 @@ const Welcome = () => {
     const clients7 = useRef(null);
     const clients8 = useRef(null);
 
+
+    const featureImage2 = useRef(null);
+    const featureImage2Replace = useRef(null);
+
     useGSAP(() => {
 
         heroTimeLine.fromTo(
@@ -98,6 +102,59 @@ const Welcome = () => {
             }
         );
 
+        clientsTimeLine.fromTo(
+            clients1.current,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 5,
+                ease: "back.inOut",
+                ScrollTrigger: {
+                    trigger: clientsSection.current,
+                    toggleActions: "play none none reverse",
+                    start: "top center",
+                    end: "bottom top",
+                }
+            }
+        );
+        clientsTimeLine.fromTo(
+            clients2.current,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 5,
+                ease: "back.inOut",
+                ScrollTrigger: {
+                    trigger: clientsSection.current,
+                    toggleActions: "play none none reverse",
+                    start: "top center",
+                    end: "bottom top",
+                }
+            }
+        );
+        clientsTimeLine.fromTo(
+            clients3.current,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 5,
+                ease: "back.inOut",
+                ScrollTrigger: {
+                    trigger: clientsSection.current,
+                    toggleActions: "play none none reverse",
+                    start: "top center",
+                    end: "bottom top",
+                }
+            }
+        );
+
+
         gsap.fromTo(
             scrollDown.current,
             {
@@ -132,6 +189,27 @@ const Welcome = () => {
                 },
             }
         );
+
+        gsap.fromTo(
+            missionSection.current,
+            {
+                width: '90%',
+                height: '90vh',
+            },
+            {
+                width: '100%',
+                height: '100vh',
+                duration: 1.2,
+                ease: "linear.inOut",
+                scrollTrigger: {
+                    trigger: missionSection.current,
+                    toggleActions: "play none none reverse",
+                    start: "top center",
+                    end: "bottom top",
+                },
+            }
+        );
+
         gsap.fromTo(
             featureSection1.current,
             {
@@ -168,25 +246,26 @@ const Welcome = () => {
                 },
             }
         );
+
         gsap.fromTo(
-            missionSection.current,
+            featureImage2.current,
             {
-                width: '90%',
-                height: '90vh',
+                height: '100%',
             },
             {
-                width: '100%',
-                height: '100vh',
-                duration: 1.2,
-                ease: "linear.inOut",
+                height: 0,
+                duration: 3,
+                ease: "liner.inOut",
                 scrollTrigger: {
-                    trigger: missionSection.current,
+                    trigger: featureImage2.current,
                     toggleActions: "play none none reverse",
                     start: "top center",
                     end: "bottom top",
                 },
             }
         );
+
+
 
     });
     return (
@@ -226,7 +305,7 @@ const Welcome = () => {
                 <section className="flex flex-col items-center justify-center bg-white py-16 px-16 ">
                     <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
                     <hr width="30%" className="border-2 border-pink-500 " />
-                    <div className="grid lg:grid-cols-8 grid-cols-1 space-y-4 lg:space-y-0 lg:gap-8 pt-6 items-center justify-center " >
+                    <div className="grid lg:grid-cols-8 grid-cols-1 space-y-4 lg:space-y-0 lg:gap-8 pt-6 items-center justify-center " ref={clientsSection} >
                         <div className="px-2" ref={clients1} >
                             <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
                             <h4 className="text-center py-2">Lorem ipsum dolor</h4>
@@ -297,8 +376,12 @@ const Welcome = () => {
                     <div className="w-full flex flex-wrap flex-row justify-center bg-gray-900">
 
                         <div className="w-full lg:w-1/2 relative">
-                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "  />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "  />
+                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt=""
+                                ref={featureImage2Replace}
+                                className="absolute top-0 left-0 h-full w-full " />
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "
+                                ref={featureImage2}
+                            />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
                             <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
