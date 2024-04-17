@@ -426,13 +426,10 @@ const Welcome = () => {
                 </section>
 
                 {/* Slogan Section */}
-                <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-cover bg-center bg-no-repeat">
-                    <h2 className="text-7xl lg:text-8xl px-8 pb-8 text-transparent  text-white" >
-                        Slogan Here
+                <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
+                    <h2 className="text-7xl lg:text-6xl px-8 pb-8 text-transparent  text-white" >
+                        Eviniz ve Isiniz Icin Mukemmel Elektrik Cozumler
                     </h2>
-                    <p className="text-3xl lg:text-5xl pt-5 text-transparent  text-white text-green-500 drop-shadow-2xl shadow-black">
-                        now is ielek
-                    </p>
                 </section>
 
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
