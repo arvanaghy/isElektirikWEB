@@ -386,7 +386,7 @@ const Welcome = () => {
                             <h4 className="text-center py-2">Lorem ipsum dolor</h4>
                         </div>
                         <div className="px-2" ref={clients2}>
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
+                            <img src="../../images/1.png" className="rounded-full shadow shadow-blue-700 " alt="" />
                             <h4 className="text-center py-2">Lorem ipsum dolor</h4>
                         </div>
                         <div className="px-2" ref={clients3}>
