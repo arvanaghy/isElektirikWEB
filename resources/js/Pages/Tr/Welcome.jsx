@@ -368,7 +368,7 @@ const Welcome = () => {
                         </h1>
                     </div>
                     <div
-                        className="text-white min-h-[10vh] font-extrabold text-xl text-center hover:text-pink-500 transition-colors duration-300 cursor-pointer"
+                        className="text-white min-h-[10vh] font-extrabold text-xl text-center hover:text-green-200 transition-colors duration-300 cursor-pointer"
                         ref={scrollDown}
                         onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth", inline: "nearest", top: 500 })}
                     >
@@ -378,8 +378,8 @@ const Welcome = () => {
 
                 {/* our clients */}
                 <section className="flex flex-col items-center justify-center bg-white py-16 px-16" >
-                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Musterilerimiz</h3>
-                    <hr width="30%" className="border-2 border-pink-500 " />
+                    <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Musterilerimiz</h3>
+                    <hr width="30%" className="border-2 border-green-500 " />
                     <div className="grid lg:grid-cols-8 grid-cols-2 lg:space-y-4 lg:space-y-0 gap-4 pt-6 items-center justify-between "  >
                         <div className="px-2" ref={clients1} >
                             <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" className="rounded-full shadow shadow-blue-700 " alt="" />
@@ -418,8 +418,8 @@ const Welcome = () => {
 
                 {/* about */}
                 <section className="flex flex-col items-center justify-center pb-32 -16 px-12 text-center bg-white min-h-[30vh]" ref={aboutSection} >
-                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Hakkimizda</h3>
-                    <hr width="30%" className="border-2 border-pink-500 " />
+                    <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Hakkimizda</h3>
+                    <hr width="30%" className="border-2 border-green-500 " />
                     <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
                         İs elektrik & mühendislik 2017 yılında İstanbul kemerburgazda kurulmuş elektrik proje ve taahhüt hizmetleri alanında uzun yıllar çalışmış konuttan ENDÜSTRİYEL tesis vs bir çok proje bitirmiş. Amacımız müşterilerimize her koşulda en iyi ve kaliteli hizmeti sunmaktır
                     </p>
