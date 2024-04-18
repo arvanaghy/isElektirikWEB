@@ -109,39 +109,52 @@ const AboutUs = () => {
             <WebSiteTRLayout>
                 {/* sirket profili */}
                 <div className="bg-[url('../images/contact-us.jpg')] py-[150px] bg-cover text-center flex flex-col space-y-10">
-                    <h3 ref={sirketProfili} className="text-7xl ">Sirket Profili</h3>
-                    <p className="text-2xl leading-10 mx-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus iste rerum veniam! Quibusdam asperiores quos cum quo iure ut necessitatibus commodi, labore veritatis sed assumenda laborum consequuntur quasi at.</p>
+                    <h3 ref={sirketProfili} className="text-transparent bg-clip-text bg-gradient-to-br
+                      from-green-500 to-green-900 drop-shadow-xl text-7xl lg:text-9xl ">Sirket Profili</h3>
+                    <p className="text-lg lg:text-2xl leading-10 mx-2 lg:mx-14">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus iste rerum veniam! Quibusdam asperiores quos cum quo iure ut necessitatibus commodi, labore veritatis sed assumenda laborum consequuntur quasi at.</p>
                 </div>
 
                 {/* iselektriki kesfedin */}
-                <div className="bg-black text-white flex flex-col space-y-10 py-20 px-10">
+                <div className="bg-gray-900 text-white flex flex-col space-y-10 py-20 px-10">
                     <h3 className="text-5xl mx-5" ref={kesfedin}>Iselekrik'i kesfedin</h3>
-                    <p className="text-2xl leading-10 mx-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus iste rerum veniam! Quibusdam asperiores quos cum quo iure ut necessitatibus commodi, labore veritatis sed assumenda laborum consequuntur quasi at.
+                    <p className="text-lg lg:text-2xl text-center lg:text-left leading-8 lg:leading-10 px-1 lg:mx-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus iste rerum veniam! Quibusdam asperiores quos cum quo iure ut necessitatibus commodi, labore veritatis sed assumenda laborum consequuntur quasi at.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sunt nam architecto nulla, dolorem atque itaque ullam excepturi quasi totam voluptatem, neque debitis beatae. Cum nam quo alias sint corrupti!</p>
                 </div>
 
                 {/* farkimiz ve misyonumuz */}
                 <div className="flex flex-col space-y-10 py-20 px-10 text-black ">
-                    <h3 className="text-5xl mx-5" ref={farkimiz}>Farkimiz ve Misyonumuz </h3>
-                    <p className="text-2xl leading-10 mx-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus iste rerum veniam! Quibusdam asperiores quos cum quo iure ut necessitatibus commodi, labore veritatis sed assumenda laborum consequuntur quasi at.</p>
+                    <h3 className="text-4xl lg:text-5xl mx-5" ref={farkimiz}>Farkimiz ve Misyonumuz </h3>
+                    <p className="text-lg lg:text-2xl text-center lg:text-left leading-8 lg:leading-10 px-1 lg:mx-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus iste rerum veniam! Quibusdam asperiores quos cum quo iure ut necessitatibus commodi, labore veritatis sed assumenda laborum consequuntur quasi at.</p>
                 </div>
 
                 {/* Our team */}
-                <section className="flex lg:flex-row flex-col bg-black text-white px-10">
-                    <div className="lg:w-5/12 p-10 " ref={teamImage}>
-                        <img src="../images/contact-us.jpg" alt="" className="rounded-full " />
-                        <div className="bg-gray-400 rounded-lg p-4 text-center space-y-5 relative -top-5">
-                            <p className="text-3xl">lorem lorem</p>
-                            <p className="">Lorem lorem lorem</p>
+                <section className="bg-black">
+                    <div class="px-2 py-10 flex flex-wrap shrink-0 lg:flex-nowrap lg:justify-between lg:items-center lg:px-16  h-full">
+                        <div class="w-full mx-2 ">
+                            <h2 class="text-center text-5xl font-bold pb-5 text-white drop-shadow-xl shadow-black leading-tight">
+                                Our Team
+                            </h2>
+                            <div class="flex flex-wrap items-center justify-between">
+                                <div class="w-full lg:w-3/12">
+                                    <img src="../../images/8.png" class="rounded-full bg-white shadow shadow-rose-950" alt="omaran al akkad"/>
+                                    <div class=" text-center mx-auto bg-stone-200/80 shadow-sm shadow-stone-400 backdrop-blur-sm rounded-xl p-4 -mt-16">
+                                        <h2 class="font-bold text-2xl drop-shadow-md sharo-rose-950 mb-2">
+                                            Elyas
+                                        </h2>
+                                        <p class="font-semibold">
+                                            Full Stack
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="w-full lg:w-8/12">
+                                    <p class="text-lg lg:text-2xl text-center text-white py-4 lg:text-left leading-8 lg:leading-10 px-1 lg:mx-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, dolores laboriosam. Fuga veniam vitae nesciunt, harum eius iste. Quo porro quasi rem ut quibusdam veniam perferendis, est ullam incidunt saepe.
+                                    </p>
+                                    
+                                </div>
+                            </div>
                         </div>
-
                     </div>
-                    <div className="lg:w-7/12 justify-center text-center space-y-10 p-10 align-middle my-auto" ref={ourTeam}>
-                        <p className="text-5xl">Our Team</p>
-                        <p className="text-xl leading-10">orem ipsum dolor sit amet consectetur adipisicing elit. Quas sequi ullam, consectetur accusantium nobis tempore numquam omnis tenetur esse laborum, aspernatur expedita asperiores in excepturi quam inventore. Recusandae, minus possimus</p>
-                    </div>
-
-                </section>
+</section>
 
                 {/* FAQ */}
                 <div className="flex flex-col space-y-10 py-10 px-10 text-black mx-5">

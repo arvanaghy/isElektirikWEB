@@ -100,11 +100,6 @@ const NavBar = () => {
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
-                            <Link href="/blog" className="inline-block pb-1">
-                                Blog
-                            </Link>
-                        </li>
-                        <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/e-catalog"
                                 className="inline-block pb-1"
