@@ -5,7 +5,7 @@ const FooterTR = () => {
     return (
         <div className="relative min-h-[15vh] py-8 px-6 bg-black w-full flex flex-col justify-center items-center text-white">
             <div className="flex lg:flex-row flex-col w-full lg:space-x-8 space-y-5">
-                <div className="w-full lg:w-4/12">
+                <div className="w-full lg:w-4/12 lg:ps-8">
                     <img src={logo} className="w-[30%] invert" />
                     <p className="py-4 text-justify">
                         BİNA VE BİNA DIŞI YAPILARIN ELEKTRİK TESİSATI KABLOLU TV VE BİLGİSAYAR AĞI TESİSATI İLE KONUT TİPİ ANT. ELEKTRİKLİ GÜNEŞ KOLLEKTÖRÜ YANGIN VE HIRSIZ ALARM SİSTEMLERİ VB. KURULUMLAR
