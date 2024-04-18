@@ -40,6 +40,18 @@ export default function Authenticated({ user, header, children }) {
                                 >
                                     Contacts
                                 </NavLink>
+                                {/* <NavLink
+                                    href={route("editClients")}
+                                    active={route().current("editClients")}
+                                >
+                                    Clients
+                                </NavLink> */}
+                                {/* <NavLink
+                                    href={route("editCatalog")}
+                                    active={route().current("editCatalog")}
+                                >
+                                    Clients
+                                </NavLink> */}
                             </div>
                         </div>
 

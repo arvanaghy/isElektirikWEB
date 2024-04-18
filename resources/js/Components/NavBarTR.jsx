@@ -103,11 +103,6 @@ const NavBarTR = () => {
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
-                            <Link href="/tr/blog" className="inline-block pb-1">
-                                Blog
-                            </Link>
-                        </li>
-                        <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/tr/e-catalog"
                                 className="inline-block pb-1"

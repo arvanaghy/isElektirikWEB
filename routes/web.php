@@ -51,6 +51,15 @@ Route::middleware(['auth', 'verified' , AdminMiddelware::class])->group(function
     Route::get('/edit-features', function () {
         return Inertia::render('EditFeatures');
     })->name('EditFeatures');
+    Route::get('/edit-clients', function () {
+        return Inertia::render('EditClients');
+    })->name('EditClients');
+    Route::get('/add-clients', function () {
+        return Inertia::render('AddClient');
+    })->name('AddClient');
+    Route::get('/edit-catalog', function () {
+        return Inertia::render('EditCatalog');
+    })->name('EditCatalog');
     
 });
 
