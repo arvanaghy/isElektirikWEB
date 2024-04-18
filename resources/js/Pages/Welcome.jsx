@@ -353,7 +353,7 @@ const Welcome = () => {
             <WebSiteENLayout>
                 {/* Is Electrik ve Muhendislik Hero Section */}
                 <section
-                    className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat"
+                    className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('../../images/5f699f2f52f2ae24b.jpg')] bg-cover bg-center bg-no-repeat"
                     ref={heroContainer}
                 >
                     <div className="min-h-[90vh] lg:min-h-[73vh] flex flex-col items-center justify-center">
@@ -378,8 +378,8 @@ const Welcome = () => {
 
                 {/* our clients */}
                 <section className="flex flex-col items-center justify-center bg-white py-16 px-16" >
-                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
-                    <hr width="30%" className="border-2 border-pink-500 " />
+                    <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
+                    <hr width="30%" className="border-2 border-green-500 " />
                     <div className="grid lg:grid-cols-8 grid-cols-2 lg:space-y-4 lg:space-y-0 gap-4 pt-6 items-center justify-between "  >
                         <div className="px-2" ref={clients1} >
                             <img src="../../images/2.png" className="rounded-full shadow shadow-blue-700 " alt="" />
@@ -410,15 +410,15 @@ const Welcome = () => {
 
                 {/* about */}
                 <section className="flex flex-col items-center justify-center pb-32 -16 px-12 text-center bg-white min-h-[30vh]" ref={aboutSection} >
-                    <h3 className="first-letter:text-pink-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
-                    <hr width="30%" className="border-2 border-pink-500 " />
-                    <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
+                    <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
+                    <hr width="30%" className="border-2 border-green-500 " />
+                    <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-fixed " ref={aboutSectionTitle}>
                         İs elektrik & mühendislik has been founded in 2017 in İstanbul kemerburga. we have worked in the field of electrical projects and contracting services for many years and have completed many projects from residential to industrial facilities. Our aim is to provide our customers the best quality services under all circumstances.
                     </p>
                 </section>
 
                 {/* Slogan Section */}
-                <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
+                <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-cover bg-center bg-no-repeat">
                     <h2 className="text-7xl lg:text-6xl px-8 pb-8 text-transparent  text-white" >
                         Electrifying Solutions for Your Home and Business
                     </h2>
@@ -427,7 +427,7 @@ const Welcome = () => {
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
                     <div className="w-full flex flex-wrap flex-col lg:flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col flex-wrap items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500" ref={featureSection1} >
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900" ref={featureSection1} >
                                 Reliable Service:
                                 Consistent, uninterrupted power delivery with minimal outages &
                                 Rapid response to restore power during outages
@@ -435,22 +435,22 @@ const Welcome = () => {
                             </p>
                         </div>
                         <div className="w-full lg:w-1/2 relative">
-                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1Replace} />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
+                            <img src="../../images/ebf49d52-7a3a-4ff6-a37b-19e37a051775.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1Replace} />
+                            <img src="../../images/fb18e959-ea22-4023-825f-e82988496550.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage1} />
                         </div>
                     </div>
                     <div className="w-full flex flex-wrap flex-row justify-center bg-gray-900">
 
                         <div className="w-full lg:w-1/2 relative">
-                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt=""
+                            <img src="../../images/f4d9b971-f222-43e9-b8b8-cd041cc35651.jpeg" alt=""
                                 ref={featureImage2Replace}
                                 className="absolute top-0 left-0 h-full w-full " />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "
+                            <img src="../../images/0d3cb257-c0e7-48be-adf6-159f37ee7491.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "
                                 ref={featureImage2}
                             />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-200"  >
                                 <ul>
                                     <li> Customer-Centric Approach:</li>
                                     <li> Affordable Costs</li>
@@ -463,9 +463,9 @@ const Welcome = () => {
 
                 {/* Our Missions Section */}
                 <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh] " >
-                    <div className="w-[90%] h-[80vh] flex items-center justify-center bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat" ref={missionSection} >
-                        <h2 className="text-4xl text-transparent flex flex-col space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
-                            <div>
+                    <div className="w-[90%] h-[80vh] flex items-center justify-center bg-[url('../../images/94c650ec-1f12-4dea-94ed-dcd4e719f6ac.jpeg')] bg-cover bg-center bg-no-repeat" ref={missionSection} >
+                        <h2 className="text-4xl text-transparent flex flex-col space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-white to-green-200">
+                            <div className="text-6xl">
                                 Our missions are to:
                             </div>
                             <div className="text-4xl mx-10">
@@ -478,7 +478,7 @@ const Welcome = () => {
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
                     <div className="w-full flex flex-wrap flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900"  >
                                 <ul>
                                     <li>Responsive and Accessible Support:</li>
                                     <li>24/7 availability through multiple channels (phone, email, chat, etc.)</li>
@@ -487,22 +487,22 @@ const Welcome = () => {
                             </p>
                         </div>
                         <div className="w-full lg:w-1/2 relative">
-                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage3Replace} />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage3} />
+                            <img src="../../images/470f0c57-c705-4a6f-8571-9a3146b18778.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage3Replace} />
+                            <img src="../../images/f2ad8497-4eaf-4f9f-97b0-41da5b50c9aa.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage3} />
                         </div>
                     </div>
                     <div className="w-full flex flex-wrap flex-row justify-center bg-gray-900">
 
                         <div className="w-full lg:w-1/2 relative">
-                            <img src="../../images/_6b710889-770a-446e-86ac-24162f557390.jpeg" alt=""
+                            <img src="../../images/362e0d4a-c7dc-42a4-ad7e-315b327404ca.jpeg" alt=""
                                 ref={featureImage4Replace}
                                 className="absolute top-0 left-0 h-full w-full " />
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "
+                            <img src="../../images/689ab2b9-4840-48ee-9d96-c255909369e8.jpeg" alt="" className="absolute top-0 left-0 h-full w-full "
                                 ref={featureImage4}
                             />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"  >
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-200"  >
                                 <ul>
                                     <li>Experienced Team:</li>
                                     <li>Multidisciplinary project managers with relevant credentials</li>

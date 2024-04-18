@@ -412,13 +412,13 @@ const Welcome = () => {
                 <section className="flex flex-col items-center justify-center pb-32 -16 px-12 text-center bg-white min-h-[30vh]" ref={aboutSection} >
                     <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Hakkimizda</h3>
                     <hr width="30%" className="border-2 border-green-500 " />
-                    <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-fixed " ref={aboutSectionTitle}>
+                    <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-fixed " ref={aboutSectionTitle}>
                         İs elektrik & mühendislik 2017 yılında İstanbul kemerburgazda kurulmuş elektrik proje ve taahhüt hizmetleri alanında uzun yıllar çalışmış konuttan ENDÜSTRİYEL tesis vs bir çok proje bitirmiş. Amacımız müşterilerimize her koşulda en iyi ve kaliteli hizmeti sunmaktır
                     </p>
                 </section>
 
                 {/* Slogan Section */}
-                <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg')] bg-cover bg-center bg-no-repeat">
+                <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-cover bg-center bg-no-repeat">
                     <h2 className="text-7xl lg:text-6xl px-8 pb-8 text-transparent  text-white" >
                         Eviniz ve Isiniz Icin Mukemmel Elektrik Cozumler
                     </h2>
