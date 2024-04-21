@@ -5,14 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class GeneralModel extends Model
+class ClienttModel extends Model
 {
     use HasFactory;
 
-    protected $table = 'general';
+    protected $table = 'clients';
 
     protected $fillable = [
-        'general_key',
-        'general_value',
+        'name',
+        'image_name',
+        'created_at',
+        'updated_at'
     ];
 }

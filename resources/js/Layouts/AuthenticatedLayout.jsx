@@ -41,14 +41,14 @@ export default function Authenticated({ user, header, children }) {
                                     Contacts
                                 </NavLink>
                                 <NavLink
-                                    href={route("EditClients")}
-                                    active={route().current("EditClients")}
+                                    href={route("AdminClient")}
+                                    active={route().current("AdminClient")}
                                 >
                                     Our Clients
                                 </NavLink>
                                 <NavLink
-                                    href={route("EditCatalog")}
-                                    active={route().current("EditCatalog")}
+                                    href={route("AdminCatalog")}
+                                    active={route().current("AdminCatalog")}
                                 >
                                     ECatalog
                                 </NavLink>

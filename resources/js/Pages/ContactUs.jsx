@@ -1,22 +1,20 @@
 import React from "react";
 import WebSiteENLayout from "@/Components/WebSiteENLayout";
-import InputLabel from "@/Components/InputLabel";
-import TextInput from "@/Components/TextInput";
-import InputError from "@/Components/InputError";
-import PrimaryButton from "@/Components/PrimaryButton";
-import { Link, useForm } from '@inertiajs/react';
 import Map from "@/Components/Map";
+import { Inertia } from '@inertiajs/inertia'
 
-const ContactUs = ({ status, canResetPassword }) => {
-    const { data, setData, post, processing, errors, reset } = useForm({
-        email: '',
-        password: '',
-        remember: false,
-    });
-    const submit = (e) => {
+
+const ContactUs = () => {
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        post(route('contact-us'));
-    };
+
+        const formData = new FormData();
+        formData.append('name', fullName.value);
+        formData.append('call_info', call_info.value);
+        formData.append('message', message.value);
+        Inertia.post('/submit-ticket', formData);
+    }
 
     return (
         <WebSiteENLayout>
@@ -29,63 +27,24 @@ const ContactUs = ({ status, canResetPassword }) => {
                     <div className="flex flex-row mx-8">
                         <div className="w-1/2 bg-white rounded-l-xl shadow-xl">
                             {/* Form Section */}
-                            <form onSubmit={submit} className="m-10 space-y-6">
+                            <form onSubmit={handleSubmit} className="m-10 space-y-6">
                                 <p className="text-4xl">Contact Form</p>
-                                <div>
-                                    <InputLabel htmlFor="text" value="Full Name" />
-                                    <TextInput
-                                        id="text"
-                                        type="text"
-                                        name="name"
-                                        value={data.text}
-                                        className="mt-1 block w-full"
-                                        autoComplete="username"
-                                        isFocused={true}
-                                        onChange={(e) => setData('name', e.target.value)}
-                                    />
-                                    <InputError message={errors.text} className="mt-2" />
+                                <div className="flex flex-col">
+                                    <label htmlFor="fullName">Full name:</label>
+                                    <input required className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='fullName' />
                                 </div>
-                                <div>
-                                    <InputLabel htmlFor="email" value="Email or Phone Number" />
-                                    <TextInput
-                                        id="email"
-                                        type="email"
-                                        name="email"
-                                        value={data.email}
-                                        className="mt-1 block w-full"
-                                        autoComplete="username"
-                                        isFocused={true}
-                                        onChange={(e) => setData('email', e.target.value)}
-                                    />
-                                    <InputError message={errors.email} className="mt-2" />
+                                <div className="flex flex-col">
+                                    <label htmlFor="call_info">Email or PhoneNumber:</label>
+                                    <input required className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='call_info' />
                                 </div>
-                                <div>
-                                    <InputLabel htmlFor="text" value="Message" />
-                                    <TextInput
-                                        id="text"
-                                        type="text"
-                                        name="Message"
-                                        value={data.text}
-                                        className="mt-1 block w-full"
-                                        autoComplete="username"
-                                        isFocused={true}
-                                        onChange={(e) => setData('Message', e.target.value)}
-                                    />
-                                    <InputError message={errors.text} className="mt-2" />
+                                <div className="flex flex-col">
+                                    <label htmlFor="message">Message:</label>
+                                    <textarea required className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='message' />
                                 </div>
-                                <div className="flex items-center justify-end mt-4">
-                                    {canResetPassword && (
-                                        <Link
-                                            href={route('password.request')}
-                                            className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                        >
-                                            Forgot your password?
-                                        </Link>
-                                    )}
-
-                                    <PrimaryButton className="ms-4" disabled={processing}>
+                                <div className="flex flex-col">
+                                    <button type="submit" className="bg-green-400 text-white rounded-md hover:rounded-xl duration-500 py-3" >
                                         Send
-                                    </PrimaryButton>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -95,11 +54,11 @@ const ContactUs = ({ status, canResetPassword }) => {
                                 <Map />
                             </div>
                             <div className="mx-5 flex flex-row space-x-4">
-                            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#ffffff" d="M32,0C18.745,0,8,10.745,8,24c0,5.678,2.502,10.671,5.271,15l17.097,24.156C30.743,63.686,31.352,64,32,64 s1.257-0.314,1.632-0.844L50.729,39C53.375,35.438,56,29.678,56,24C56,10.745,45.255,0,32,0z M48.087,39h-0.01L32,61L15.923,39 h-0.01C13.469,35.469,10,29.799,10,24c0-12.15,9.85-22,22-22s22,9.85,22,22C54,29.799,50.281,35.781,48.087,39z"></path> <path fill="#ffffff" d="M32,14c-5.523,0-10,4.478-10,10s4.477,10,10,10s10-4.478,10-10S37.523,14,32,14z M32,32 c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> <path fill="#ffffff" d="M32,10c-7.732,0-14,6.268-14,14s6.268,14,14,14s14-6.268,14-14S39.732,10,32,10z M32,36 c-6.627,0-12-5.373-12-12s5.373-12,12-12s12,5.373,12,12S38.627,36,32,36z"></path> </g> </g></svg>
+                                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#ffffff" d="M32,0C18.745,0,8,10.745,8,24c0,5.678,2.502,10.671,5.271,15l17.097,24.156C30.743,63.686,31.352,64,32,64 s1.257-0.314,1.632-0.844L50.729,39C53.375,35.438,56,29.678,56,24C56,10.745,45.255,0,32,0z M48.087,39h-0.01L32,61L15.923,39 h-0.01C13.469,35.469,10,29.799,10,24c0-12.15,9.85-22,22-22s22,9.85,22,22C54,29.799,50.281,35.781,48.087,39z"></path> <path fill="#ffffff" d="M32,14c-5.523,0-10,4.478-10,10s4.477,10,10,10s10-4.478,10-10S37.523,14,32,14z M32,32 c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> <path fill="#ffffff" d="M32,10c-7.732,0-14,6.268-14,14s6.268,14,14,14s14-6.268,14-14S39.732,10,32,10z M32,36 c-6.627,0-12-5.373-12-12s5.373-12,12-12s12,5.373,12,12S38.627,36,32,36z"></path> </g> </g></svg>
                                 <p className="text-xl font-[2000]">Adress:<span className="text-xl">ksdjfhkjkiskdfjk</span></p>
                             </div>
                             <div className="mx-5 flex flex-row space-x-4">
-                            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#ffffff" d="M48,0H16c-2.211,0-4,1.789-4,4v56c0,2.211,1.789,4,4,4h32c2.211,0,4-1.789,4-4V4C52,1.789,50.211,0,48,0z M50,60c0,1.104-0.896,2-2,2H16c-1.104,0-2-0.896-2-2v-8h36V60z M50,50H14V10h36V50z M50,8H14V4c0-1.104,0.896-2,2-2h32 c1.104,0,2,0.896,2,2V8z"></path> <path fill="#ffffff" d="M32,60c1.658,0,3-1.342,3-3s-1.342-3-3-3s-3,1.342-3,3S30.342,60,32,60z M32,56c0.553,0,1,0.447,1,1 s-0.447,1-1,1s-1-0.447-1-1S31.447,56,32,56z"></path> <path fill="#ffffff" d="M33,4h-6c-0.553,0-1,0.447-1,1s0.447,1,1,1h6c0.553,0,1-0.447,1-1S33.553,4,33,4z"></path> <circle fill="#ffffff" cx="37" cy="5" r="1"></circle> </g> </g></svg>
+                                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#ffffff" d="M48,0H16c-2.211,0-4,1.789-4,4v56c0,2.211,1.789,4,4,4h32c2.211,0,4-1.789,4-4V4C52,1.789,50.211,0,48,0z M50,60c0,1.104-0.896,2-2,2H16c-1.104,0-2-0.896-2-2v-8h36V60z M50,50H14V10h36V50z M50,8H14V4c0-1.104,0.896-2,2-2h32 c1.104,0,2,0.896,2,2V8z"></path> <path fill="#ffffff" d="M32,60c1.658,0,3-1.342,3-3s-1.342-3-3-3s-3,1.342-3,3S30.342,60,32,60z M32,56c0.553,0,1,0.447,1,1 s-0.447,1-1,1s-1-0.447-1-1S31.447,56,32,56z"></path> <path fill="#ffffff" d="M33,4h-6c-0.553,0-1,0.447-1,1s0.447,1,1,1h6c0.553,0,1-0.447,1-1S33.553,4,33,4z"></path> <circle fill="#ffffff" cx="37" cy="5" r="1"></circle> </g> </g></svg>
                                 <p className="text-xl font-bold">Telephone:<span className="text-xl">2556452034</span></p>
                             </div>
                             <div className="mx-5 flex flex-row space-x-4">
@@ -108,8 +67,8 @@ const ContactUs = ({ status, canResetPassword }) => {
                             </div>
                             <div className="mx-5 flex flex-col">
                                 <div className="flex flex-row space-x-4">
-                                <svg fill="#ffffff" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M128,92a36,36,0,1,0,36,36A36.04061,36.04061,0,0,0,128,92Zm0,64a28,28,0,1,1,28-28A28.03146,28.03146,0,0,1,128,156ZM65.3418,101.53271A67.94065,67.94065,0,0,0,79.916,176.0835a3.99974,3.99974,0,1,1-5.65625,5.65673,75.94065,75.94065,0,0,1,0-107.48046A3.99974,3.99974,0,1,1,79.916,79.9165,67.8,67.8,0,0,0,65.3418,101.53271ZM204,128a75.7808,75.7808,0,0,1-22.25977,53.74023,3.99974,3.99974,0,0,1-5.65625-5.65673,67.94065,67.94065,0,0,0,0-96.167,3.99974,3.99974,0,1,1,5.65625-5.65673A75.7808,75.7808,0,0,1,204,128ZM51.63184,204.36768a3.99974,3.99974,0,1,1-5.65625,5.65673,115.90639,115.90639,0,0,1,0-164.04882,3.99974,3.99974,0,0,1,5.65625,5.65673,107.90641,107.90641,0,0,0,0,152.73536ZM244,128a115.65632,115.65632,0,0,1-33.97559,82.02441,3.99974,3.99974,0,0,1-5.65625-5.65673,107.90641,107.90641,0,0,0,0-152.73536,3.99974,3.99974,0,0,1,5.65625-5.65673A115.65862,115.65862,0,0,1,244,128Z"></path> </g></svg>
-                                <p className="text-xl font-bold mb-5">Social Media:</p>
+                                    <svg fill="#ffffff" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M128,92a36,36,0,1,0,36,36A36.04061,36.04061,0,0,0,128,92Zm0,64a28,28,0,1,1,28-28A28.03146,28.03146,0,0,1,128,156ZM65.3418,101.53271A67.94065,67.94065,0,0,0,79.916,176.0835a3.99974,3.99974,0,1,1-5.65625,5.65673,75.94065,75.94065,0,0,1,0-107.48046A3.99974,3.99974,0,1,1,79.916,79.9165,67.8,67.8,0,0,0,65.3418,101.53271ZM204,128a75.7808,75.7808,0,0,1-22.25977,53.74023,3.99974,3.99974,0,0,1-5.65625-5.65673,67.94065,67.94065,0,0,0,0-96.167,3.99974,3.99974,0,1,1,5.65625-5.65673A75.7808,75.7808,0,0,1,204,128ZM51.63184,204.36768a3.99974,3.99974,0,1,1-5.65625,5.65673,115.90639,115.90639,0,0,1,0-164.04882,3.99974,3.99974,0,0,1,5.65625,5.65673,107.90641,107.90641,0,0,0,0,152.73536ZM244,128a115.65632,115.65632,0,0,1-33.97559,82.02441,3.99974,3.99974,0,0,1-5.65625-5.65673,107.90641,107.90641,0,0,0,0-152.73536,3.99974,3.99974,0,0,1,5.65625-5.65673A115.65862,115.65862,0,0,1,244,128Z"></path> </g></svg>
+                                    <p className="text-xl font-bold mb-5">Social Media:</p>
 
                                 </div>
                                 <div className="flex flex-row space-x-3 mx-5">

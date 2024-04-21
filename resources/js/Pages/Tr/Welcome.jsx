@@ -505,31 +505,31 @@ const Welcome = () => {
                             show All
                         </Link>
                     </div>
-                    <div class="grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-y-5 lg:space-x-5  lg:space-y-0 px-5">
-                        <div class="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
+                    <div className="grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-y-5 lg:space-x-5  lg:space-y-0 px-5">
+                        <div className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
-                        <div class="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
+                        <div className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
 
-                        <div class="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
+                        <div className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
-                        <div class="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
+                        <div className="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
-                        <div class="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
+                        <div className="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
-                        <div class="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" class="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 class="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
+                        <div className="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
                         </div>
                     </div>
                     <div className=" pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">

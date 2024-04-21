@@ -129,25 +129,25 @@ const AboutUs = () => {
 
                 {/* Our team */}
                 <section className="bg-black">
-                    <div class="px-2 py-10 flex flex-wrap shrink-0 lg:flex-nowrap lg:justify-between lg:items-center lg:px-16  h-full">
-                        <div class="w-full mx-2 ">
-                            <h2 class="text-center text-5xl font-bold pb-5 text-white drop-shadow-xl shadow-black leading-tight">
+                    <div className="px-2 py-10 flex flex-wrap shrink-0 lg:flex-nowrap lg:justify-between lg:items-center lg:px-16  h-full">
+                        <div className="w-full mx-2 ">
+                            <h2 className="text-center text-5xl font-bold pb-5 text-white drop-shadow-xl shadow-black leading-tight">
                                 Our Team
                             </h2>
-                            <div class="flex flex-wrap items-center justify-between">
-                                <div class="w-full lg:w-3/12">
-                                    <img src="../../images/8.png" class="rounded-full bg-white shadow shadow-rose-950" alt="omaran al akkad"/>
-                                    <div class=" text-center mx-auto bg-stone-200/80 shadow-sm shadow-stone-400 backdrop-blur-sm rounded-xl p-4 -mt-16">
-                                        <h2 class="font-bold text-2xl drop-shadow-md sharo-rose-950 mb-2">
+                            <div className="flex flex-wrap items-center justify-between">
+                                <div className="w-full lg:w-3/12">
+                                    <img src="../../images/8.png" className="rounded-full bg-white shadow shadow-rose-950" alt="omaran al akkad"/>
+                                    <div className=" text-center mx-auto bg-stone-200/80 shadow-sm shadow-stone-400 backdrop-blur-sm rounded-xl p-4 -mt-16">
+                                        <h2 className="font-bold text-2xl drop-shadow-md sharo-rose-950 mb-2">
                                             Elyas
                                         </h2>
-                                        <p class="font-semibold">
+                                        <p className="font-semibold">
                                             Full Stack
                                         </p>
                                     </div>
                                 </div>
-                                <div class="w-full lg:w-8/12">
-                                    <p class="text-lg lg:text-2xl text-center text-white py-4 lg:text-left leading-8 lg:leading-10 px-1 lg:mx-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, dolores laboriosam. Fuga veniam vitae nesciunt, harum eius iste. Quo porro quasi rem ut quibusdam veniam perferendis, est ullam incidunt saepe.
+                                <div className="w-full lg:w-8/12">
+                                    <p className="text-lg lg:text-2xl text-center text-white py-4 lg:text-left leading-8 lg:leading-10 px-1 lg:mx-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, dolores laboriosam. Fuga veniam vitae nesciunt, harum eius iste. Quo porro quasi rem ut quibusdam veniam perferendis, est ullam incidunt saepe.
                                     </p>
                                     
                                 </div>

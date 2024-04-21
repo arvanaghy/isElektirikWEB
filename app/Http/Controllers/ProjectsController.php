@@ -15,7 +15,7 @@ class ProjectsController extends Controller
     public function index(): Response
     {
         $projects_list = array();
-        $projects = ProjectsModel::get();
+        $projects = ProjectsModel::paginate(12);
         foreach ($projects as $project) {
             $image = ProjectImagesModel::select('name as image')->where('project_id', $project->id)->first();
             array_push(
@@ -24,13 +24,17 @@ class ProjectsController extends Controller
                     'id' => $project->id,
                     'name' => $project->name,
                     'slug' => $project->slug,
+                    'description_en' => $project->slug,
+                    'province' => $project->slug,
                     'image' => $image ? $image->image : null
                 )
             );
         }
 
-        return Inertia::render('Projects/All', [
-            'projects' => $projects_list
+       return Inertia::render('Projects/All', [
+            'projects' => $projects_list,
+            'lastPage'=> $projects->lastPage(),
+            'currentPage'=> $projects->currentPage(),
         ]);
     }
 
@@ -38,14 +42,14 @@ class ProjectsController extends Controller
     public function details($slug)
     {
         $images = null;
-        $videos = null;
-        $details = ProjectsModel::where('slug', $slug)->first();
-        if ($details) {
-            $images = ProjectImagesModel::where('project_id', $details->id)->get();
-            $videos = ProjectVideosModel::where('project_id', $details->id)->get();
+        $project_detail = ProjectsModel::where('slug', $slug)->first();
+        
+        if ($project_detail) {
+            $images = ProjectImagesModel::where('project_id', $project_detail->id)->get();
         }
+
         return Inertia::render('Projects/Details', [
-            'details' => $details,
+            'project_detail' => $project_detail,
         ]);
     }
 }
