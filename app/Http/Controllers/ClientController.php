@@ -35,14 +35,12 @@ class ClientController extends Controller
             if (!File::isDirectory(public_path() . '/images/clients/orignial')) {
                 File::MakeDirectory(public_path() . '/images/clients/orignial', 0777, true, true);
             }
-            foreach ($request->file('images') as $file) {
-                $name = time() . '_' . $file->getClientOriginalName();
-                $file->move(public_path() . '/images/clients/orignial/', $name);
-                $data = $name;
-            }
+            $file = $request->file('images')[0];
+            $image_name = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/clients/orignial/', $image_name);
         }
         $client->name = $request->name;
-        $client->image_name = $request->$data;
+        $client->image_name = $image_name;
         $client->save();
         return redirect()->route('AdminClient');
     }
@@ -50,6 +48,9 @@ class ClientController extends Controller
     public function destroy($id)
     {
         $client = ClienttModel::find($id);
+        if (File::exists(public_path() . '/images/clients/orignial/' . $client->image_name)) {
+            File::delete(public_path() . '/images/clients/orignial/' . $client->image_name);
+        }
         $client->delete();
         return redirect()->route('AdminClient');
     }

@@ -62,7 +62,12 @@ class AdminProjectController extends Controller
         return redirect()->route('projectsAdmin');
     }
 
-    public function create(Request $request)
+    public function create()
+    {
+        return Inertia::render('Admin/AddProject');
+    }
+
+    public function store(Request $request)
     {
 
         $validated = $request->validate([
@@ -79,22 +84,6 @@ class AdminProjectController extends Controller
 
         $project = new ProjectsModel();
 
-        if ($request->hasfile('images')) {
-            if (!File::isDirectory(public_path() . '/images/projects/orignial')) {
-                File::MakeDirectory(public_path() . '/images/projects/orignial', 0777, true, true);
-            }
-            if (!File::isDirectory(public_path() . '/images/projects/webp')) {
-                File::MakeDirectory(public_path() . '/images/projects/webp', 0777, true, true);
-            }
-            foreach ($request->file('images') as $file) {
-                $name = time() . '_' . $file->getClientOriginalName();
-                $file->move(public_path() . '/images/projects/orignial/', $name);
-                Image::configure(['driver' => 'gd']);
-                Image::make(public_path() . '/images/projects/orignial/' . $name)->encode('webp', 80)->resize(250, 250)->save(public_path() . '/images/projects/webp/' . $time() . '_' . ".webp", 100);
-                $data[] = $name;
-            }
-        }
-
         $project->name = $request->title;
         $project->slug = $request->slug;
         $project->start_date = $request->startDate;
@@ -106,15 +95,69 @@ class AdminProjectController extends Controller
         $project->location = $request->titlocationle;
         $project->save();
 
+        $project_id = $project->id;
+
+        $images_name = [];
+
+        if ($request->hasfile('images')) {
+            if (!File::isDirectory(public_path() . '/images/projects/orignial')) {
+                File::MakeDirectory(public_path() . '/images/projects/orignial', 0777, true, true);
+            }
+            if (!File::isDirectory(public_path() . '/images/projects/webp')) {
+                File::MakeDirectory(public_path() . '/images/projects/webp', 0777, true, true);
+            }
+            foreach ($request->file('images') as $file) {
+                $name = time() . '_' . $file->getClientOriginalName();
+                $file->move(public_path() . '/images/projects/orignial/', $name);
+                $images_name[] = $name;
+            }
+        }
+
+        foreach ($images_name as $name) {
+            $project_image = new  ProjectImagesModel();
+            $project_image->project_id = $project_id;
+            $project_image->name = $name;
+            $project_image->save();
+        }
+
         return redirect()->route('projectsAdmin');
     }
 
-    public function store(Request $request)
+    public function updateImages(Request $request, $id)
     {
-        $project = new ProjectsModel();
-        $project->name = $request->name;
-        $project->description = $request->description;
-        $project->save();
+        $project = ProjectsModel::findOrFail($id);
+
+        if ($request->hasfile('images')) {
+            if (!File::isDirectory(public_path() . '/images/projects/orignial')) {
+                File::MakeDirectory(public_path() . '/images/projects/orignial', 0777, true, true);
+            }
+            if (!File::isDirectory(public_path() . '/images/projects/webp')) {
+                File::MakeDirectory(public_path() . '/images/projects/webp', 0777, true, true);
+            }
+            foreach ($request->file('images') as $file) {
+                $name = time() . '_' . $file->getClientOriginalName();
+                $file->move(public_path() . '/images/projects/orignial/', $name);
+                $images_name[] = $name;
+            }
+        }
+        foreach ($images_name as $name) {
+            $project_image = new  ProjectImagesModel();
+            $project_image->project_id = $id;
+            $project_image->name = $name;
+            $project_image->save();
+        }
+        return redirect()->route('projectsAdmin');
+    }
+
+
+    public function deleteImages($id)
+    {
+        $image = ProjectImagesModel::findOrFail($id);
+        if (File::exists(public_path() . '/images/projects/orignial/' . $image->name)) {
+            File::delete(public_path() . '/images/projects/orignial/' . $image->name);
+        }
+        $image->delete();
+
         return redirect()->route('projectsAdmin');
     }
 }

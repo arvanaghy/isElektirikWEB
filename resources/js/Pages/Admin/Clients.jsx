@@ -55,7 +55,9 @@ const Clients = ({ auth, clients }) => {
                                             <tr key={client.id} >
                                                 <td className="border px-4 py-2">{client.id}</td>
                                                 <td className="border px-4 py-2">{client.name}</td>
-                                                <td className="border px-4 py-2">{client.image_name}</td>
+                                                <td className="border px-4 py-2 ">
+                                                <img src={`/images/clients/orignial/${client.image_name}`} className="w-20 h-20" alt="" />
+                                                </td>
                                                 <td className="border px-4 py-2">
                                                     <button onClick={() => handleDelete(client.id)} className="bg-red-400 px-4 py-2 rounded-xl hover:bg-red-200 duration-200">Delete</button>
                                                 </td>
