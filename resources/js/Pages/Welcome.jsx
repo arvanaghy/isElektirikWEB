@@ -358,7 +358,7 @@ const Welcome = () => {
                 >
                     <div className="min-h-[90vh] lg:min-h-[73vh] flex flex-col items-center justify-center">
                         <h1
-                            className="z-10 text-5xl md:text-6xl font-extrabold tracking-tight flex flex-col lg:flex-row text-center leading-relaxed text-white lg:text-6xl xl:text-7xl drop-shadow-md shadow-black text-pretty"
+                            className="z-10 text-5xl md:text-6xl font-extrabold tracking-tight flex flex-col lg:flex-row text-center leading-relaxed text-white lg:text-6xl xl:text-7xl drop-shadow-md shadow-black text-pretty mt-28 lg:mt-0"
                             ref={heroSectioTitle}
                         >
                             <span className="mx-1" ref={heroSectioTitle1}> is </span>
@@ -409,7 +409,7 @@ const Welcome = () => {
                 </section>
 
                 {/* about */}
-                <section className="flex flex-col items-center justify-center pb-32 -16 px-12 text-center bg-white min-h-[30vh]" ref={aboutSection} >
+                <section className="flex flex-col items-center justify-center pb-32 -16 lg:px-12 px-7 text-center bg-white min-h-[30vh]" ref={aboutSection} >
                     <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
                     <hr width="30%" className="border-2 border-green-500 " />
                     <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-fixed " ref={aboutSectionTitle}>
@@ -419,15 +419,15 @@ const Welcome = () => {
 
                 {/* Slogan Section */}
                 <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-cover bg-center bg-no-repeat">
-                    <h2 className="text-7xl lg:text-6xl px-8 pb-8 text-transparent  text-white" >
+                    <h2 className="lg:text-7xl text-5xl  lg:px-8 lg:pb-8 text-transparent  text-white" >
                         Electrifying Solutions for Your Home and Business
                     </h2>
                 </section>
 
-                <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
+                <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh]" >
                     <div className="w-full flex flex-wrap flex-col lg:flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col flex-wrap items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900" ref={featureSection1} >
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-3 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900" ref={featureSection1} >
                                 Reliable Service:
                                 Consistent, uninterrupted power delivery with minimal outages &
                                 Rapid response to restore power during outages
@@ -450,7 +450,7 @@ const Welcome = () => {
                             />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-200"  >
+                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-3 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-200"  >
                                 <li> Customer-Centric Approach:</li>
                                 <li> Affordable Costs</li>
                                 <li>Flexible billing and payment options</li>
@@ -460,13 +460,13 @@ const Welcome = () => {
                 </section>
 
                 {/* Our Missions Section */}
-                <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh] " >
+                <section className="flex flex-col items-center justify-center text-center bg-white lg:min-h-[90vh] " >
                     <div className="w-[90%] h-[80vh] flex items-center justify-center bg-[url('../../images/94c650ec-1f12-4dea-94ed-dcd4e719f6ac.jpeg')] bg-cover bg-center bg-no-repeat" ref={missionSection} >
-                        <h2 className="text-4xl text-transparent flex flex-col space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-white to-green-200">
-                            <div className="text-6xl">
+                        <h2 className="lg:text-4xl text-3xl text-transparent flex flex-col lg:space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-white to-green-200">
+                            <div className="lg:text-6xl text-3xl">
                                 Our missions are to:
                             </div>
-                            <div className="text-4xl mx-10">
+                            <div className="lg:text-4xl text-2xl lg:mx-10 mx-7">
                                 Combining technical expertise, project management excellence, and a customer-centric approach, we unlock new possibilities.
                             </div>
                         </h2>
@@ -477,11 +477,11 @@ const Welcome = () => {
                     <div className="w-full flex flex-wrap flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
 
-                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
+                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-2 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
                                 <li>Responsive and Accessible Support:</li>
                                 <li>24/7 availability through multiple channels (phone, email, chat, etc.)</li>
                                 <li>Empowered and well-trained customer service representatives</li>
-                            </ul>
+                            </ul> 
 
                         </div>
                         <div className="w-full lg:w-1/2 relative">
@@ -500,7 +500,7 @@ const Welcome = () => {
                             />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
+                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-2 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
                                 <li>Experienced Team:</li>
                                 <li>Multidisciplinary project managers with relevant credentials</li>
                                 <li>Access to specialized technical experts and consultants</li>
