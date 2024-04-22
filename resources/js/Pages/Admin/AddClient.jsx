@@ -34,7 +34,7 @@ export default function AddClient({ auth }) {
                             <div className='flex flex-col gap-4 lg:gap-10 w-full lg:w-1/2'>
                                 <input required className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" placeholder='Client Name' id='title' />
                                 <label htmlFor="files">Image</label>
-                                <input required className=' rounded shadow ' type="file" id="files" name="files" multiple />
+                                <input required className=' rounded shadow ' type="file" id="files" name="files" />
 
                             </div>
                             <button className='border  border-green-400 bg-green-300 hover:border-green-700 hover:scale-110 hover:text-white animate-pulse hover:bg-green-700 px-8 py-2 drop-shadow-xl shadow rounded-md hover:rounded-xl duration-500 active:bg-green-500' type='submit'>Register Client</button>

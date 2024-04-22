@@ -38,11 +38,12 @@ Route::middleware(['auth', 'verified', AdminMiddelware::class])->group(function 
     Route::get('/projects-admin', [AdminProjectController::class, 'index'])->name('projectsAdmin');
     Route::get('/edit-project/{id}', [AdminProjectController::class, 'edit']);
     Route::delete('/deleteProject/{id}', [AdminProjectController::class, 'destroy']);
-    Route::get('/add-project', function () {
-        return Inertia::render('Admin/AddProject');
-    })->name('addProject');
-    Route::post('/submit-project', [AdminProjectController::class, 'create']);
+    Route::get('/add-project', [AdminProjectController::class, 'create'] )->name('addProject');
+    Route::post('/submit-project', [AdminProjectController::class, 'store']);
     Route::post('/update-project/{id}', [AdminProjectController::class, 'update']);
+    Route::post('/update-project-images/{id}', [AdminProjectController::class, 'updateImages']);
+    Route::delete('/delete-project-image/{id}', [AdminProjectController::class, 'deleteImages']);
+
 
     
     Route::get('/contacts-admin', [GeneralController::class, 'list_tickets'])->name('contactsAdmin');
@@ -74,7 +75,7 @@ Route::middleware(['auth', 'verified', AdminMiddelware::class])->group(function 
     Route::get('/add-catalog', [AdminCatalog::class, 'create']);
     Route::post('/submit-catalog', [AdminCatalog::class, 'store']);
     Route::delete('/delete-catalog/{id}', [AdminCatalog::class, 'destroy']);
-    Route::get('/edit-catalog/{id}', [AdminCatalog::class, 'edit']);
+
 });
 
 Route::middleware('auth')->group(function () {
