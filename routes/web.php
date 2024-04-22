@@ -20,6 +20,7 @@ Route::get('contact-us', [HomeController::class, 'contact_us'])->name('contact-u
 Route::get('e-catalog', [ECatalogController::class, 'index'])->name('e-catalog');
 Route::get('projects', [ProjectsController::class, 'index'])->name('projects');
 Route::get('project-details/{slug}', [ProjectsController::class, 'details']);
+Route::get('/search', [ProjectsController::class, 'search']);
 
 Route::get('/tr/', [HomeController::class, 'tr_index'])->name('tr-home');
 Route::get('/tr/about-us', [HomeController::class, 'tr_about_us'])->name('tr-about-us');
@@ -35,14 +36,15 @@ Route::middleware(['auth', 'verified', AdminMiddelware::class])->group(function 
     Route::get('/general-admin', [GeneralController::class, 'index'])->name('generalAdmin');
 
     Route::get('/projects-admin', [AdminProjectController::class, 'index'])->name('projectsAdmin');
-    Route::get('/edit-project/{id}', [AdminProjectController::class, 'edit'])->name('projectsEditAdmin');
+    Route::get('/edit-project/{id}', [AdminProjectController::class, 'edit']);
     Route::delete('/deleteProject/{id}', [AdminProjectController::class, 'destroy']);
     Route::get('/add-project', function () {
         return Inertia::render('Admin/AddProject');
     })->name('addProject');
     Route::post('/submit-project', [AdminProjectController::class, 'create']);
+    Route::post('/update-project/{id}', [AdminProjectController::class, 'update']);
 
-
+    
     Route::get('/contacts-admin', [GeneralController::class, 'list_tickets'])->name('contactsAdmin');
 
     Route::get('/edit-call-info', [GeneralController::class, 'editCallInfo'])->name('EditCallInfo');
@@ -61,10 +63,6 @@ Route::middleware(['auth', 'verified', AdminMiddelware::class])->group(function 
     Route::get('/edit-features', [GeneralController::class, 'editFeauters'])->name('EditFeatures');
     Route::post('/edit-features', [GeneralController::class, 'updateFeatures']);
 
-    Route::get('/edit-catalog', function () {
-        return Inertia::render('EditCatalog');
-    })->name('EditCatalog');
-
     Route::get('/admin-clients', [ClientController::class, 'index'])->name('AdminClient');
     Route::get('/add-clients', [ClientController::class, 'create'])->name('AddClient');
     Route::post('/add-clients', [ClientController::class, 'store']);
@@ -77,7 +75,6 @@ Route::middleware(['auth', 'verified', AdminMiddelware::class])->group(function 
     Route::post('/submit-catalog', [AdminCatalog::class, 'store']);
     Route::delete('/delete-catalog/{id}', [AdminCatalog::class, 'destroy']);
     Route::get('/edit-catalog/{id}', [AdminCatalog::class, 'edit']);
-    Route::put('/update-catalog/{id}', [AdminCatalog::class, 'update']);
 });
 
 Route::middleware('auth')->group(function () {

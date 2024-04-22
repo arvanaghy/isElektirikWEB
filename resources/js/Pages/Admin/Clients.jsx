@@ -7,7 +7,9 @@ const Clients = ({ auth, clients }) => {
 
 
     const handleDelete = (id) => {
-        Inertia.delete(`/delete-clients/${id}`);
+        if (window.confirm('Are you sure you want to delete this record?')) {
+            Inertia.delete(`/delete-clients/${id}`);
+        }
     }
 
     return (
@@ -68,7 +70,7 @@ const Clients = ({ auth, clients }) => {
                             {clients.links.map((link, idx) => (
                                 <Link href={link.url} key={idx} className="bg-gray-200 align-baseline text-center rounded-full py-2 px-4 border border-black hover:bg-black
                                                             hover:text-white duration-200 hover:border-white hover:animate-pulse "
-                                >{link.label}</Link>
+                                >{link.label.replaceAll('&laquo;', '').replaceAll('&raquo;', '')}</Link>
                             ))}
                         </div>
                     </div>

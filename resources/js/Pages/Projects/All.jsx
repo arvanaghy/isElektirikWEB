@@ -22,8 +22,15 @@ const All = ({ projects, lastPage, currentPage }) => {
                     Our Projects
                 </div>
                 <div className=" flex flex-col items-center justify-center px-10 py-20 ">
+                {projects.length < 1 && (
+                            <div className="flex flex-col items-center justify-center bg-white py-16 px-16" >
+                                <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">No Projects Found</h3>
+                                <hr width="30%" className="border-2 border-green-500 " />
+                            </div>
+                        )  }
                     <div className="grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-y-5 lg:space-x-5  lg:space-y-0 px-5">
-                        {projects.map(project =>
+
+                        {projects.length > 0 && projects.map(project =>
                             <Link href={`/project-details/${project.slug}`} key={project.id} className="group col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
                                 <img src={`../../images/${project.image}`} alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
 

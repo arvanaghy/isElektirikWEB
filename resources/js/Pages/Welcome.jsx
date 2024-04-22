@@ -450,13 +450,11 @@ const Welcome = () => {
                             />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-200"  >
-                                <ul>
-                                    <li> Customer-Centric Approach:</li>
-                                    <li> Affordable Costs</li>
-                                    <li>Flexible billing and payment options</li>
-                                </ul>
-                            </p>
+                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-200"  >
+                                <li> Customer-Centric Approach:</li>
+                                <li> Affordable Costs</li>
+                                <li>Flexible billing and payment options</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -469,7 +467,7 @@ const Welcome = () => {
                                 Our missions are to:
                             </div>
                             <div className="text-4xl mx-10">
-                            Combining technical expertise, project management excellence, and a customer-centric approach, we unlock new possibilities.
+                                Combining technical expertise, project management excellence, and a customer-centric approach, we unlock new possibilities.
                             </div>
                         </h2>
                     </div>
@@ -478,13 +476,13 @@ const Welcome = () => {
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
                     <div className="w-full flex flex-wrap flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900"  >
-                                <ul>
-                                    <li>Responsive and Accessible Support:</li>
-                                    <li>24/7 availability through multiple channels (phone, email, chat, etc.)</li>
-                                    <li>Empowered and well-trained customer service representatives</li>
-                                </ul>
-                            </p>
+
+                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
+                                <li>Responsive and Accessible Support:</li>
+                                <li>24/7 availability through multiple channels (phone, email, chat, etc.)</li>
+                                <li>Empowered and well-trained customer service representatives</li>
+                            </ul>
+
                         </div>
                         <div className="w-full lg:w-1/2 relative">
                             <img src="../../images/470f0c57-c705-4a6f-8571-9a3146b18778.jpeg" alt="" className="absolute top-0 left-0 h-full w-full " ref={featureImage3Replace} />
@@ -502,13 +500,11 @@ const Welcome = () => {
                             />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-200"  >
-                                <ul>
-                                    <li>Experienced Team:</li>
-                                    <li>Multidisciplinary project managers with relevant credentials</li>
-                                    <li>Access to specialized technical experts and consultants</li>
-                                </ul>
-                            </p>
+                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent px-8 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
+                                <li>Experienced Team:</li>
+                                <li>Multidisciplinary project managers with relevant credentials</li>
+                                <li>Access to specialized technical experts and consultants</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
