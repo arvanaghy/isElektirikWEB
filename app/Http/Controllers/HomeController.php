@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GeneralModel;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -35,9 +36,21 @@ class HomeController extends Controller
 
     public function contact_us(): Response
     {
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
         return Inertia::render('ContactUs', [
             'url' => '/contact-us',
-            'language' => 'en'
+            'language' => 'en',
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
         ]);
     }
 

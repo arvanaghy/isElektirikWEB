@@ -5,7 +5,7 @@ import Footer from "@/Components/Footer";
 import SideScroll from "./SideScroll";
 import BackToTopButton from "./BackToTopButton";
 import PhoneCallButtonEN from "./PhoneCallButtonEN";
-const WebSiteENLayout = ({ children }) => {
+const WebSiteENLayout = ({ children  }) => {
     return (
         <>
             <div className="">
