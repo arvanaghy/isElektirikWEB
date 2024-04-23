@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ClienttModel;
 use App\Models\GeneralModel;
+use App\Models\ProjectImagesModel;
+use App\Models\ProjectsModel;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -16,7 +19,7 @@ class HomeController extends Controller
             'type' => 'success',
             'text' => 'Welcome'
         );
-        
+
         $address = GeneralModel::where('general_key', 'address')->first();
         $phone = GeneralModel::where('general_key', 'phone')->first();
         $email = GeneralModel::where('general_key', 'email')->first();
@@ -24,6 +27,36 @@ class HomeController extends Controller
         $telegram = GeneralModel::where('general_key', 'telegram')->first();
         $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
         $about_us_text_en = GeneralModel::where('general_key', 'about_us_text_en')->first();
+
+        $feauters_1_text_en = GeneralModel::where('general_key', 'feauters_1_text_en')->first();
+        $feauters_2_text_en = GeneralModel::where('general_key', 'feauters_2_text_en')->first();
+        $feauters_3_text_en = GeneralModel::where('general_key', 'feauters_3_text_en')->first();
+        $feauters_4_text_en = GeneralModel::where('general_key', 'feauters_4_text_en')->first();
+
+        $hero_section_text_en = GeneralModel::where('general_key', 'hero_section_text_en')->first();
+        $slogan_text_en = GeneralModel::where('general_key', 'slogan_text_en')->first();
+
+
+        $our_clients = ClienttModel::orderBy('id', 'desc')->limit(8)->get();
+
+        $projects_lists = [];
+
+        $our_projects = ProjectsModel::orderBy('id', 'desc')->limit(6)->get();
+        foreach ($our_projects as $project) {
+            $image = ProjectImagesModel::select('name as image')->where('project_id', $project->id)->first();
+            array_push(
+                $projects_lists,
+                array(
+                    'id' => $project->id,
+                    'name' => $project->name,
+                    'slug' => $project->slug,
+                    'description_en' => $project->description_en,
+                    'province' => $project->province,
+                    'image' => $image ? $image->image : null
+                )
+            );
+        }
+
 
         return Inertia::render('Welcome', [
             'url' => '/',
@@ -36,7 +69,14 @@ class HomeController extends Controller
             'telegram' => $telegram,
             'linkdin' => $linkdin,
             'about_us_text_en' => $about_us_text_en,
-
+            'feauters_1_text_en' => $feauters_1_text_en,
+            'feauters_2_text_en' => $feauters_2_text_en,
+            'feauters_3_text_en' => $feauters_3_text_en,
+            'feauters_4_text_en' => $feauters_4_text_en,
+            'hero_section_text_en' => $hero_section_text_en,
+            'slogan_text_en' => $slogan_text_en,
+            'our_clients' => $our_clients,
+            'our_projects' => $projects_lists,
         ]);
     }
 
@@ -75,6 +115,8 @@ class HomeController extends Controller
         $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
         $about_us_text_en = GeneralModel::where('general_key', 'about_us_text_en')->first();
 
+
+
         return Inertia::render('ContactUs', [
             'url' => '/contact-us',
             'language' => 'en',
@@ -85,6 +127,7 @@ class HomeController extends Controller
             'telegram' => $telegram,
             'linkdin' => $linkdin,
             'about_us_text_en' => $about_us_text_en,
+
         ]);
     }
 

@@ -109,6 +109,9 @@ class ProjectsController extends Controller
             $images = ProjectImagesModel::where('project_id', $project_detail->id)->get();
         }
 
+
+        $other_projects = ProjectsModel::where('id', '!=', $project_detail->id)->where('province', $project_detail->province)->orderBy('id', 'desc')->limit(6)->get();
+
         return Inertia::render('Projects/Details', [
             'project_detail' => $project_detail,
             'address' => $address,
@@ -118,6 +121,7 @@ class ProjectsController extends Controller
             'telegram' => $telegram,
             'linkdin' => $linkdin,
             'about_us_text_en' => $about_us_text_en,
+            'other_projects' => $other_projects,
         ]);
     }
 
