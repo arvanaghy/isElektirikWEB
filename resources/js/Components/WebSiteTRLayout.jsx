@@ -5,7 +5,15 @@ import FooterTR from "@/Components/FooterTR";
 import PhoneCallButton from "@/Components/PhoneCallButton";
 import BackToTopButton from "@/Components/BackToTopButton";
 import SideScroll from "@/Components/SideScroll";
-const WebSiteTRLayout = ({ children }) => {
+const WebSiteTRLayout = ({ children,
+    address,
+    phone,
+    email,
+    insta,
+    telegram,
+    linkdin,
+    about_tr,
+}) => {
     return (
         <div className="">
             <TopBarTR />
@@ -15,8 +23,8 @@ const WebSiteTRLayout = ({ children }) => {
                 {children}
             </main>
             <BackToTopButton />
-            <PhoneCallButton /> 
-            <FooterTR />
+            <PhoneCallButton phone={phone} linkdin={linkdin} />
+            <FooterTR address={address} phone={phone} email={email} insta={insta} telegram={telegram} linkdin={linkdin} about_tr={about_tr} />
         </div>
     );
 };

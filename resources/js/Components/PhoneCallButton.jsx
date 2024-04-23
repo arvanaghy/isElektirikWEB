@@ -11,7 +11,7 @@ const PhoneCallButton = () => {
     return (
         <div
             onClick={() => setIsOpen((prev) => !prev)}
-            className="w-24 fixed flex flex-col cursor-pointer bottom-4 right-16 rounded overflow-hidden "
+            className="w-24 fixed flex flex-col cursor-pointer bottom-4 right-16 rounded overflow-hidden" style={{ zIndex: 9999 }}
         >
             <div className={` ${isOpen ? 'flex flex-row w-24 h-10 space-x-2 justify-center align-middle items-center content-center my-auto ' : 'hidden'}  bg-gray-300 mb-2 rounded overflow-hidden text-center`}>
                 <div className="pr-3 border-r-2 border-gray-400 hover:scale-110">
