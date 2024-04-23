@@ -2,7 +2,7 @@ import { Link } from "@inertiajs/react";
 import React, { useEffect, useState } from "react";
 import logo from "../../../public/images/ful-logo.png";
 import { usePage } from "@inertiajs/react";
-
+import { Inertia } from "@inertiajs/inertia";
 
 const NavBarTR = () => {
     const [isPageScrolledDown, setIsPageScrolledDown] = useState(false);
@@ -10,6 +10,11 @@ const NavBarTR = () => {
     const [isLanguageToggled, setIsLanguageToggled] = useState(false);
     const { url } = usePage();
 
+    const handleSearch =(e)=>{
+        e.preventDefault();
+        Inertia.get(`/tr/search?q=${search.value}`);
+        search.value = "";
+    }
 
 
     const scrollSpy = () => {
@@ -43,11 +48,12 @@ const NavBarTR = () => {
                         </div>
                     </Link>
 
-                    <div className="flex flex-row w-full">
+                    <form onSubmit={handleSearch} className="flex flex-row w-full">
                         <input
                             type="text"
                             className="rounded-l text-md w-[30rem]"
-                            placeholder="Projelerimizi Ara"
+                            placeholder="Search Projects"
+                            id="search"
                         />
                         <button
                             type="submit"
@@ -71,7 +77,7 @@ const NavBarTR = () => {
                                 </g>
                             </svg>
                         </button>
-                    </div>
+                    </form>
                 </div>
                 <div className="place-items-end">
                     <ul
@@ -107,7 +113,7 @@ const NavBarTR = () => {
                                 href="/tr/e-catalog"
                                 className="inline-block pb-1"
                             >
-                                E-Catalog
+                                E-Katalog
                             </Link>
                         </li>
                     </ul>
