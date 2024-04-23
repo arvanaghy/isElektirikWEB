@@ -256,7 +256,7 @@ const Welcome = ({
     });
     return (
         <>
-            <Head title="welcome">
+            <Head title="Welcome">
                 <meta name="description" content="" />
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />
@@ -296,7 +296,6 @@ const Welcome = ({
                             our_clients.map((client, idx) => (
                                 <div key={idx} className="px-2 py-2 flex flex-col items-center justify-center hover:-translate-y-4 duration-300 transition-all ease-in-out" >
                                     <img src={`../../images/clients/orignial/${client.image_name}`} className="rounded-full shadow shadow-blue-700 w-32 h-32 lg:w-64 lg:h-64 " alt={client.name} />
-                                    <p>{client.name}</p>
                                 </div>
                             ))
                         }
@@ -416,9 +415,9 @@ const Welcome = ({
 
 
                     </div>
-                    <div className=" pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">
-                        <Link href="/projects" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
-                            show All
+                    <div className="pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">
+                        <Link href="/projects" className="border border-green-500 hover:text-green-800 transition-all duration-300 p-3 rounded-lg text-2xl text-green-500">
+                            Show All
                         </Link>
                     </div>
 

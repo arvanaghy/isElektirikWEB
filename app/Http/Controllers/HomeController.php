@@ -144,6 +144,40 @@ class HomeController extends Controller
         $telegram = GeneralModel::where('general_key', 'telegram')->first();
         $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
         $about_us_text_tr = GeneralModel::where('general_key', 'about_us_text_tr')->first();
+
+
+
+
+        $feauters_1_text_tr = GeneralModel::where('general_key', 'feauters_1_text_tr')->first();
+        $feauters_2_text_tr = GeneralModel::where('general_key', 'feauters_2_text_tr')->first();
+        $feauters_3_text_tr = GeneralModel::where('general_key', 'feauters_3_text_tr')->first();
+        $feauters_4_text_tr = GeneralModel::where('general_key', 'feauters_4_text_tr')->first();
+
+        $hero_section_text_tr = GeneralModel::where('general_key', 'hero_section_text_tr')->first();
+        $slogan_text_tr = GeneralModel::where('general_key', 'slogan_text_tr')->first();
+
+
+        $our_clients = ClienttModel::orderBy('id', 'desc')->limit(8)->get();
+
+        $projects_lists = [];
+
+        $our_projects = ProjectsModel::orderBy('id', 'desc')->limit(6)->get();
+        foreach ($our_projects as $project) {
+            $image = ProjectImagesModel::select('name as image')->where('project_id', $project->id)->first();
+            array_push(
+                $projects_lists,
+                array(
+                    'id' => $project->id,
+                    'name' => $project->name,
+                    'slug' => $project->slug,
+                    'description_en' => $project->description_en,
+                    'province' => $project->province,
+                    'image' => $image ? $image->image : null
+                )
+            );
+        }
+
+
         return Inertia::render('Tr/Welcome', [
             'url' => '/',
             'language' => 'tr',
@@ -154,6 +188,14 @@ class HomeController extends Controller
             'telegram' => $telegram,
             'linkdin' => $linkdin,
             'about_us_text_tr' => $about_us_text_tr,
+            'feauters_1_text_tr' => $feauters_1_text_tr,
+            'feauters_2_text_tr' => $feauters_2_text_tr,
+            'feauters_3_text_tr' => $feauters_3_text_tr,
+            'feauters_4_text_tr' => $feauters_4_text_tr,
+            'hero_section_text_tr' => $hero_section_text_tr,
+            'slogan_text_tr' => $slogan_text_tr,
+            'our_clients' => $our_clients,
+            'our_projects' => $projects_lists,
         ]);
     }
 
