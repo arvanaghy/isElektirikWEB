@@ -120,6 +120,8 @@ class ProjectsController extends Controller
                     'id' => $project->id,
                     'name' => $project->name,
                     'slug' => $project->slug,
+                    'start_date' => $project->start_date,
+                    'end_date' => $project->end_date,
                     'image' => $image ? $image->image : null
                 )
             );

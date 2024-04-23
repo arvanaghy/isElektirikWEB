@@ -3,6 +3,7 @@ import WebSiteENLayout from "@/Components/WebSiteENLayout";
 import { Head, Link } from "@inertiajs/react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import Map from "@/Components/Map";
 
 const Details = ({
     project_detail,
@@ -16,6 +17,7 @@ const Details = ({
     about_us_text_en,
     other_projects,
 }) => {
+
     return (
         <>
             <Head title="">
@@ -24,13 +26,13 @@ const Details = ({
                 <meta name="author" content="" />
             </Head>
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}>
-                <div className=" flex flex-row w-full flex-wrap items-center justify-center px-10 py-20 ">
-                    <div className="w-3/5">
+                <div className=" flex flex-row w-full flex-wrap items-center justify-between px-10 py-20 ">
+                    <div className="w-full lg:w-3/5">
                         <div className=" px-10">
-                            <Carousel autoPlay showArrows infiniteLoop  >
+                            <Carousel autoFocus autoPlay showArrows infiniteLoop  >
                                 {images.map((image, index) =>
                                 (
-                                    <div key={index}>
+                                    <div className="border  shadow-2xl" key={index}>
                                         <img src={`../../images/projects/orignial/${image.name}`} />
                                     </div>
                                 ))
@@ -40,21 +42,41 @@ const Details = ({
                             </Carousel>
                         </div>
                     </div>
-                    <div className="w-2/5">
-                        <div className="">
-                            <h1 className="text-3xl font-bold text-gray-900">
-                                title : <span className="text-3xl font-bold text-gray-900">
+                    <div className="w-full border-4 border-green-200  rounded-md shadow-xl  p-5 lg:max-w-[32em] lg:mr-20 lg:w-2/5">
+                        <div className="space-y-8 flex flex-col">
+                            <h1 className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300 font-bold text-gray-900">
+                            Project Name: <span className="lg:text-xl font-bold text-gray-500">
                                     {project_detail.name}
                                 </span>
                             </h1>
-                            <p>
-                                location : <span className="text-3xl font-bold text-gray-900">
-                                    {project_detail.location}
+
+
+
+                            <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
+                            Province: <span className="lg:text-xl  font-bold text-gray-500">
+                                    {project_detail.province}
                                 </span>
                             </p>
-                            <p className="text-gray-700">
-                                {project_detail.description_en}
+                            <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
+                            Alley: <span className="lg:text-xl  font-bold text-gray-500">
+                                    {project_detail.alley}
+                                </span>
                             </p>
+                            <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
+                            Start Date: <span className="lg:text-xl  font-bold text-gray-500">
+                                    {project_detail.start_date.substring(0,10)}
+                                </span>
+                            </p>
+                            <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
+                            End Date: <span className="lg:text-xl font-bold text-gray-500">
+                                    {project_detail.end_date ? project_detail.end_date.substring(0,10) : 'Still Working...'}
+                                </span>
+                            </p>
+                            <p className="flex flex-col gap-6 justify-between border-l lg:text-xl border-green-400 pl-4 hover:text-green-400 duration-300 ;lg:text-bold">Description: <p className="text-gray-500 hover:animate-pulse text-justify  lg:text-xl">
+                            {project_detail.description_en} Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus doloribus aliquid iusto vel architecto sapiente cupiditate commodi sed molestias suscipit dolores perspiciatis, veritatis dolore eum adipisci atque culpa rerum! Ullam.
+                            </p>
+                            </p>
+                            <Map></Map>
                         </div>
 
                     </div>
