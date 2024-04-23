@@ -109,8 +109,22 @@ class ProjectsController extends Controller
             $images = ProjectImagesModel::where('project_id', $project_detail->id)->get();
         }
 
+        $other_projects_list = [];
+        $other_projects = ProjectsModel::where('id', '!=', $project_detail->id)->orderBy('id', 'desc')->limit(6)->get();
 
-        $other_projects = ProjectsModel::where('id', '!=', $project_detail->id)->where('province', $project_detail->province)->orderBy('id', 'desc')->limit(6)->get();
+        foreach ($other_projects as $project) {
+            $image = ProjectImagesModel::select('name as image')->where('project_id', $project->id)->first();
+            array_push(
+                $other_projects_list,
+                array(
+                    'id' => $project->id,
+                    'name' => $project->name,
+                    'slug' => $project->slug,
+                    'image' => $image ? $image->image : null
+                )
+            );
+        }
+
 
         return Inertia::render('Projects/Details', [
             'project_detail' => $project_detail,
@@ -122,7 +136,7 @@ class ProjectsController extends Controller
             'telegram' => $telegram,
             'linkdin' => $linkdin,
             'about_us_text_en' => $about_us_text_en,
-            'other_projects' => $other_projects,
+            'other_projects' => $other_projects_list,
         ]);
     }
 
