@@ -114,6 +114,7 @@ class ProjectsController extends Controller
 
         return Inertia::render('Projects/Details', [
             'project_detail' => $project_detail,
+            'images' => $images,
             'address' => $address,
             'phone' => $phone,
             'email' => $email,
