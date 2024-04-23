@@ -5,7 +5,15 @@ import { useGSAP } from "@gsap/react";
 import { Head, Link } from "@inertiajs/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Welcome = () => {
+const Welcome = ({
+    address,
+    phone,
+    email,
+    insta,
+    telegram,
+    linkdin,
+    about_us_text_en,
+}) => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
 
     const heroSectioTitle = useRef(null);
@@ -350,7 +358,7 @@ const Welcome = () => {
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />
             </Head>
-            <WebSiteENLayout>
+            <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}  >
                 {/* Is Electrik ve Muhendislik Hero Section */}
                 <section
                     className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('../../images/5f699f2f52f2ae24b.jpg')] bg-cover bg-center bg-no-repeat"
@@ -481,7 +489,7 @@ const Welcome = () => {
                                 <li>Responsive and Accessible Support:</li>
                                 <li>24/7 availability through multiple channels (phone, email, chat, etc.)</li>
                                 <li>Empowered and well-trained customer service representatives</li>
-                            </ul> 
+                            </ul>
 
                         </div>
                         <div className="w-full lg:w-1/2 relative">

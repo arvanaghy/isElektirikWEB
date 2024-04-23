@@ -5,7 +5,15 @@ import Footer from "@/Components/Footer";
 import SideScroll from "./SideScroll";
 import BackToTopButton from "./BackToTopButton";
 import PhoneCallButtonEN from "./PhoneCallButtonEN";
-const WebSiteENLayout = ({ children  }) => {
+const WebSiteENLayout = ({ children,
+    address,
+    phone,
+    email,
+    insta,
+    telegram,
+    linkdin,
+    about_en,
+}) => {
     return (
         <>
             <div className="">
@@ -16,8 +24,8 @@ const WebSiteENLayout = ({ children  }) => {
                     {children}
                 </main>
                 <BackToTopButton />
-                <PhoneCallButtonEN />
-                <Footer />
+                <PhoneCallButtonEN phone={phone} linkdin={linkdin} />
+                <Footer address={address} phone={phone} email={email} insta={insta} telegram={telegram} linkdin={linkdin} about_en={about_en} />
             </div>
         </>
     );

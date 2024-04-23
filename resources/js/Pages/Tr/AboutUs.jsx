@@ -104,13 +104,13 @@ const AboutUs = () => {
                             </h2>
                             <div className="flex flex-wrap items-center justify-between">
                                 <div className="w-full lg:w-3/12">
-                                    <img src="../../images/8.png" className="rounded-full bg-white shadow shadow-rose-950" alt="omaran al akkad" />
+                                    <img src="../../images/ibrahim.jpg" className="rounded-full bg-white shadow shadow-rose-950" alt="omaran al akkad" />
                                     <div className=" text-center mx-auto bg-stone-200/80 shadow-sm shadow-stone-400 backdrop-blur-sm rounded-xl p-4 -mt-16">
                                         <h2 className="font-bold text-2xl drop-shadow-md sharo-rose-950 mb-2">
-                                            Elyas
+                                            ibrahim Sacak
                                         </h2>
                                         <p className="font-semibold">
-                                            Full Stack
+                                            CEO
                                         </p>
                                     </div>
                                 </div>

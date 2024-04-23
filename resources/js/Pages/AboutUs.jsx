@@ -5,7 +5,15 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const AboutUs = () => {
+const AboutUs = ({
+    address,
+    phone,
+    email,
+    insta,
+    telegram,
+    linkdin,
+    about_us_text_en,
+}) => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
     const sirketProfili = useRef(null);
     const kesfedin = useRef(null);
@@ -45,7 +53,7 @@ const AboutUs = () => {
                 },
             }
         );
-       
+
         gsap.from(
             ourTeam.current,
             {
@@ -58,7 +66,7 @@ const AboutUs = () => {
                 },
             }
         );
-        
+
     })
 
     return (
@@ -68,7 +76,7 @@ const AboutUs = () => {
                 <meta name="keywords" content="HTML, CSS, JavaScript" />
                 <meta name="author" content="John Doesdfsf" />
             </Head>
-            <WebSiteENLayout>
+            <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}  >
                 {/* sirket profili */}
                 <div className="bg-[url('../images/contact-us.jpg')] py-16 bg-cover text-center flex flex-col lg:mt-0 mt-20">
                     <h5 ref={sirketProfili} className="text-6xl space-x-5">
@@ -96,19 +104,19 @@ const AboutUs = () => {
                 <section className="text-black">
                     <div className="lg:p-10 flex flex-wrap shrink-0 lg:flex-nowrap lg:justify-between lg:items-center lg:px-16  h-full">
                         <div className="w-full lg:mx-20 mx-5 ">
-                            <h2  ref={ourTeam}
-                            className="text-center lg:text-6xl lg:first-letter:text-7xl text-5xl font-bold pb-5 text-black drop-shadow-xl shadow-black leading-tight mt-10 lg:mt-0 first-letter:text-green-500 first-letter:text-6xl">
+                            <h2 ref={ourTeam}
+                                className="text-center lg:text-6xl lg:first-letter:text-7xl text-5xl font-bold pb-5 text-black drop-shadow-xl shadow-black leading-tight mt-10 lg:mt-0 first-letter:text-green-500 first-letter:text-6xl">
                                 Our Team
                             </h2>
                             <div className="flex flex-wrap items-center justify-between">
                                 <div className="w-full lg:w-3/12">
-                                    <img src="../../images/8.png" className="rounded-full bg-white shadow shadow-rose-950" alt="omaran al akkad" />
+                                    <img src="../../images/ibrahim.jpg" className="rounded-full bg-white shadow shadow-rose-950" alt="omaran al akkad" />
                                     <div className=" text-center mx-auto bg-stone-200/80 shadow-sm shadow-stone-400 backdrop-blur-sm rounded-xl p-4 -mt-16">
                                         <h2 className="font-bold text-2xl drop-shadow-md sharo-rose-950 mb-2">
-                                            Elyas
+                                            ibrahim sacak
                                         </h2>
                                         <p className="font-semibold">
-                                            Full Stack
+                                            CEO
                                         </p>
                                     </div>
                                 </div>
