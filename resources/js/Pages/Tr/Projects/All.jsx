@@ -4,7 +4,18 @@ import { useGSAP } from "@gsap/react";
 import WebSiteTRLayout from "@/Components/WebSiteTRLayout";
 import { Head, Link } from "@inertiajs/react";
 
-const All = ({ projects, lastPage, currentPage }) => {
+const All = ({ 
+    projects, 
+    lastPage, 
+    currentPage,
+    address,
+    phone,
+    email,
+    insta,
+    telegram,
+    linkdin,
+    about_us_text_tr,
+}) => {
 
     gsap.registerPlugin(useGSAP);
     const ourProjects = useRef(null);
@@ -34,7 +45,7 @@ const All = ({ projects, lastPage, currentPage }) => {
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />
             </Head>
-            <WebSiteTRLayout>
+            <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value}>
             <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">
                         <h5 ref={ourProjects}  className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">
                             <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Projelerimiz</span>
