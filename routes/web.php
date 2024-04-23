@@ -27,6 +27,8 @@ Route::get('/tr/about-us', [HomeController::class, 'tr_about_us'])->name('tr-abo
 Route::get('/tr/contact-us', [HomeController::class, 'tr_contact_us'])->name('tr-contact-us');
 Route::get('/tr/e-catalog', [ECatalogController::class, 'tr_index'])->name('tr-e-catalog');
 Route::get('/tr/projects', [ProjectsController::class, 'tr_index'])->name('tr-projects');
+Route::get('/tr/search', [ProjectsController::class, 'search_tr']);
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
