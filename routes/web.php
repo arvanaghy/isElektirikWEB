@@ -43,8 +43,6 @@ Route::middleware(['auth', 'verified', AdminMiddelware::class])->group(function 
     Route::post('/update-project/{id}', [AdminProjectController::class, 'update']);
     Route::post('/update-project-images/{id}', [AdminProjectController::class, 'updateImages']);
     Route::delete('/delete-project-image/{id}', [AdminProjectController::class, 'deleteImages']);
-
-
     
     Route::get('/contacts-admin', [GeneralController::class, 'list_tickets'])->name('contactsAdmin');
 
