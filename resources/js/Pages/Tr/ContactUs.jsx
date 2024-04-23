@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import WebSiteTRLayout from "@/Components/WebSiteTRLayout";
 import Map from "@/Components/Map";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Inertia } from '@inertiajs/inertia'
-import { useRef } from "react";
+
 
 
 const ContactUs = () => {
     gsap.registerPlugin(useGSAP);
-    const sirketProfili = useRef(null);
+    const contactUs = useRef(null);
 
     useGSAP(() => {
         gsap.from(
-            sirketProfili.current,
+            contactUs.current,
             {
                 duration: 2.5,
                 ease: "power4.out",
@@ -38,7 +38,7 @@ const ContactUs = () => {
             <>
                 <div className=" flex flex-col">
                     <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">
-                        <h5 ref={sirketProfili} className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">
+                        <h5 ref={contactUs} className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">
                             <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Bize</span>
                         <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500"> Ulasin </span> 
                         </h5>

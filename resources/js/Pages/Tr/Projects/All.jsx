@@ -1,8 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import WebSiteTRLayout from "@/Components/WebSiteTRLayout";
 import { Head, Link } from "@inertiajs/react";
 
 const All = ({ projects, lastPage, currentPage }) => {
+
+    gsap.registerPlugin(useGSAP);
+    const ourProjects = useRef(null);
+
+    useGSAP(() => {
+        gsap.from(
+            ourProjects.current,
+            {
+                duration: 2.5,
+                ease: "power4.out",
+                y: -500,
+            }
+        );
+    });
+
 
     const range = [];
 
@@ -18,13 +35,15 @@ const All = ({ projects, lastPage, currentPage }) => {
                 <meta name="author" content="" />
             </Head>
             <WebSiteTRLayout>
-                <div className=" flex flex-col text-6xl items-center bg-gray-900 text-white justify-center px-10 py-16 ">
-                    Our Projects
-                </div>
+            <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">
+                        <h5 ref={ourProjects}  className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">
+                            <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Projelerimiz</span>
+                        </h5>
+                    </div>
                 <div className=" flex flex-col items-center justify-center px-10 py-20 ">
                 {projects.length < 1 && (
                             <div className="flex flex-col items-center justify-center bg-white py-16 px-16" >
-                                <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">No Projects Found</h3>
+                                <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Hiçbir Proje Bulunamadı</h3>
                                 <hr width="30%" className="border-2 border-green-500 " />
                             </div>
                         )  }

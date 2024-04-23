@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef }  from "react";
 import WebSiteENLayout from "@/Components/WebSiteENLayout";
 import { Head, Link } from "@inertiajs/react";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 
 const ECatalog = ({ catalog_list, lastPage, currentPage }) => {
+    gsap.registerPlugin(useGSAP);
+    const eCatalog = useRef(null);
+
+    useGSAP(() => {
+        gsap.from(
+            eCatalog.current,
+            {
+                duration: 2.5,
+                ease: "power4.out",
+                y: -500,
+            }
+        );
+    });
 
     const range = [];
 
@@ -19,9 +35,12 @@ const ECatalog = ({ catalog_list, lastPage, currentPage }) => {
                 <meta name="author" content="John Doesdfsf" />
             </Head>
             <WebSiteENLayout>
-                <div className=" flex flex-col text-6xl items-center bg-gray-900 text-white justify-center px-10 py-16 ">
-                    E-Catalog
-                </div>
+            <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">
+                        <h5 ref={eCatalog}  className="lg:text-6xl text-4xl  mt-16 lg:mt-0">
+                            <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">E-</span>
+                            <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Catalog</span>
+                        </h5>
+                    </div>
                 <div className=" flex flex-col items-center justify-center px-10 py-20 ">
                     {catalog_list.data.length < 1 && (
                         <div className="flex flex-col items-center justify-center bg-white py-16 px-16" >

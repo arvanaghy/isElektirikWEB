@@ -1,8 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import WebSiteENLayout from "@/Components/WebSiteENLayout";
 import { Head, Link } from "@inertiajs/react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 
 const All = ({ projects, lastPage, currentPage }) => {
+    gsap.registerPlugin(useGSAP);
+    const ourProjects = useRef(null);
+
+    useGSAP(() => {
+        gsap.from(
+            ourProjects.current,
+            {
+                duration: 2.5,
+                ease: "power4.out",
+                y: -500,
+            }
+        );
+    });
 
     const range = [];
 
@@ -18,8 +34,11 @@ const All = ({ projects, lastPage, currentPage }) => {
                 <meta name="author" content="" />
             </Head>
             <WebSiteENLayout>
-                <div className=" flex flex-col text-6xl items-center bg-gray-900 text-white justify-center px-10 py-16 ">
-                    Our Projects
+                <div  className=" flex flex-col gap-5 text-6xl items-center bg-[url('../images/contact-us.jpg')] bg-cover text-black justify-center  px-10 py-16 ">
+                    <div ref={ourProjects}>
+                    <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Our</span>
+                    <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl pl-5 first-letter:text-green-500">Projects</span>
+                    </div>
                 </div>
                 <div className=" flex flex-col items-center justify-center px-10 py-20 ">
                 {projects.length < 1 && (
