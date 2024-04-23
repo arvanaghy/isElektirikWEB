@@ -45,10 +45,10 @@ const All = ({
                 <meta name="author" content="" />
             </Head>
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}>
-                <div  className=" flex flex-col gap-5 text-6xl items-center bg-[url('../images/contact-us.jpg')] bg-cover text-black justify-center  px-10 py-16 ">
-                    <div ref={ourProjects}>
-                    <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Our</span>
-                    <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl pl-5 first-letter:text-green-500">Projects</span>
+                <div  className=" flex flex-col gap-5 text-4xl lg:text-6xl items-center bg-[url('../images/contact-us.jpg')] bg-cover text-black justify-center  px-10 py-16 ">
+                    <div className="pt-24 lg:pt-0" ref={ourProjects }>
+                    <span className="inline-block lg:first-letter:text-7xl first-letter:text-4xl first-letter:text-green-500">Our</span>
+                    <span className="inline-block lg:first-letter:text-7xl first-letter:text-4xl pl-5 first-letter:text-green-500">Projects</span>
                     </div>
                 </div>
                 <div className=" flex flex-col items-center justify-center px-10 py-20 ">
