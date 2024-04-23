@@ -18,4 +18,15 @@ class ECatalogController extends Controller
             'currentPage' => $catalogs->currentPage(),
         ]);
     }
+
+    public function tr_index(): Response
+    {
+        $catalogs = ECatalogModel::orderBy('id', 'desc')->paginate(12);
+        return Inertia::render('Tr/ECatalog', [
+            'catalog_list' => $catalogs,
+            'lastPage' => $catalogs->lastPage(),
+            'currentPage' => $catalogs->currentPage(),
+        ]);
+    }
+
 }

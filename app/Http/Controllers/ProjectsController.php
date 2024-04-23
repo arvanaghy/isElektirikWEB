@@ -30,10 +30,36 @@ class ProjectsController extends Controller
             );
         }
 
-       return Inertia::render('Projects/All', [
+        return Inertia::render('Projects/All', [
             'projects' => $projects_list,
-            'lastPage'=> $projects->lastPage(),
-            'currentPage'=> $projects->currentPage(),
+            'lastPage' => $projects->lastPage(),
+            'currentPage' => $projects->currentPage(),
+        ]);
+    }
+
+    public function tr_index(): Response
+    {
+        $projects_list = array();
+        $projects = ProjectsModel::paginate(12);
+        foreach ($projects as $project) {
+            $image = ProjectImagesModel::select('name as image')->where('project_id', $project->id)->first();
+            array_push(
+                $projects_list,
+                array(
+                    'id' => $project->id,
+                    'name' => $project->name,
+                    'slug' => $project->slug,
+                    'description_tr' => $project->description_tr,
+                    'province' => $project->province,
+                    'image' => $image ? $image->image : null
+                )
+            );
+        }
+
+        return Inertia::render('Tr/Projects/All', [
+            'projects' => $projects_list,
+            'lastPage' => $projects->lastPage(),
+            'currentPage' => $projects->currentPage(),
         ]);
     }
 
@@ -42,7 +68,7 @@ class ProjectsController extends Controller
     {
         $images = null;
         $project_detail = ProjectsModel::where('slug', $slug)->first();
-        
+
         if ($project_detail) {
             $images = ProjectImagesModel::where('project_id', $project_detail->id)->get();
         }
@@ -52,17 +78,18 @@ class ProjectsController extends Controller
         ]);
     }
 
-    public function search(Request $request){
+    public function search(Request $request)
+    {
 
         $searchPhrases = explode(' ', $request->q);
 
         $projects_list = array();
         $projects = ProjectsModel::query();
         foreach ($searchPhrases as $phrase) {
-            $projects = $projects->where('name', 'like', '%'.$phrase.'%');
+            $projects = $projects->where('name', 'like', '%' . $phrase . '%');
         }
         $projects = $projects->orderBy('id', 'desc')->paginate(12);
- 
+
         foreach ($projects as $project) {
             $image = ProjectImagesModel::select('name as image')->where('project_id', $project->id)->first();
             array_push(
@@ -70,7 +97,7 @@ class ProjectsController extends Controller
                 array(
                     'id' => $project->id,
                     'name' => $project->name,
-                   'slug' => $project->slug,
+                    'slug' => $project->slug,
                     'description_en' => $project->description_en,
                     'province' => $project->province,
                     'image' => $image ? $image->image : null
@@ -78,12 +105,46 @@ class ProjectsController extends Controller
             );
         }
 
-        
+
         return Inertia::render('Projects/All', [
             'projects' => $projects_list,
-            'lastPage'=> $projects->lastPage(),
-            'currentPage'=> $projects->currentPage(),
+            'lastPage' => $projects->lastPage(),
+            'currentPage' => $projects->currentPage(),
         ]);
+    }
 
+    public function search_tr(Request $request)
+    {
+
+        $searchPhrases = explode(' ', $request->q);
+
+        $projects_list = array();
+        $projects = ProjectsModel::query();
+        foreach ($searchPhrases as $phrase) {
+            $projects = $projects->where('name', 'like', '%' . $phrase . '%');
+        }
+        $projects = $projects->orderBy('id', 'desc')->paginate(12);
+
+        foreach ($projects as $project) {
+            $image = ProjectImagesModel::select('name as image')->where('project_id', $project->id)->first();
+            array_push(
+                $projects_list,
+                array(
+                    'id' => $project->id,
+                    'name' => $project->name,
+                    'slug' => $project->slug,
+                    'description_en' => $project->description_en,
+                    'province' => $project->province,
+                    'image' => $image ? $image->image : null
+                )
+            );
+        }
+
+
+        return Inertia::render('Tr/Projects/All', [
+            'projects' => $projects_list,
+            'lastPage' => $projects->lastPage(),
+            'currentPage' => $projects->currentPage(),
+        ]);
     }
 }
