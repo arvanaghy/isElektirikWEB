@@ -142,6 +142,55 @@ class ProjectsController extends Controller
         ]);
     }
 
+    public function tr_details($slug)
+    {
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_tr = GeneralModel::where('general_key', 'about_us_text_tr')->first();
+        $images = null;
+        $project_detail = ProjectsModel::where('slug', $slug)->first();
+
+        if ($project_detail) {
+            $images = ProjectImagesModel::where('project_id', $project_detail->id)->get();
+        }
+
+        $other_projects_list = [];
+        $other_projects = ProjectsModel::where('id', '!=', $project_detail->id)->orderBy('id', 'desc')->limit(6)->get();
+
+        foreach ($other_projects as $project) {
+            $image = ProjectImagesModel::select('name as image')->where('project_id', $project->id)->first();
+            array_push(
+                $other_projects_list,
+                array(
+                    'id' => $project->id,
+                    'name' => $project->name,
+                    'slug' => $project->slug,
+                    'start_date' => $project->start_date,
+                    'end_date' => $project->end_date,
+                    'image' => $image ? $image->image : null
+                )
+            );
+        }
+
+
+        return Inertia::render('Tr/Projects/Details', [
+            'project_detail' => $project_detail,
+            'images' => $images,
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
+            'about_us_text_en' => $about_us_text_tr,
+            'other_projects' => $other_projects_list,
+        ]);
+    }
+
     public function search(Request $request)
     {
         $address = GeneralModel::where('general_key', 'address')->first();

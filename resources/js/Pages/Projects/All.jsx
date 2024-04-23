@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 
-const All = ({ 
+const All = ({
     projects,
     lastPage,
     currentPage,
@@ -45,24 +45,24 @@ const All = ({
                 <meta name="author" content="" />
             </Head>
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}>
-                <div  className=" flex flex-col gap-5 text-4xl lg:text-6xl items-center bg-[url('../images/contact-us.jpg')] bg-cover text-black justify-center  px-10 py-16 ">
-                    <div className="pt-24 lg:pt-0" ref={ourProjects }>
-                    <span className="inline-block lg:first-letter:text-7xl first-letter:text-4xl first-letter:text-green-500">Our</span>
-                    <span className="inline-block lg:first-letter:text-7xl first-letter:text-4xl pl-5 first-letter:text-green-500">Projects</span>
+                <div className=" flex flex-col gap-5 text-4xl lg:text-6xl items-center bg-[url('../images/contact-us.jpg')] bg-cover text-black justify-center  px-10 py-16 ">
+                    <div className="pt-24 lg:pt-0" ref={ourProjects}>
+                        <span className="inline-block lg:first-letter:text-7xl first-letter:text-4xl first-letter:text-green-500">Our</span>
+                        <span className="inline-block lg:first-letter:text-7xl first-letter:text-4xl pl-5 first-letter:text-green-500">Projects</span>
                     </div>
                 </div>
                 <div className=" flex flex-col items-center justify-center px-10 py-20 ">
-                {projects.length < 1 && (
-                            <div className="flex flex-col items-center justify-center bg-white py-16 px-16" >
-                                <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">No Projects Found</h3>
-                                <hr width="30%" className="border-2 border-green-500 " />
-                            </div>
-                        )  }
+                    {projects.length < 1 && (
+                        <div className="flex flex-col items-center justify-center bg-white py-16 px-16" >
+                            <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">No Projects Found</h3>
+                            <hr width="30%" className="border-2 border-green-500 " />
+                        </div>
+                    )}
                     <div className="grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-y-5 lg:space-x-5  lg:space-y-0 px-5">
 
                         {projects.length > 0 && projects.map(project =>
                             <Link href={`/project-details/${project.slug}`} key={project.id} className="group col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                                <img src={`../../images/projects/orignial/${project.image}`} alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                                <img src={`../../images/projects/orignial/${project.image}`} alt={project.name} className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
 
                                 <div className="absolute bottom-3 duration-300 ease-in-out left-3 ">
                                     <h2 className="text-lg font-bold  drop-shadow shadow-black text-black ">{project.name}</h2>
