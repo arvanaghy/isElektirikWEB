@@ -67,6 +67,8 @@ const Details = ({ project_detail,
                                 </span>
                             </p>
                             <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
+                            Bitiş tarihi: <span className="lg:text-xl font-bold text-gray-500">
+                                    {project_detail.end_date ? project_detail.end_date.substring(0, 10) : 'Hala çalışıyor...'}
                                 Bitiş tarihi: <span className="lg:text-xl font-bold text-gray-500">
                                     {project_detail.end_date ? project_detail.end_date.substring(0, 10) : 'Still Working...'}
                                 </span>

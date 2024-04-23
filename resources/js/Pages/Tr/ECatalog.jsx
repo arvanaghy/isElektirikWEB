@@ -60,20 +60,22 @@ const ECatalog = ({
                             <hr width="30%" className="border-2 border-green-500 " />
                         </div>
                     )}
-                    <div className="w-full flex flex-col items-center justify-center space-y-5">
+                    <div className=" w-full flex flex-col lg:px-20 space-y-8 lg:space-y-4 justify-between text-center">
                         {
                             catalog_list.data.map((item, index) => (
-                                <div key={index} className="w-full flex flex-row items-center justify-center bg-gray-100 py-8 px-8" >
-                                    <div className=" w-1/3 text-center text-gray-600  ">
-                                        {item.title}
-                                    </div>
-                                    <div className=" w-1/3 text-center text-gray-600  ">
-                                        {item.description}
-                                    </div>
-                                    <div className=" w-1/3 justify-end text-right">
-                                        <Link href={item.url} className="hover:text-green-800 transition-all duration-300  text-green-500" > Download </Link>
-                                    </div>
+                                <div key={index} className="lg:text-xl border flex flex-col lg:flex-row lg:justify-between lg:px-20 lg:items-center rounded-md py-8 shadow-lg" >
+                                    <p  className=" border-l-4 flex flex-row justify-between lg:justify-normal px-4 border-green-400" >
+                                    İsim:<span className="text-gray-500 lg:pl-10">{item.title}</span>
+                                    </p>
+                                    <p className=" border-l-4 flex flex-col lg:flex-row lg:items-center pt-4 lg:pt-0 justify-between lg:justify-normal px-4 border-green-400" >
+                                    Detail: <span className="pt-2 lg:pt-0 text-gray-500 lg:pl-10">{item.description}</span>
+                                    </p>
+
+                                    
+                                    <Link href={item.url} className=" hover:text-green-800 h-full my-auto pt-5 lg:pt-0 transition-all duration-300  text-green-500" > İndirmek </Link>
+
                                 </div>
+                                
                             )
                             )
                         }
