@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminProjectController;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\AdminCatalog;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\SitemapController;
 
 use App\Http\Middleware\AdminMiddelware;
 use Illuminate\Foundation\Application;
@@ -29,6 +30,9 @@ Route::get('/tr/e-catalog', [ECatalogController::class, 'tr_index'])->name('tr-e
 Route::get('/tr/projects', [ProjectsController::class, 'tr_index'])->name('tr-projects');
 Route::get('/tr/project-details/{slug}', [ProjectsController::class, 'tr_details']);
 Route::get('/tr/search', [ProjectsController::class, 'search_tr']);
+
+Route::get('/site-map', [SitemapController::class, 'generateSitemap']);
+
 
 
 Route::get('/dashboard', function () {

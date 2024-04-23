@@ -16,7 +16,11 @@ const Details = ({ project_detail,
     linkdin,
     about_us_text_tr,
     other_projects, }) => {
+
+    const position = project_detail?.location != null ? project_detail?.location.split("|") : null;
+
     return (
+
         <>
             <Head title="">
                 <meta name="description" content="" />
@@ -43,27 +47,27 @@ const Details = ({ project_detail,
                     <div className="w-full border-4 border-green-200  rounded-md shadow-xl  p-5 lg:max-w-[32em] lg:mr-20 lg:w-2/5">
                         <div className="space-y-8 flex flex-col">
                             <h1 className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300 font-bold text-gray-900">
-                            Proje Adı: <span className="lg:text-xl font-bold text-gray-500">
+                                Proje Adı: <span className="lg:text-xl font-bold text-gray-500">
                                     {project_detail.name}
                                 </span>
                             </h1>
                             <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
-                            ilce: <span className="lg:text-xl  font-bold text-gray-500">
+                                ilce: <span className="lg:text-xl  font-bold text-gray-500">
                                     {project_detail.province}
                                 </span>
                             </p>
                             <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
-                            Sokak: <span className="lg:text-xl  font-bold text-gray-500">
+                                Sokak: <span className="lg:text-xl  font-bold text-gray-500">
                                     {project_detail.alley}
                                 </span>
                             </p>
                             <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
-                            Başlangıç ​​tarihi: <span className="lg:text-xl  font-bold text-gray-500">
+                                Başlangıç ​​tarihi: <span className="lg:text-xl  font-bold text-gray-500">
                                     {project_detail.start_date.substring(0, 10)}
                                 </span>
                             </p>
                             <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
-                            Bitiş tarihi: <span className="lg:text-xl font-bold text-gray-500">
+                                Bitiş tarihi: <span className="lg:text-xl font-bold text-gray-500">
                                     {project_detail.end_date ? project_detail.end_date.substring(0, 10) : 'Still Working...'}
                                 </span>
                             </p>
@@ -71,7 +75,7 @@ const Details = ({ project_detail,
                                 {project_detail.description_tr}
                             </p>
                             </p>
-                            <Map></Map>
+                            {position && < Map lat={position[0]} long={position[1]} />}
                         </div>
 
                     </div>

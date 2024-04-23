@@ -18,10 +18,12 @@ const Details = ({
     other_projects,
 }) => {
 
+    const position = project_detail?.location != null ? project_detail?.location.split("|") : null;
+
     return (
         <>
-            <Head title="">
-                <meta name="description" content="" />
+            <Head title={project_detail.name}>
+                <meta name="description" content={project_detail.description} />
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />
             </Head>
@@ -49,9 +51,6 @@ const Details = ({
                                     {project_detail.name}
                                 </span>
                             </h1>
-
-
-
                             <p className="lg:text-xl flex flex-row border-l border-green-400 pl-4 justify-between hover:text-green-400 duration-300">
                                 Province: <span className="lg:text-xl  font-bold text-gray-500">
                                     {project_detail.province}
@@ -76,7 +75,7 @@ const Details = ({
                                 {project_detail.description_en}
                             </p>
                             </p>
-                            <Map></Map>
+                            {position && < Map lat={position[0]} long={position[1]} />}
                         </div>
 
                     </div>
