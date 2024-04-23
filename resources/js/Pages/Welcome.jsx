@@ -256,7 +256,7 @@ const Welcome = ({
     });
     return (
         <>
-            <Head title="welcome">
+            <Head title="Welcome">
                 <meta name="description" content="" />
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />
@@ -291,12 +291,11 @@ const Welcome = ({
                 <section className="flex flex-col items-center justify-center bg-white py-16 px-16" >
                     <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
                     <hr width="30%" className="border-2 border-green-500 " />
-                    <div className="flex flex-row space-x-8 pt-12 items-center justify-between "  >
+                    <div className="flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8 pt-12 items-center justify-between "  >
                         {
                             our_clients.map((client, idx) => (
-                                <div key={idx} className="px-2 hover:-translate-y-4 duration-300 transition-all ease-in-out" >
-                                    <img src={`../../images/clients/orignial/${client.image_name}`} className="rounded-full shadow shadow-blue-700 w-64 h-64 " alt={client.name} />
-                                    <p>{client.name}</p>
+                                <div key={idx} className="px-2 py-2 flex flex-col items-center justify-center hover:-translate-y-4 duration-300 transition-all ease-in-out" >
+                                    <img src={`../../images/clients/orignial/${client.image_name}`} className="rounded-full shadow shadow-blue-700 w-32 h-32 lg:w-64 lg:h-64 " alt={client.name} />
                                 </div>
                             ))
                         }
@@ -416,9 +415,9 @@ const Welcome = ({
 
 
                     </div>
-                    <div className=" pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">
-                        <Link href="/projects" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
-                            show All
+                    <div className="pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">
+                        <Link href="/projects" className="border border-green-500 hover:text-green-800 transition-all duration-300 p-3 rounded-lg text-2xl text-green-500">
+                            Show All
                         </Link>
                     </div>
 

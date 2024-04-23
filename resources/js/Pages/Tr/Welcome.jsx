@@ -13,6 +13,10 @@ const Welcome = ({
     telegram,
     linkdin,
     about_us_text_tr,
+    feauters_1_text_tr, feauters_2_text_tr, feauters_3_text_tr, feauters_4_text_tr,
+    hero_section_text_tr, slogan_text_tr,
+    our_clients,
+    our_projects
 }) => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -30,14 +34,7 @@ const Welcome = ({
     const featureImage1Replace = useRef(null);
     const featureSection1 = useRef(null);
     const heroTimeLine = gsap.timeline();
-    const clients1 = useRef(null);
-    const clients2 = useRef(null);
-    const clients3 = useRef(null);
-    const clients4 = useRef(null);
-    const clients5 = useRef(null);
-    const clients6 = useRef(null);
-    const clients7 = useRef(null);
-    const clients8 = useRef(null);
+
     const featureImage2 = useRef(null);
     const featureImage2Replace = useRef(null);
     const featureImage3 = useRef(null);
@@ -47,17 +44,6 @@ const Welcome = ({
     const productsSectionTitle = useRef(null);
 
     useGSAP(() => {
-
-        const clientsTimeLine = gsap.timeline(
-            {
-                scrollTrigger: {
-                    trigger: clients1.current,
-                    start: "top bottom",
-                    toggleActions: "play none none reverse",
-                    end: "bottom top",
-                }
-            }
-        );
 
         heroTimeLine.fromTo(
             heroSectioTitle1.current,
@@ -118,89 +104,6 @@ const Welcome = ({
                 y: 0,
             }
         );
-
-        clientsTimeLine.fromTo(
-            clients1.current,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                ease: "back.inOut",
-            }
-        ).fromTo(
-            clients2.current,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                ease: "back.inOut",
-            }
-        ).fromTo(
-            clients3.current,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                ease: "back.inOut",
-            }
-        ).fromTo(
-            clients4.current,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                ease: "back.inOut",
-            }
-        ).fromTo(
-            clients5.current,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                ease: "back.inOut",
-            }
-        ).fromTo(
-            clients6.current,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                ease: "back.inOut",
-            }
-        ).fromTo(
-            clients7.current,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                ease: "back.inOut",
-            }
-        ).fromTo(
-            clients8.current,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                ease: "back.inOut",
-            }
-        );
-
 
         gsap.fromTo(
             scrollDown.current,
@@ -353,7 +256,7 @@ const Welcome = ({
     });
     return (
         <>
-            <Head title="welcome">
+            <Head title="Hosgeldiniz">
                 <meta name="description" content="" />
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />
@@ -388,31 +291,14 @@ const Welcome = ({
                 <section className="flex flex-col items-center justify-center bg-white py-16 px-16" >
                     <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Musterilerimiz</h3>
                     <hr width="30%" className="border-2 border-green-500 " />
-                    <div className="grid lg:grid-cols-8 grid-cols-2 lg:space-y-4 lg:space-y-0 gap-4 pt-6 items-center justify-between "  >
-                        <div className="px-2" ref={clients1} >
-                            <img src="../../images/2.png" className="rounded-full shadow shadow-blue-700 " alt="" />
-                        </div>
-                        <div className="px-2" ref={clients2}>
-                            <img src="../../images/1.png" className="rounded-full shadow shadow-blue-700 " alt="" />
-                        </div>
-                        <div className="px-2" ref={clients3}>
-                            <img src="../../images/3.png" className="rounded-full shadow shadow-blue-700 " alt="" />
-                        </div>
-                        <div className="px-2" ref={clients4}>
-                            <img src="../../images/4.png" className="rounded-full shadow shadow-blue-700 " alt="" />
-                        </div>
-                        <div className="px-2" ref={clients5} >
-                            <img src="../../images/5.png" className="rounded-full shadow shadow-blue-700 " alt="" />
-                        </div>
-                        <div className="px-2" ref={clients6}>
-                            <img src="../../images/6.png" className="rounded-full shadow shadow-blue-700 " alt="" />
-                        </div>
-                        <div className="px-2" ref={clients7}>
-                            <img src="../../images/7.png" className="rounded-full shadow shadow-blue-700 " alt="" />
-                        </div>
-                        <div className="px-2" ref={clients8}>
-                            <img src="../../images/8.png" className="rounded-full shadow shadow-blue-700 " alt="" />
-                        </div>
+                    <div className="flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8 pt-12 items-center justify-between "  >
+                        {
+                            our_clients.map((client, idx) => (
+                                <div key={idx} className="px-2 py-2 flex flex-col items-center justify-center hover:-translate-y-4 duration-300 transition-all ease-in-out" >
+                                    <img src={`../../images/clients/orignial/${client.image_name}`} className="rounded-full shadow shadow-blue-700 w-32 h-32 lg:w-64 lg:h-64 " alt={client.name} />
+                                </div>
+                            ))
+                        }
                     </div>
                 </section>
 
@@ -420,15 +306,15 @@ const Welcome = ({
                 <section className="flex flex-col items-center justify-center lg:pb-32 pb-10 lg:px-12 px-7 text-center bg-white min-h-[30vh]" ref={aboutSection} >
                     <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Hakkimizda</h3>
                     <hr width="30%" className="border-2 border-green-500 " />
-                    <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text  bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-fixed " ref={aboutSectionTitle}>
-                        İs elektrik & mühendislik 2017 yılında İstanbul kemerburgazda kurulmuş elektrik proje ve taahhüt hizmetleri alanında uzun yıllar çalışmış konuttan ENDÜSTRİYEL tesis vs bir çok proje bitirmiş. Amacımız müşterilerimize her koşulda en iyi ve kaliteli hizmeti sunmaktır
+                    <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text   bg-gradient-to-r from-green-500 to-green-900  bg-fixed " ref={aboutSectionTitle}>
+                        {about_us_text_tr?.general_value}
                     </p>
                 </section>
 
                 {/* Slogan Section */}
                 <section className=" flex flex-col items-center justify-center lg:p-8 p-6 text-center bg-white min-h-[90vh] bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-cover bg-center bg-no-repeat">
                     <h2 className="text-5xl lg:text-7xl lg:px-8 px-4 pb-8 text-transparent text-white" >
-                        Eviniz ve Isiniz Icin Mukemmel Elektrik Cozumler
+                        {slogan_text_tr?.general_value}
                     </h2>
                 </section>
 
@@ -436,10 +322,7 @@ const Welcome = ({
                     <div className="w-full flex flex-wrap flex-col lg:flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col flex-wrap items-center justify-center min-h-[70vh]">
                             <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-4 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900" ref={featureSection1} >
-                                Reliable Service:
-                                Consistent, uninterrupted power delivery with minimal outages &
-                                Rapid response to restore power during outages
-
+                                {feauters_1_text_tr?.general_value}
                             </p>
                         </div>
                         <div className="w-full lg:w-1/2 relative">
@@ -458,11 +341,10 @@ const Welcome = ({
                             />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-4 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-200"  >
-                                <li> Customer-Centric Approach:</li>
-                                <li> Affordable Costs</li>
-                                <li>Flexible billing and payment options</li>
-                            </ul>
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-4 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-200"  >
+                                {feauters_2_text_tr?.general_value}
+
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -476,7 +358,8 @@ const Welcome = ({
                                 Our missions are to:
                             </div>
                             <div className="lg:text-4xl text-2xl lg:mx-10 mx-4">
-                                Combining technical expertise, project management excellence, and a customer-centric approach, we unlock new possibilities.
+                                {hero_section_text_tr?.general_value}
+
                             </div>
                         </h2>
                     </div>
@@ -486,11 +369,10 @@ const Welcome = ({
                     <div className="w-full flex flex-wrap flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
 
-                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-4 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
-                                <li>Responsive and Accessible Support:</li>
-                                <li>24/7 availability through multiple channels (phone, email, chat, etc.)</li>
-                                <li>Empowered and well-trained customer service representatives</li>
-                            </ul> 
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-4 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
+                                {feauters_3_text_tr?.general_value}
+
+                            </p>
 
                         </div>
                         <div className="w-full lg:w-1/2 relative">
@@ -509,11 +391,10 @@ const Welcome = ({
                             />
                         </div>
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
-                            <ul className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-4 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
-                                <li>Experienced Team:</li>
-                                <li>Multidisciplinary project managers with relevant credentials</li>
-                                <li>Access to specialized technical experts and consultants</li>
-                            </ul>
+                            <p className="text-2xl first-letter:text-3xl text-start lg:text-4xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-4 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900">
+                                {feauters_4_text_tr?.general_value}
+
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -522,39 +403,22 @@ const Welcome = ({
                 <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
                     <div className="w-full flex-wrap bg-white flex flex-row items-center justify-between px-12 py-4">
                         <h3 className="text-4xl text-black flex flex-row items-center justify-center border-b-2 pb-5 border-green-500 " ref={productsSectionTitle}> Projelerimiz</h3>
-                        <Link href="#" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
-                            show All
+                        <Link href="tr/projects" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
+                            Hepsini Göster
                         </Link>
                     </div>
                     <div className="grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-y-5 lg:space-x-5  lg:space-y-0 px-5">
-                        <div className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
-                        </div>
-                        <div className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
-                        </div>
-
-                        <div className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
-                        </div>
-                        <div className="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
-                        </div>
-                        <div className="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
-                        </div>
-                        <div className="col-span-1 relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                            <img src="../../images/_7f66a187-fc33-4d60-8e36-9a3a4854e77c.jpeg" alt="Our Commitments" className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                            <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">Our Commitments</h2>
-                        </div>
+                        {our_projects.map((project, index) =>
+                        (
+                            <Link href={`/tr/project-details/${project.slug}`} key={index} className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                                <img src={`../../images/projects/orignial/${project.image}`} alt={project.name} className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                                <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">{project.name}</h2>
+                            </Link>
+                        ))
+                        }
                     </div>
-                    <div className=" pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">
-                        <Link href="#" className="hidden lg:inline-block hover:text-green-800 transition-all duration-300 text-2xl text-green-500">
+                    <div className="pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">
+                        <Link href="/tr/projects" className="border border-green-500 hover:text-green-800 transition-all duration-300 p-3 rounded-lg text-2xl text-green-500">
                             Hepsini Goster
                         </Link>
                     </div>

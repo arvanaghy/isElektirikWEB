@@ -41,9 +41,9 @@ const ECatalog = ({
     return (
         <>
             <Head title="e-catalog">
-                <meta name="description" content="Free Web tutorialasdasds" />
-                <meta name="keywords" content="HTML, CSS, JavaScript" />
-                <meta name="author" content="John Doesdfsf" />
+                <meta name="description" content="" />
+                <meta name="keywords" content="" />
+                <meta name="author" content="" />
             </Head>
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}>
             <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">

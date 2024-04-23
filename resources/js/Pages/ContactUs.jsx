@@ -8,7 +8,7 @@ import { useRef } from "react";
 import { Head, Link } from "@inertiajs/react";
 
 
-const ContactUs = ({ 
+const ContactUs = ({
     address,
     phone,
     email,
@@ -16,7 +16,7 @@ const ContactUs = ({
     telegram,
     linkdin,
     about_us_text_en,
- }) => {
+}) => {
     gsap.registerPlugin(useGSAP);
     const contactUs = useRef(null);
 
@@ -48,11 +48,11 @@ const ContactUs = ({
                 <Head title="Contact Us">
                     <title>Contact Us</title>
                     <meta name="title" content="Contact Us" />
-                    <meta name="description" content="Free Web tutorial" />
-                    <meta name="keywords" content="HTML, CSS, JavaScript" />
-                    <meta name="author" content="John Doe" />
+                    <meta name="description" content="" />
+                    <meta name="keywords" content="" />
+                    <meta name="author" content="" />
                 </Head>
-                
+
                 <div className=" flex flex-col">
                     <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">
                         <h5 ref={contactUs} className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">

@@ -10,7 +10,7 @@ const NavBarTR = () => {
     const [isLanguageToggled, setIsLanguageToggled] = useState(false);
     const { url } = usePage();
 
-    const handleSearch =(e)=>{
+    const handleSearch = (e) => {
         e.preventDefault();
         Inertia.get(`/tr/search?q=${search.value}`);
         search.value = "";
@@ -41,10 +41,10 @@ const NavBarTR = () => {
                 >
                     <Link href="/tr" className="w-64">
                         <div>
-                            <img 
-                            src={logo} 
-                            alt="is elektirik"
-                            className="backdrop-filter backdrop-hue-rotate-90" />
+                            <img
+                                src={logo}
+                                alt="is elektirik"
+                                className="backdrop-filter backdrop-hue-rotate-90" />
                         </div>
                     </Link>
 
@@ -192,7 +192,7 @@ const NavBarTR = () => {
                         </button>
                     </div>
                 </div>
-                <div className="flex flex-row justify-center w-full pt-3">
+                <form onSubmit={handleSearch} className="flex flex-row justify-center w-full pt-3">
                     <input
                         type="text"
                         placeholder="Search Project "
@@ -220,7 +220,7 @@ const NavBarTR = () => {
                             </g>
                         </svg>
                     </button>
-                </div>
+                </form>
                 {isNavbarMenuOpen && (
                     <div className="relative top-2 flex flex-col flex-wrap md:hidden w-full min-h-[95vh] bg-gray-300 p-2 z-50">
                         <ul className="w-full space-y-2">
@@ -234,14 +234,11 @@ const NavBarTR = () => {
                                 <Link href="/tr/projects">Projelerimiz</Link>
                             </li>
                             <li>
-                                <Link href="/tr/blog">Blog</Link>
-                            </li>
-                            <li>
-                                <Link href="/tr/e-catalog">E-Catalog</Link>
+                                <Link href="/tr/e-catalog">E-Katalog</Link>
                             </li>
                         </ul>
                         <ul className="w-full text-white bg-gray-600 mt-2 px-1 py-2 rounded">
-                            <li className="flex flex-row"
+                            <li className="flex flex-row mt-3"
                                 onClick={() => setIsLanguageToggled((prev) => !prev)} >
                                 <svg
                                     className="w-6 h-6 mx-2"
@@ -279,7 +276,7 @@ const NavBarTR = () => {
                                 } >  English</Link> </li>
 
                             )}
-                            <li className="flex flex-row">
+                            <li className="flex flex-row mt-3">
                                 <svg
                                     className="w-6 h-6 mx-2"
                                     viewBox="-0.5 0 25 25"
@@ -311,40 +308,41 @@ const NavBarTR = () => {
                                     </g>
                                 </svg>
                                 <p>Favori Projeler</p></li>
-                            <li className="flex flex-row">
-                                <svg
-                                    className="w-6 h-6 mx-2"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                                    <g
-                                        id="SVGRepo_tracerCarrier"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    ></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        {" "}
-                                        <circle
-                                            cx="12"
-                                            cy="6"
-                                            r="4"
-                                            stroke="#ffffff"
-                                            strokeWidth="1.5"
-                                        ></circle>{" "}
-                                        <path
-                                            d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634"
-                                            stroke="#ffffff"
-                                            strokeWidth="1.5"
+                            <li className="flex flex-row mt-3">
+                                <Link href="/login" className="flex flex-row" >
+                                    <svg
+                                        className="w-6 h-6 mx-2"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                        <g
+                                            id="SVGRepo_tracerCarrier"
                                             strokeLinecap="round"
-                                        ></path>{" "}
-                                    </g>
-                                </svg>
-                                <p>
-                                    login
-                                </p>
-
+                                            strokeLinejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            {" "}
+                                            <circle
+                                                cx="12"
+                                                cy="6"
+                                                r="4"
+                                                stroke="#ffffff"
+                                                strokeWidth="1.5"
+                                            ></circle>{" "}
+                                            <path
+                                                d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634"
+                                                stroke="#ffffff"
+                                                strokeWidth="1.5"
+                                                strokeLinecap="round"
+                                            ></path>{" "}
+                                        </g>
+                                    </svg>
+                                    <p>
+                                        login
+                                    </p>
+                                </Link>
                             </li>
                         </ul>
                     </div>
