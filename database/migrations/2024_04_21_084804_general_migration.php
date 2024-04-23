@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('general_key');
             $table->string('general_value');
+            $table->timestamps();
         });
     }
 

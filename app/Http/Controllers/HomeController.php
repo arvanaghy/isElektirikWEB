@@ -91,6 +91,7 @@ class HomeController extends Controller
         $telegram = GeneralModel::where('general_key', 'telegram')->first();
         $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
         $about_us_text_en = GeneralModel::where('general_key', 'about_us_text_en')->first();
+        $hero_section_text_en = GeneralModel::where('general_key', 'hero_section_text_en')->first();
 
         return Inertia::render('AboutUs', [
             'url' => '/about-us',
@@ -102,6 +103,7 @@ class HomeController extends Controller
             'telegram' => $telegram,
             'linkdin' => $linkdin,
             'about_us_text_en' => $about_us_text_en,
+            'hero_section_text_en' => $hero_section_text_en,
         ]);
     }
 
