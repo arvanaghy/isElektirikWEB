@@ -78,7 +78,7 @@ const AboutUs = ({
                 <meta name="keywords" content="HTML, CSS, JavaScript" />
                 <meta name="author" content="John Doesdfsf" />
             </Head>
-            <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_tr?.general_value}>
+            <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value}>
                 {/* sirket profili */}
                 <div className="bg-[url('../images/contact-us.jpg')] py-16 bg-cover text-center flex flex-col lg:mt-0 mt-20">
                     <h5 ref={sirketProfili} className="text-6xl space-x-5">
