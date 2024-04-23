@@ -40,7 +40,7 @@ const All = ({
 
     return (
         <>
-            <Head title="OurProjects">
+            <Head title="Projelerimiz">
                 <meta name="description" content="" />
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />

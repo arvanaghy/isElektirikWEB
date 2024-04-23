@@ -22,8 +22,8 @@ const Details = ({ project_detail,
     return (
 
         <>
-            <Head title="">
-                <meta name="description" content="" />
+            <Head title={project_detail.name}>
+                <meta name="description" content={project_detail.description_tr} />
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />
             </Head>

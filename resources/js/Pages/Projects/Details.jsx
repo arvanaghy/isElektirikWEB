@@ -23,7 +23,7 @@ const Details = ({
     return (
         <>
             <Head title={project_detail.name}>
-                <meta name="description" content={project_detail.description} />
+                <meta name="description" content={project_detail.description_en} />
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />
             </Head>

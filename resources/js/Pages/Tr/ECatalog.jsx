@@ -40,7 +40,7 @@ const ECatalog = ({
 
     return (
         <>
-            <Head title="e-catalog">
+            <Head title="e-katalog">
                 <meta name="description" content="Free Web tutorialasdasds" />
                 <meta name="keywords" content="HTML, CSS, JavaScript" />
                 <meta name="author" content="John Doesdfsf" />
@@ -70,9 +70,8 @@ const ECatalog = ({
                                     <p className=" border-l-4 flex flex-col lg:flex-row lg:items-center pt-4 lg:pt-0 justify-between lg:justify-normal px-4 border-green-400" >
                                     Detail: <span className="pt-2 lg:pt-0 text-gray-500 lg:pl-10">{item.description}</span>
                                     </p>
-
-                                    
-                                    <Link href={item.url} className=" hover:text-green-800 h-full my-auto pt-5 lg:pt-0 transition-all duration-300  text-green-500" > İndirmek </Link>
+                                   
+                                    <a href={`../../catalog/${item.download_filename}`} target="_blank" download={item.download_filename}  className=" hover:text-green-800 h-full my-auto pt-5 lg:pt-0 transition-all duration-300  text-green-500" > İndirmek </a>
 
                                 </div>
                                 
