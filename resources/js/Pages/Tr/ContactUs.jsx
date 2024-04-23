@@ -7,7 +7,15 @@ import { Inertia } from '@inertiajs/inertia'
 
 
 
-const ContactUs = () => {
+const ContactUs = ({
+    address,
+    phone,
+    email,
+    insta,
+    telegram,
+    linkdin,
+    about_us_text_tr,
+}) => {
     gsap.registerPlugin(useGSAP);
     const contactUs = useRef(null);
 
@@ -34,7 +42,7 @@ const ContactUs = () => {
     }
 
     return (
-        <WebSiteTRLayout>
+        <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value} >
             <>
                 <div className=" flex flex-col">
                     <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">

@@ -54,6 +54,13 @@ class ProjectsController extends Controller
 
     public function tr_index(): Response
     {
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_tr = GeneralModel::where('general_key', 'about_us_text_tr')->first();
         $projects_list = array();
         $projects = ProjectsModel::paginate(12);
         foreach ($projects as $project) {
@@ -75,6 +82,13 @@ class ProjectsController extends Controller
             'projects' => $projects_list,
             'lastPage' => $projects->lastPage(),
             'currentPage' => $projects->currentPage(),
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
+            'about_us_text_tr' => $about_us_text_tr,
         ]);
     }
 
@@ -157,7 +171,13 @@ class ProjectsController extends Controller
 
     public function search_tr(Request $request)
     {
-
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_tr = GeneralModel::where('general_key', 'about_us_text_tr')->first();
         $searchPhrases = explode(' ', $request->q);
 
         $projects_list = array();
@@ -187,6 +207,13 @@ class ProjectsController extends Controller
             'projects' => $projects_list,
             'lastPage' => $projects->lastPage(),
             'currentPage' => $projects->currentPage(),
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
+            'about_us_text_tr' => $about_us_text_tr,
         ]);
     }
 }
