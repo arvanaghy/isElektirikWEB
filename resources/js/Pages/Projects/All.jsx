@@ -5,7 +5,18 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 
-const All = ({ projects, lastPage, currentPage }) => {
+const All = ({ 
+    projects,
+    lastPage,
+    currentPage,
+    address,
+    phone,
+    email,
+    insta,
+    telegram,
+    linkdin,
+    about_us_text_en,
+}) => {
     gsap.registerPlugin(useGSAP);
     const ourProjects = useRef(null);
 
@@ -33,7 +44,7 @@ const All = ({ projects, lastPage, currentPage }) => {
                 <meta name="keywords" content="" />
                 <meta name="author" content="" />
             </Head>
-            <WebSiteENLayout>
+            <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}>
                 <div  className=" flex flex-col gap-5 text-6xl items-center bg-[url('../images/contact-us.jpg')] bg-cover text-black justify-center  px-10 py-16 ">
                     <div ref={ourProjects}>
                     <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Our</span>

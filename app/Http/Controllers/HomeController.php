@@ -73,6 +73,8 @@ class HomeController extends Controller
         $insta = GeneralModel::where('general_key', 'insta')->first();
         $telegram = GeneralModel::where('general_key', 'telegram')->first();
         $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_en = GeneralModel::where('general_key', 'about_us_text_en')->first();
+
         return Inertia::render('ContactUs', [
             'url' => '/contact-us',
             'language' => 'en',
@@ -82,6 +84,7 @@ class HomeController extends Controller
             'insta' => $insta,
             'telegram' => $telegram,
             'linkdin' => $linkdin,
+            'about_us_text_en' => $about_us_text_en,
         ]);
     }
 
@@ -89,9 +92,23 @@ class HomeController extends Controller
 
     public function tr_index(): Response
     {
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_tr = GeneralModel::where('general_key', 'about_us_text_tr')->first();
         return Inertia::render('Tr/Welcome', [
             'url' => '/',
-            'language' => 'tr'
+            'language' => 'tr',
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
+            'about_us_text_tr' => $about_us_text_tr,
         ]);
     }
 

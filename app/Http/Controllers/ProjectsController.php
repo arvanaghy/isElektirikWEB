@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GeneralModel;
 use App\Models\ProjectImagesModel;
 use App\Models\ProjectsModel;
 use Illuminate\Http\Request;
@@ -13,6 +14,13 @@ class ProjectsController extends Controller
 {
     public function index(): Response
     {
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_en = GeneralModel::where('general_key', 'about_us_text_en')->first();
         $projects_list = array();
         $projects = ProjectsModel::paginate(12);
         foreach ($projects as $project) {
@@ -34,6 +42,13 @@ class ProjectsController extends Controller
             'projects' => $projects_list,
             'lastPage' => $projects->lastPage(),
             'currentPage' => $projects->currentPage(),
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
+            'about_us_text_en' => $about_us_text_en,
         ]);
     }
 
@@ -66,6 +81,13 @@ class ProjectsController extends Controller
 
     public function details($slug)
     {
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_en = GeneralModel::where('general_key', 'about_us_text_en')->first();
         $images = null;
         $project_detail = ProjectsModel::where('slug', $slug)->first();
 
@@ -75,12 +97,25 @@ class ProjectsController extends Controller
 
         return Inertia::render('Projects/Details', [
             'project_detail' => $project_detail,
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
+            'about_us_text_en' => $about_us_text_en,
         ]);
     }
 
     public function search(Request $request)
     {
-
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_en = GeneralModel::where('general_key', 'about_us_text_en')->first();
         $searchPhrases = explode(' ', $request->q);
 
         $projects_list = array();
@@ -110,6 +145,13 @@ class ProjectsController extends Controller
             'projects' => $projects_list,
             'lastPage' => $projects->lastPage(),
             'currentPage' => $projects->currentPage(),
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
+            'about_us_text_en' => $about_us_text_en,
         ]);
     }
 

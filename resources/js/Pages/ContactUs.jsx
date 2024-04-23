@@ -8,7 +8,15 @@ import { useRef } from "react";
 import { Head, Link } from "@inertiajs/react";
 
 
-const ContactUs = ({ address, phone, email, insta, telegram, linkdin }) => {
+const ContactUs = ({ 
+    address,
+    phone,
+    email,
+    insta,
+    telegram,
+    linkdin,
+    about_us_text_en,
+ }) => {
     gsap.registerPlugin(useGSAP);
     const contactUs = useRef(null);
 
@@ -35,7 +43,7 @@ const ContactUs = ({ address, phone, email, insta, telegram, linkdin }) => {
     }
 
     return (
-        <WebSiteENLayout >
+        <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value} >
             <>
                 <Head title="Contact Us">
                     <title>Contact Us</title>
