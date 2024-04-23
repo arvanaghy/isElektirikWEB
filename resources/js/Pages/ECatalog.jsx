@@ -6,7 +6,18 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 
-const ECatalog = ({ catalog_list, lastPage, currentPage }) => {
+const ECatalog = ({ 
+    catalog_list,
+    lastPage,
+    currentPage,
+    address,
+    phone,
+    email,
+    insta,
+    telegram,
+    linkdin,
+    about_us_text_en,
+}) => {
     gsap.registerPlugin(useGSAP);
     const eCatalog = useRef(null);
 
@@ -34,7 +45,7 @@ const ECatalog = ({ catalog_list, lastPage, currentPage }) => {
                 <meta name="keywords" content="HTML, CSS, JavaScript" />
                 <meta name="author" content="John Doesdfsf" />
             </Head>
-            <WebSiteENLayout>
+            <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}>
             <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">
                         <h5 ref={eCatalog}  className="lg:text-6xl text-4xl  mt-16 lg:mt-0">
                             <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">E-</span>
