@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProjectsModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\File;
 
 class SitemapController extends Controller
 {
@@ -14,7 +16,7 @@ class SitemapController extends Controller
         $sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
         // Add static pages
-        $staticPages = ['/', '/about', '/contact'];
+        $staticPages = ['/', '/about-us', '/contact-us', '/projects', '/e-catalog', '/tr/', '/tr/about-us', '/tr/contact-us', '/tr/projects', '/tr/e-catalog'];
         foreach ($staticPages as $page) {
             $sitemap .= '<url>';
             $sitemap .= '<loc>' . url($page) . '</loc>';
@@ -24,21 +26,21 @@ class SitemapController extends Controller
             $sitemap .= '</url>';
         }
 
-        // Add dynamic pages (e.g., blog posts)
-        // $posts = Post::all();
-        // foreach ($posts as $post) {
-        //     $sitemap .= '<url>';
-        //     $sitemap .= '<loc>' . url('/post/' . $post->slug) . '</loc>';
-        //     $sitemap .= '<lastmod>' . $post->updated_at->toAtomString() . '</lastmod>';
-        //     $sitemap .= '<changefreq>weekly</changefreq>';
-        //     $sitemap .= '<priority>0.8</priority>';
-        //     $sitemap .= '</url>';
-        // }
+        // Add dynamic pages (e.g., blog projects)
+        $projects = ProjectsModel::all();
+        foreach ($projects as $project) {
+            $sitemap .= '<url>';
+            $sitemap .= '<loc>' . url('/project-details/' . $project->slug) . '</loc>';
+            $sitemap .= '<lastmod>' . $project->updated_at->toAtomString() . '</lastmod>';
+            $sitemap .= '<changefreq>weekly</changefreq>';
+            $sitemap .= '<priority>0.8</priority>';
+            $sitemap .= '</url>';
+        }
 
         $sitemap .= '</urlset>';
 
-        Storage::disk('public')->put('sitemap.xml', $sitemap);
+        File::put(public_path('sitemap.xml'), $sitemap);
 
-        return response()->json(['message' => 'Sitemap generated successfully']);
+        return redirect('/sitemap.xml');
     }
 }
