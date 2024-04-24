@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const PhoneCallButton = () => {
+const PhoneCallButton = ({phone , linkdin}) => {
     const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
         setTimeout(() => {
@@ -14,7 +14,7 @@ const PhoneCallButton = () => {
             className="w-24 fixed flex flex-col cursor-pointer bottom-4 right-16 rounded overflow-hidden" style={{ zIndex: 9999 }}
         >
             <div className={` ${isOpen ? 'flex flex-row w-24 h-10 space-x-2 justify-center align-middle items-center content-center my-auto ' : 'hidden'}  bg-gray-300 mb-2 rounded overflow-hidden text-center`}>
-                <div className="pr-3 border-r-2 border-gray-400 hover:scale-110">
+                <a href={`tel:${phone}`} className="pr-3 border-r-2 border-gray-400 hover:scale-110">
                     <svg
                         className="w-5 h-5 "
                         viewBox="0 0 24 24"
@@ -47,10 +47,10 @@ const PhoneCallButton = () => {
                             ></path>{" "}
                         </g>
                     </svg>
-                </div>
-                <div className="hover:scale-110">
+                </a>
+                <a target="_blank" href={linkdin} className="hover:scale-110">
                     <svg className="w-7 h-7" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M84.7925 257.334C1.81069 106.044 237.525 -11.6463 321.16 119.453C396.366 237.339 251.357 391.573 150.736 312.145" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M89.5909 265.912C34.5405 357.344 49.8143 347.445 133.267 311.303" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M170.381 113.42C60.1005 141.74 240.793 341.184 288.582 236.047" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M177.338 175.365C186.032 197.073 208.905 214.528 227.906 227.195" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M177.338 126.062C187.693 143.231 203.319 159.586 178.602 168.412" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M285.431 228.46C262.184 210.573 250.584 200.134 232.965 225.301" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
-                </div>
+                </a>
             </div>
             <div className=" flex flex-row items-center justify-center bg-green-300 shadow shadow-gray-500/50 rounded-xl hover:opacity-100 opacity-80">
                 <svg

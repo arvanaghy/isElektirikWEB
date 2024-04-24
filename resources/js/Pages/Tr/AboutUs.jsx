@@ -13,6 +13,7 @@ const AboutUs = ({
     telegram,
     linkdin,
     about_us_text_tr,
+    hero_section_text_tr
 }) => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
     const sirketProfili = useRef(null);
@@ -92,14 +93,13 @@ const AboutUs = ({
                 {/* iselektriki kesfedin */}
                 <div className="text-black flex flex-col space-y-10 lg:p-20 p-10">
                     <h3 ref={kesfedin} className="text-5xl first-letter:text-green-500 first-letter:text-6xl mx-5">Iselekrik'i kesfedin</h3>
-                    <p className="text-2xl leading-10 lg:mx-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus iste rerum veniam! Quibusdam asperiores quos cum quo iure ut necessitatibus commodi, labore veritatis sed assumenda laborum consequuntur quasi at.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sunt nam architecto nulla, dolorem atque itaque ullam excepturi quasi totam voluptatem, neque debitis beatae. Cum nam quo alias sint corrupti!</p>
+                    <p className="text-2xl leading-10 lg:mx-10">{about_us_text_tr?.general_value}</p>
                 </div>
 
                 {/* farkimiz ve misyonumuz */}
                 <div className="flex flex-col space-y-10 lg:p-20 p-10  text-white bg-black ">
                     <h3 className="text-4xl lg:text-5xl mx-5 first-letter:text-5xl lg:first-letter:text-6xl first-letter:text-green-500" ref={farkimiz}>Farkimiz ve Misyonumuz </h3>
-                    <p className="text-lg lg:text-2xl text-center lg:text-left leading-8 lg:leading-10 px-1 lg:mx-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus iste rerum veniam! Quibusdam asperiores quos cum quo iure ut necessitatibus commodi, labore veritatis sed assumenda laborum consequuntur quasi at.</p>
+                    <p className="text-lg lg:text-2xl text-center lg:text-left leading-8 lg:leading-10 px-1 lg:mx-10">{hero_section_text_tr?.general_value}</p>
                 </div>
 
                 {/* Our team */}

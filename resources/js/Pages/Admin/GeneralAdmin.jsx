@@ -80,7 +80,7 @@ const GeneralAdmin = ({ auth, slogan_tr, slogan_en, feauters_1_text_tr, feauters
                                         <th className="w-1/4 px-4 py-2">email</th>
                                         <th className="w-1/4 px-4 py-2">instagram</th>
                                         <th className="w-1/4 px-4 py-2">telegram</th>
-                                        <th className="w-1/4 px-4 py-2">linkedin</th>
+                                        <th className="w-1/4 px-4 py-2">whatsapp</th>
                                         <th className="w-1/4 px-4 py-2">operation</th>
                                     </tr>
                                 </thead>
