@@ -24,13 +24,11 @@ const Details = ({
         <>
             <Head title={project_detail.name}>
                 <meta name="description" content={project_detail.description_en} />
-                <meta name="keywords" content="" />
-                <meta name="author" content="" />
             </Head>
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}>
-                <div className=" flex flex-row w-full flex-wrap items-center justify-between px-10 py-20 ">
+                <div className=" flex flex-row w-full flex-wrap items-center justify-between lg:px-10 py-20 ">
                     <div className="w-full lg:w-3/5">
-                        <div className=" px-10">
+                        <div className=" lg:px-10">
                             <Carousel autoFocus autoPlay showArrows infiniteLoop  >
                                 {images.map((image, index) =>
                                 (

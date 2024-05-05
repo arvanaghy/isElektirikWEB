@@ -354,14 +354,17 @@ const Welcome = ({
                 {/* Our Missions Section */}
                 <section className="flex flex-col items-center justify-center text-center bg-white lg:min-h-[90vh] " >
                     <div className="w-[90%] h-[80vh] flex items-center justify-center bg-[url('../../images/94c650ec-1f12-4dea-94ed-dcd4e719f6ac.jpeg')] bg-cover bg-center bg-no-repeat" ref={missionSection} >
-                        <h2 className="lg:text-4xl text-3xl text-transparent flex flex-col lg:space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-green-900 to-green-200 drop-shadow-lg shadow-black ">
-                            <div className="lg:text-6xl text-3xl">
-                                Our missions are to:
-                            </div>
-                            <div className="lg:text-4xl text-2xl lg:mx-10 mx-7">
-                                {hero_section_text_en?.general_value}
-                            </div>
-                        </h2>
+                    <div className="bg-white/60 p-6 rounded-xl text-center w-[90%] shadow-2xl shadow-gray-500/70 ">
+                            <h2 className="lg:text-4xl text-3xl text-transparent flex flex-col lg:space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-green-900 to-green-200 drop-shadow-lg shadow-black ">
+                                <div className="lg:text-6xl text-3xl">
+                                    Our missions are to:
+                                </div>
+                                <div className="lg:text-4xl text-2xl lg:mx-10 mx-4">
+                                    {hero_section_text_en?.general_value}
+
+                                </div>
+                            </h2>
+                        </div>
                     </div>
                 </section>
                 {/* 
