@@ -259,14 +259,11 @@ const Welcome = ({
     return (
         <>
             <Head title="Hosgeldiniz">
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
-                <meta name="author" content="" />
             </Head>
             <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value}>
                 {/* Is Electrik ve Muhendislik Hero Section */}
                 <section
-                    className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('../../images/5f699f2f52f2ae24b.jpg')] bg-cover bg-center bg-no-repeat"
+                    className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('/storage/mainHome.jpeg')] bg-cover bg-center bg-no-repeat"
                     ref={heroContainer}
                 >
                     <div className="min-h-[90vh] lg:min-h-[73vh] flex flex-col items-center justify-center">

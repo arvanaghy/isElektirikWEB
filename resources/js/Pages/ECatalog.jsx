@@ -46,7 +46,7 @@ const ECatalog = ({
                 <meta name="author" content="" />
             </Head>
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}>
-            <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">
+            <div className="flex flex-col bg-[url('/storage/contact-us.jpg')] py-16 text-center bg-auto bg-no-repeat">
                         <h5 ref={eCatalog}  className="lg:text-6xl text-4xl  mt-16 lg:mt-0">
                             <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">E-</span>
                             <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Catalog</span>
@@ -70,9 +70,7 @@ const ECatalog = ({
                                     <p className=" border-l-4 flex flex-col lg:flex-row lg:items-center pt-4 lg:pt-0 justify-between lg:justify-normal px-4 border-green-400" >
                                     Description: <span className="pt-2 lg:pt-0 text-gray-500 lg:pl-10">{item.description}</span>
                                     </p>
-
-                                    
-                                    <Link href={item.url} className=" hover:text-green-800 h-full my-auto pt-5 lg:pt-0 transition-all duration-300  text-green-500" > Download </Link>
+                                     <a href={`/storage/${item.download_filename}`} className=" hover:text-green-800 h-full my-auto pt-5 lg:pt-0 transition-all duration-300  text-green-500" > Download </a>
 
                                 </div>
                                 
@@ -84,15 +82,15 @@ const ECatalog = ({
                     {lastPage > 1 && (
                         <div className="flex flex-col items-center w-full py-3">
                             <div className="flex flex-row w-full h-32 items-center justify-center ">
-                                <Link href="/projects?page=1" className="hover:text-green-800 transition-all duration-300  text-green-500">
+                                <Link href="/e-catalog?page=1" className="hover:text-green-800 transition-all duration-300  text-green-500">
                                     FitrstPage
                                 </Link>
                                 {range.map((page) => (
                                     <Link
-                                        href={`/projects?page=${page}`}
+                                        href={`e-catalog/?page=${page}`}
                                         className={`mx-2 border-2 border-green-400 p-2 rounded-md hover:text-green-800 transition-all duration-300 text-green-500 ${page === currentPage ? "bg-green-500 text-white" : ""} `}>{page}</Link>
                                 ))}
-                                <Link href={`/projects?page=${lastPage}`} className="hover:text-green-800 transition-all duration-300 text-green-500">
+                                <Link href={`ecatalog/?page=${lastPage}`} className="hover:text-green-800 transition-all duration-300 text-green-500">
                                     lastPage
                                 </Link>
                             </div>

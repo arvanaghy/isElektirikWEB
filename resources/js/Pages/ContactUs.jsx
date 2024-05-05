@@ -50,7 +50,7 @@ const ContactUs = ({
                 </Head>
 
                 <div className=" flex flex-col">
-                    <div className="flex flex-col bg-[url('/storage/contact-us.jpg')] py-16 text-center bg-cover">
+                    <div className="flex flex-col bg-[url('/storage/contact-us.jpg')] py-16 text-center bg-auto bg-no-repeat">
                         <h5 ref={contactUs} className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">
                             <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Contact</span>
                             <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500"> Us </span>

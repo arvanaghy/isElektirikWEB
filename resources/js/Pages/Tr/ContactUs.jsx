@@ -50,7 +50,7 @@ const ContactUs = ({
             <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value} >
                 <>
                     <div className=" flex flex-col">
-                        <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-cover">
+                        <div className="flex flex-col bg-[url('../images/contact-us.jpg')] py-16 text-center bg-auto bg-no-repeat">
                             <h5 ref={contactUs} className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">
                                 <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Bize</span>
                                 <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500"> Ulasin </span>

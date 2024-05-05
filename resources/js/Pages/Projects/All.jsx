@@ -45,7 +45,7 @@ const All = ({
                 <meta name="author" content="" />
             </Head>
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}>
-                <div className=" flex flex-col gap-5 text-4xl lg:text-6xl items-center bg-[url('/storage/contact-us.jpg')] bg-cover text-black justify-center  px-10 py-16 ">
+                <div className=" flex flex-col gap-5 text-4xl lg:text-6xl items-center bg-[url('/storage/contact-us.jpg')] bg-auto bg-no-repeat text-black justify-center  px-10 py-16 ">
                     <div className="pt-24 lg:pt-0" ref={ourProjects}>
                         <span className="inline-block lg:first-letter:text-7xl first-letter:text-4xl first-letter:text-green-500">Our</span>
                         <span className="inline-block lg:first-letter:text-7xl first-letter:text-4xl pl-5 first-letter:text-green-500">Projects</span>
@@ -62,7 +62,7 @@ const All = ({
 
                         {projects.length > 0 && projects.map(project =>
 
-                            <Link href={`/project-details/${project.slug}`} key={project.id} className="group w-full flex flex-row items-center justify-start cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <Link href={`/project-details/${project.slug}`} key={project.id} className="group w-full flex flex-row items-center justify-start cursor-pointer hover:bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-800/60 hover:scale-105 transition-all duration-300 ease-in-out ">
                                 <img src={`/storage/${project.image}`} alt={project.name} className="w-52 h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
                                 <div className="flex flex-col px-8 py-3 space-y-2">
                                     <h2 className="text-lg font-bold  drop-shadow shadow-black text-black flex flex-row ">

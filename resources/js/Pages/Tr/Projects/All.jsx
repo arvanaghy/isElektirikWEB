@@ -46,7 +46,7 @@ const All = ({
                 <meta name="author" content="" />
             </Head>
             <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value}>
-                <div className="flex flex-col bg-[url('/storage/contact-us.jpg')] py-16 text-center bg-cover">
+                <div className="flex flex-col bg-[url('/storage/contact-us.jpg')] py-16 text-center bg-auto bg-no-repeat">
                     <h5 ref={ourProjects} className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">
                         <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Projelerimiz</span>
                     </h5>
@@ -61,7 +61,7 @@ const All = ({
                     <div className="flex flex-col lg:flex-row lg:flex-wrap items-center justify-center w-full px-24 space-y-6">
 
                         {projects.length > 0 && projects.map(project =>
-                            <Link href={`/tr/project-details/${project.slug}`} key={project.id} className="group w-full flex flex-row items-center justify-start cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <Link href={`/tr/project-details/${project.slug}`} key={project.id} className="group w-full flex flex-row items-center justify-start cursor-pointer hover:bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-800/60 hover:scale-105 transition-all duration-300 ease-in-out ">
                                 <img src={`/storage/${project.image}`} alt={project.name} className="w-52 h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
                                 <div className="flex flex-col px-8 py-3 space-y-2">
                                     <h2 className="text-lg font-bold  drop-shadow shadow-black text-black flex flex-row ">
