@@ -23,7 +23,7 @@ const WebSiteTRLayout = ({ children,
                 {children}
             </main>
             <BackToTopButton />
-            <PhoneCallButton phone={phone} linkdin={linkdin} />
+            {/* <PhoneCallButton phone={phone} linkdin={linkdin} /> */}
             <FooterTR address={address} phone={phone} email={email} insta={insta} telegram={telegram} linkdin={linkdin} about_tr={about_tr} />
         </div>
     );

@@ -7,6 +7,7 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\AdminProjectController;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\AdminCatalog;
+use App\Http\Controllers\AdminServicesController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\SitemapController;
 
@@ -18,6 +19,7 @@ use Inertia\Inertia;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('about-us', [HomeController::class, 'about_us'])->name('about-us');
 Route::get('contact-us', [HomeController::class, 'contact_us'])->name('contact-us');
+Route::get('our-services', [HomeController::class, 'our_services'])->name('our-services');
 Route::get('e-catalog', [ECatalogController::class, 'index'])->name('e-catalog');
 Route::get('projects', [ProjectsController::class, 'index'])->name('projects');
 Route::get('project-details/{slug}', [ProjectsController::class, 'details']);
@@ -26,6 +28,7 @@ Route::get('/search', [ProjectsController::class, 'search']);
 Route::get('/tr/', [HomeController::class, 'tr_index'])->name('tr-home');
 Route::get('/tr/about-us', [HomeController::class, 'tr_about_us'])->name('tr-about-us');
 Route::get('/tr/contact-us', [HomeController::class, 'tr_contact_us'])->name('tr-contact-us');
+Route::get('/tr/our-services', [HomeController::class, 'tr_our_services'])->name('tr-our-services');
 Route::get('/tr/e-catalog', [ECatalogController::class, 'tr_index'])->name('tr-e-catalog');
 Route::get('/tr/projects', [ProjectsController::class, 'tr_index'])->name('tr-projects');
 Route::get('/tr/project-details/{slug}', [ProjectsController::class, 'tr_details']);
@@ -37,9 +40,9 @@ Route::get('/site-map', [SitemapController::class, 'generateSitemap']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified', AdminMiddelware::class])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware(['auth', 'verified', AdminMiddelware::class])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/general-admin', [GeneralController::class, 'index'])->name('generalAdmin');
 
     Route::get('/projects-admin', [AdminProjectController::class, 'index'])->name('projectsAdmin');
@@ -50,6 +53,15 @@ Route::middleware(['auth', 'verified', AdminMiddelware::class])->group(function 
     Route::post('/update-project/{id}', [AdminProjectController::class, 'update']);
     Route::post('/update-project-images/{id}', [AdminProjectController::class, 'updateImages']);
     Route::delete('/delete-project-image/{id}', [AdminProjectController::class, 'deleteImages']);
+
+
+    Route::get('/services-admin', [AdminServicesController::class, 'index'])->name('servicesAdmin');
+    Route::get('/add-service', [AdminServicesController::class, 'create']);
+    Route::post('/submit-services', [AdminServicesController::class, 'store']);
+    Route::delete('/delete-service/{id}', [AdminServicesController::class, 'destroy']);
+    Route::get('/edit-service/{id}', [AdminServicesController::class, 'edit']);
+    Route::post('/update-service/{id}', [AdminServicesController::class, 'update']);
+
     
     Route::get('/contacts-admin', [GeneralController::class, 'list_tickets'])->name('contactsAdmin');
 

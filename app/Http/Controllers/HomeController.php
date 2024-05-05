@@ -6,6 +6,7 @@ use App\Models\ClienttModel;
 use App\Models\GeneralModel;
 use App\Models\ProjectImagesModel;
 use App\Models\ProjectsModel;
+use App\Models\ServicesModel;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -107,6 +108,35 @@ class HomeController extends Controller
         ]);
     }
 
+    public function our_services(): Response
+    {
+
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_en = GeneralModel::where('general_key', 'about_us_text_en')->first();
+        $electrical_services = ServicesModel::where('type', 'electrical')->orderBy('id', 'desc')->get();
+        $mechanical_services = ServicesModel::where('type', 'mechanical')->orderBy('id', 'desc')->get();
+
+        return Inertia::render('OurServices', [
+            'url' => '/our-services',
+            'language' => 'en',
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
+            'about_us_text_en' => $about_us_text_en,
+            'electrical_services' => $electrical_services,
+            'mechanical_services' => $mechanical_services,
+        ]);
+    }
+
+
     public function contact_us(): Response
     {
         $address = GeneralModel::where('general_key', 'address')->first();
@@ -116,7 +146,6 @@ class HomeController extends Controller
         $telegram = GeneralModel::where('general_key', 'telegram')->first();
         $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
         $about_us_text_en = GeneralModel::where('general_key', 'about_us_text_en')->first();
-
 
 
         return Inertia::render('ContactUs', [
@@ -244,6 +273,34 @@ class HomeController extends Controller
             'telegram' => $telegram,
             'linkdin' => $linkdin,
             'about_us_text_tr' => $about_us_text_tr,
+        ]);
+    }
+
+    public function tr_our_services(): Response
+    {
+
+        $address = GeneralModel::where('general_key', 'address')->first();
+        $phone = GeneralModel::where('general_key', 'phone')->first();
+        $email = GeneralModel::where('general_key', 'email')->first();
+        $insta = GeneralModel::where('general_key', 'insta')->first();
+        $telegram = GeneralModel::where('general_key', 'telegram')->first();
+        $linkdin = GeneralModel::where('general_key', 'linkdin')->first();
+        $about_us_text_tr = GeneralModel::where('general_key', 'about_us_text_tr')->first();
+        $electrical_services = ServicesModel::where('type', 'electrical')->orderBy('id', 'desc')->get();
+        $mechanical_services = ServicesModel::where('type', 'mechanical')->orderBy('id', 'desc')->get();
+
+        return Inertia::render('Tr/OurServices', [
+            'url' => '/our-services',
+            'language' => 'tr',
+            'address' => $address,
+            'phone' => $phone,
+            'email' => $email,
+            'insta' => $insta,
+            'telegram' => $telegram,
+            'linkdin' => $linkdin,
+            'about_us_text_tr' => $about_us_text_tr,
+            'electrical_services' => $electrical_services,
+            'mechanical_services' => $mechanical_services,
         ]);
     }
 }

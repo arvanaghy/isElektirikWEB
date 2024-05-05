@@ -93,11 +93,11 @@ const NavBarTR = () => {
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
-                            <Link
-                                href="/tr/contact-us"
+                        <Link
+                                href="/tr/our-services"
                                 className="inline-block pb-1"
                             >
-                                iletisim
+                                Hizmetlerimiz
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
@@ -110,11 +110,17 @@ const NavBarTR = () => {
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
+                                href="/tr/contact-us"
+                                className="inline-block pb-1"
+                            >
+                                İletişim
+                            </Link>
+                            {/* <Link
                                 href="/tr/e-catalog"
                                 className="inline-block pb-1"
                             >
                                 E-Katalog
-                            </Link>
+                            </Link> */}
                         </li>
                     </ul>
                 </div>
@@ -228,14 +234,17 @@ const NavBarTR = () => {
                                 <Link href="/tr/about-us">Hakkimizda</Link>
                             </li>
                             <li>
-                                <Link href="/tr/contact-us">iletisim</Link>
+                                <Link href="/tr/our-services">Hizmetlerimiz</Link>
                             </li>
                             <li>
                                 <Link href="/tr/projects">Projelerimiz</Link>
                             </li>
                             <li>
-                                <Link href="/tr/e-catalog">E-Katalog</Link>
+                                <Link href="/tr/contact-us">Iletisim</Link>
                             </li>
+                            {/* <li>
+                                <Link href="/tr/e-catalog">E-Katalog</Link>
+                            </li> */}
                         </ul>
                         <ul className="w-full text-white bg-gray-600 mt-2 px-1 py-2 rounded">
                             <li className="flex flex-row mt-3"

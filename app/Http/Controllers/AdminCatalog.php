@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\ECatalogModel;
 use Inertia\Inertia;
 use Inertia\Response;
+use Illuminate\Support\Facades\Storage;
+
 
 class AdminCatalog extends Controller
 {
@@ -31,19 +33,11 @@ class AdminCatalog extends Controller
             'description' => 'sometimes',
         ]);
 
-
-
         if ($request->hasfile('images')) {
-            if (!File::isDirectory(public_path() . '/catalog')) {
-                File::MakeDirectory(public_path() . '/catalog', 0777, true, true);
-            }
-
             $file = $request->file('images')[0];
-
             $fileName = time() . '_' . $file->getClientOriginalName();
-            $file->move(public_path() . '/catalog/', $fileName);
+            Storage::disk('public')->put($fileName, File::get($file));
         }
-
 
         $catalog = new ECatalogModel();
         $catalog->title = $request->title;
@@ -64,9 +58,6 @@ class AdminCatalog extends Controller
     public function destroy($id)
     {
         $catalog = ECatalogModel::find($id);
-        if (File::exists(public_path() . '/catalog/' . $catalog->download_filename)) {
-            File::delete(public_path() . '/catalog/' . $catalog->download_filename);
-        }
         $catalog->delete();
         return redirect('/admin-catalog');
     }

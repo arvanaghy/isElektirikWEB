@@ -35,6 +35,12 @@ export default function Authenticated({ user, header, children }) {
                                     Projects
                                 </NavLink>
                                 <NavLink
+                                    href={route("servicesAdmin")}
+                                    active={route().current("servicesAdmin")}
+                                >
+                                    Our Services
+                                </NavLink>
+                                <NavLink
                                     href={route("contactsAdmin")}
                                     active={route().current("contactsAdmin")}
                                 >

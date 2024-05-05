@@ -36,8 +36,8 @@ const GeneralAdmin = ({ auth, slogan_tr, slogan_en, feauters_1_text_tr, feauters
                                 </thead>
                                 <tbody className="">
                                     <tr>
-                                        <td className="border px-4 py-2">{slogan_tr.general_value}</td>
-                                        <td className="border px-4 py-2">{slogan_en.general_value}</td>
+                                        <td className="border px-4 py-2">{slogan_tr?.general_value}</td>
+                                        <td className="border px-4 py-2">{slogan_en?.general_value}</td>
                                         <td className="border px-4 py-2">
                                             <Link href={route('EditSlogan')} className="bg-[#a89732] w-full p-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</Link>
                                         </td>
@@ -59,8 +59,8 @@ const GeneralAdmin = ({ auth, slogan_tr, slogan_en, feauters_1_text_tr, feauters
                                 </thead>
                                 <tbody className="">
                                     <tr>
-                                        <td className="border px-4 py-2">{about_us_text_en.general_value}</td>
-                                        <td className="border px-4 py-2">{about_us_text_tr.general_value}</td>
+                                        <td className="border px-4 py-2">{about_us_text_en?.general_value}</td>
+                                        <td className="border px-4 py-2">{about_us_text_tr?.general_value}</td>
                                         <td className="border px-4 py-2">
                                             <Link href={route('EditAboutUs')} className="bg-[#a89732] w-full p-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</Link>
                                         </td>
@@ -78,20 +78,20 @@ const GeneralAdmin = ({ auth, slogan_tr, slogan_en, feauters_1_text_tr, feauters
                                         <th className="w-1/2 px-4 py-2">address</th>
                                         <th className="w-1/2 px-4 py-2">phone</th>
                                         <th className="w-1/4 px-4 py-2">email</th>
-                                        <th className="w-1/4 px-4 py-2">instagram</th>
+                                        {/* <th className="w-1/4 px-4 py-2">instagram</th>
                                         <th className="w-1/4 px-4 py-2">telegram</th>
-                                        <th className="w-1/4 px-4 py-2">whatsapp</th>
+                                        <th className="w-1/4 px-4 py-2">whatsapp</th> */}
                                         <th className="w-1/4 px-4 py-2">operation</th>
                                     </tr>
                                 </thead>
                                 <tbody className="">
                                     <tr>
-                                        <td className="border px-4 py-2"> {address.general_value}</td>
-                                        <td className="border px-4 py-2"> {phone.general_value}</td>
-                                        <td className="border px-4 py-2"> {email.general_value} </td>
-                                        <td className="border px-4 py-2">{instagram.general_value} </td>
-                                        <td className="border px-4 py-2"> {telegram.general_value}</td>
-                                        <td className="border px-4 py-2"> {linkedin.general_value} </td>
+                                        <td className="border px-4 py-2"> {address?.general_value}</td>
+                                        <td className="border px-4 py-2"> {phone?.general_value}</td>
+                                        <td className="border px-4 py-2"> {email?.general_value} </td>
+                                        {/* <td className="border px-4 py-2">{instagram?.general_value} </td>
+                                        <td className="border px-4 py-2"> {telegram?.general_value}</td>
+                                        <td className="border px-4 py-2"> {linkedin?.general_value} </td> */}
                                         <td className="border px-4 py-2">
                                             <Link href={route('EditCallInfo')} className="bg-[#a89732] w-full p-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</Link>
                                         </td>
@@ -113,8 +113,8 @@ const GeneralAdmin = ({ auth, slogan_tr, slogan_en, feauters_1_text_tr, feauters
                                 </thead>
                                 <tbody className="">
                                     <tr>
-                                        <td className="border px-4 py-2">{hero_section_text_en.general_value}</td>
-                                        <td className="border px-4 py-2">{hero_section_text_tr.general_value}</td>
+                                        <td className="border px-4 py-2">{hero_section_text_en?.general_value}</td>
+                                        <td className="border px-4 py-2">{hero_section_text_tr?.general_value}</td>
                                         <td className="border px-4 py-2">
                                             <Link href={route('EditHero')} className="bg-[#a89732] w-full p-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</Link>
                                         </td>
@@ -124,7 +124,7 @@ const GeneralAdmin = ({ auth, slogan_tr, slogan_en, feauters_1_text_tr, feauters
 
                         </div>
                         {/* features section */}
-                        <div className="flex flex-col text-center items-center p-10">
+                        {/* <div className="flex flex-col text-center items-center p-10">
                             <h1 className="text-2xl w-1/2 border-b-[1px] border-green-500 mb-2">Feauters</h1>
                             <table className="table-auto w-full">
                                 <thead>
@@ -136,28 +136,28 @@ const GeneralAdmin = ({ auth, slogan_tr, slogan_en, feauters_1_text_tr, feauters
                                 </thead>
                                 <tbody className="">
                                     <tr>
-                                        <td className="border px-4 py-2">{feauters_1_text_en.general_value}</td>
-                                        <td className="border px-4 py-2">{feauters_1_text_tr.general_value}</td>
+                                        <td className="border px-4 py-2">{feauters_1_text_en?.general_value}</td>
+                                        <td className="border px-4 py-2">{feauters_1_text_tr?.general_value}</td>
                                         <td rowSpan={4} className="border px-4 py-2">
                                             <Link href={route('EditFeatures')} className="bg-[#a89732] w-full p-2 rounded-xl hover:bg-[#c7b23a] duration-200">Modify</Link>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className="border px-4 py-2">{feauters_2_text_en.general_value}</td>
-                                        <td className="border px-4 py-2">{feauters_2_text_tr.general_value}</td>
+                                        <td className="border px-4 py-2">{feauters_2_text_en?.general_value}</td>
+                                        <td className="border px-4 py-2">{feauters_2_text_tr?.general_value}</td>
                                     </tr>
                                     <tr>
-                                        <td className="border px-4 py-2">{feauters_3_text_en.general_value}</td>
-                                        <td className="border px-4 py-2"> {feauters_3_text_tr.general_value} </td>
+                                        <td className="border px-4 py-2">{feauters_3_text_en?.general_value}</td>
+                                        <td className="border px-4 py-2"> {feauters_3_text_tr?.general_value} </td>
                                     </tr>
                                     <tr>
-                                        <td className="border px-4 py-2">{feauters_4_text_en.general_value}</td>
-                                        <td className="border px-4 py-2">{feauters_4_text_tr.general_value}</td>
+                                        <td className="border px-4 py-2">{feauters_4_text_en?.general_value}</td>
+                                        <td className="border px-4 py-2">{feauters_4_text_tr?.general_value}</td>
                                     </tr>
                                 </tbody>
                             </table>
 
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

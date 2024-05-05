@@ -19,7 +19,7 @@ const AboutUs = ({
     const sirketProfili = useRef(null);
     const kesfedin = useRef(null);
     const farkimiz = useRef(null);
-    const ourTeam = useRef(null);
+    // const ourTeam = useRef(null);
 
     useGSAP(() => {
         gsap.from(
@@ -55,31 +55,27 @@ const AboutUs = ({
             }
         );
 
-        gsap.from(
-            ourTeam.current,
-            {
-                duration: 1,
-                ease: "power1.in",
-                x: 500,
-                scrollTrigger: {
-                    trigger: ourTeam.current,
-                    toggleActions: "play none none none",
-                },
-            }
-        );
+        // gsap.from(
+        //     ourTeam.current,
+        //     {
+        //         duration: 1,
+        //         ease: "power1.in",
+        //         x: 500,
+        //         scrollTrigger: {
+        //             trigger: ourTeam.current,
+        //             toggleActions: "play none none none",
+        //         },
+        //     }
+        // );
 
     })
 
     return (
         <>
-            <Head title="About Us">
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
-                <meta name="author" content="" />
-            </Head>
+            <Head title="About Us" />
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}  >
                 {/* sirket profili */}
-                <div className="bg-[url('../images/contact-us.jpg')] py-16 bg-cover text-center flex flex-col lg:mt-0 mt-20">
+                <div className="bg-[url('/storage/contact-us.jpg')] py-16 bg-cover text-center flex flex-col lg:mt-0 mt-20">
                     <h5 ref={sirketProfili} className="text-6xl space-x-5">
                         <span className="inline-block first-letter:text-7xl first-letter:text-green-500">Company</span>
                         <span className="inline-block first-letter:text-7xl first-letter:text-green-500"> Profile </span>
@@ -89,19 +85,19 @@ const AboutUs = ({
                 </div>
 
                 {/* iselektriki kesfedin */}
-                <div className="text-black flex flex-col space-y-10 lg:p-20 p-10">
+                <div className="text-black flex flex-col space-y-10 lg:p-20 p-10 bg-black text-white">
                     <h3 ref={kesfedin} className="text-5xl first-letter:text-green-500 first-letter:text-6xl mx-5">Discover Iselekrik</h3>
                     <p className="text-2xl leading-10 lg:mx-10">{about_us_text_en?.general_value}</p>
                 </div>
 
                 {/* farkimiz ve misyonumuz */}
-                <div className="flex flex-col space-y-10 lg:p-20 p-10  text-white bg-black ">
+                <div className="flex flex-col space-y-10 lg:p-20 p-10  text-black  ">
                     <h3 className="text-4xl lg:text-5xl mx-5 first-letter:text-5xl lg:first-letter:text-6xl first-letter:text-green-500" ref={farkimiz}>Our Mission and Difference </h3>
                     <p className="text-lg lg:text-2xl text-center lg:text-left leading-8 lg:leading-10 px-1 lg:mx-10">{hero_section_text_en?.general_value}</p>
                 </div>
 
                 {/* Our team */}
-                <section className="text-black">
+                {/* <section className="text-black">
                     <div className="lg:p-10 flex flex-wrap shrink-0 lg:flex-nowrap lg:justify-between lg:items-center lg:px-16  h-full">
                         <div className="w-full lg:mx-20 mx-5 ">
                             <h2 ref={ourTeam}
@@ -128,7 +124,7 @@ const AboutUs = ({
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
 
             </WebSiteENLayout>

@@ -46,7 +46,7 @@ const ProjectsAdmin = ({ auth, projects_list }) => {
                                     <tr>
                                         <th className="px-4 py-2">Index</th>
                                         <th className="w-1/2 px-4 py-2">Name</th>
-                                        <th className="w-1/4 px-4 py-2">Date Created</th>
+                                        {/* <th className="w-1/4 px-4 py-2">Date Created</th> */}
                                         <th className="w-1/4 px-4 py-2">Province</th>
                                         <th className="w-1/4 px-4 py-2">Opreation</th>
                                     </tr>
@@ -57,7 +57,7 @@ const ProjectsAdmin = ({ auth, projects_list }) => {
                                         <tr key={idx}>
                                             <td className="border px-4 py-2">{project.id}</td>
                                             <td className="border px-4 py-2">{project.name}</td>
-                                            <td className="border px-4 py-2">{project.start_date}</td>
+                                            {/* <td className="border px-4 py-2">{project.start_date}</td> */}
                                             <td className="border px-4 py-2">{project.province}</td>
                                             <td className="border px-4 py-2">
                                                 <div className="flex flex-row items-center justify-between gap-4">

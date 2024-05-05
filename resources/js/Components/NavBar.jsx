@@ -92,10 +92,10 @@ const NavBar = () => {
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/contact-us"
+                                href="/our-services"
                                 className="inline-block pb-1"
                             >
-                                Contact Us
+                                Our Services
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
@@ -107,11 +107,17 @@ const NavBar = () => {
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
-                            <Link
+                            {/* <Link
                                 href="/e-catalog"
                                 className="inline-block pb-1"
                             >
                                 E-Catalog
+                            </Link> */}
+                            <Link
+                                href="/contact-us"
+                                className="inline-block pb-1"
+                            >
+                                Contact Us
                             </Link>
                         </li>
                     </ul>
@@ -224,13 +230,16 @@ const NavBar = () => {
                                 <Link href="/about-us">About Us</Link>
                             </li>
                             <li>
-                                <Link href="/contact-us">Contact Us</Link>
+                                <Link href="/contact-us">Our Services</Link>
                             </li>
                             <li>
                                 <Link href="/projects">Projects</Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link href="/e-catalog">E-Catalog</Link>
+                            </li> */}
+                            <li>
+                                <Link href="/contact-us">Contact Us</Link>
                             </li>
                         </ul>
                         <ul className="w-full text-white bg-gray-600 mt-2 px-1 py-2 rounded">

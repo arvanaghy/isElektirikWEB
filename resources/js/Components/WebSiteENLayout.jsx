@@ -24,7 +24,7 @@ const WebSiteENLayout = ({ children,
                     {children}
                 </main>
                 <BackToTopButton />
-                <PhoneCallButtonEN phone={phone} linkdin={linkdin} />
+                {/* <PhoneCallButtonEN phone={phone} linkdin={linkdin} /> */}
                 <Footer address={address} phone={phone} email={email} insta={insta} telegram={telegram} linkdin={linkdin} about_en={about_en} />
             </div>
         </>

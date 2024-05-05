@@ -14,10 +14,10 @@ export default function EditProject({ auth, project, images }) {
         formData.append('description_en', descriptionEn.value);
         formData.append('description_tr', descriptionTr.value);
         formData.append('province', province.value);
-        formData.append('alley', alley.value);
-        formData.append('start_date', startDate.value);
-        formData.append('end_date', endDate.value);
-        formData.append('location', locationmap.value);
+        // formData.append('alley', alley.value);
+        // formData.append('start_date', startDate.value);
+        // formData.append('end_date', endDate.value);
+        // formData.append('location', locationmap.value);
 
         Inertia.post('/update-project/' + project.id, formData);
     }
@@ -50,8 +50,8 @@ export default function EditProject({ auth, project, images }) {
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="flex flex-row items-center justify-between overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                        <form onSubmit={handleSubmit} className='flex flex-col lg:flex-row justify-between items-center p-10 drop-shadow-lg gap-10  w-full lg:w-1/2'>
-                            <div className='flex flex-col gap-3'>
+                        <form onSubmit={handleSubmit} className=' flex flex-col lg:flex-row justify-between items-center p-10 drop-shadow-lg gap-10  w-full lg:w-1/2'>
+                            <div className='flex flex-col gap-3 w-full'>
                                 <label htmlFor="title">title</label>
                                 <input required defaultValue={project.name} className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='title' />
                                 <label htmlFor="slug">
@@ -68,18 +68,18 @@ export default function EditProject({ auth, project, images }) {
                                     Province
                                 </label>
                                 <input required defaultValue={project.province} className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='province' />
-                                <label htmlFor="alley">
+                                {/* <label htmlFor="alley">
                                     alley
                                 </label>
-                                <input defaultValue={project.alley} className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='alley' />
-                                <div className=' w-full flex flex-col lg:flex-row  justify-between items-center'>
+                                <input defaultValue={project.alley} className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='alley' /> */}
+                                {/* <div className=' w-full flex flex-col lg:flex-row  justify-between items-center'>
                                     <label htmlFor='startDate'>Start Date</label>
                                     <input required defaultValue={project.start_date && project.start_date.slice('0', '10').replaceAll(" ", "")} className='w-full lg:w-1/3 border border-green-500 text-gray-500 rounded-md hover:rounded-xl duration-500' type="date" id="startDate" />
                                     <label htmlFor='endDate'>End Date </label>
                                     <input defaultValue={project.end_date && project.end_date.slice('0', '10').replaceAll(" ", "")} className='w-full lg:w-1/3 border border-green-500 text-gray-500 rounded-md hover:rounded-xl duration-500' type="date" id="endDate" />
-                                </div>
-                                <label htmlFor="locationmap"> map location </label>
-                                <input type="text" defaultValue={project.location} id='locationmap' className='border border-green-400 px-8 py-2 drop-shadow-xl shadow rounded-md hover:rounded-xl duration-500 active:bg-green-500' />
+                                </div> */}
+                                {/* <label htmlFor="locationmap"> map location </label>
+                                <input type="text" defaultValue={project.location} id='locationmap' className='border border-green-400 px-8 py-2 drop-shadow-xl shadow rounded-md hover:rounded-xl duration-500 active:bg-green-500' /> */}
                                 <button type='submit' className='border  border-green-400 bg-green-300 hover:border-green-700 hover:scale-110 hover:text-white animate-pulse hover:bg-green-700 px-8 py-2 drop-shadow-xl shadow rounded-md hover:rounded-xl duration-500 active:bg-green-500' >Edit Project</button>
                             </div>
                         </form>
@@ -95,7 +95,7 @@ export default function EditProject({ auth, project, images }) {
                             {images.map((image, index) => (
                                 <div key={index} className="w-full flex justify-center items-center m-2 p-2">
                                     <form onSubmit={(e) => handleDeleteImages(e, image.id)} className='flex flex-row justify-around w-full items-center bg-gray-100 rounded-md shadow shadow-gray-400 ' >
-                                        <img src={`/images/projects/orignial/${image.name}`} className="w-24 h-24" />
+                                        <img src={`/storage/${image.name}`} className="w-24 h-24" />
                                         <button type='submit' className='border  border-red-400 bg-red-300 hover:border-red-700 hover:scale-110 hover:text-white animate-pulse hover:bg-red-700 px-8 py-2 drop-shadow-xl shadow rounded-md hover:rounded-xl duration-500 active:bg-red-500' >Delete</button>
                                     </form>
                                 </div>

@@ -30,17 +30,17 @@ const Welcome = ({
     const aboutSection = useRef(null);
     const aboutSectionTitle = useRef(null);
     const missionSection = useRef(null);
-    const featureImage1 = useRef(null);
-    const featureImage1Replace = useRef(null);
-    const featureSection1 = useRef(null);
+    // const featureImage1 = useRef(null);
+    // const featureImage1Replace = useRef(null);
+    // const featureSection1 = useRef(null);
     const heroTimeLine = gsap.timeline();
 
-    const featureImage2 = useRef(null);
-    const featureImage2Replace = useRef(null);
-    const featureImage3 = useRef(null);
-    const featureImage3Replace = useRef(null);
-    const featureImage4 = useRef(null);
-    const featureImage4Replace = useRef(null);
+    // const featureImage2 = useRef(null);
+    // const featureImage2Replace = useRef(null);
+    // const featureImage3 = useRef(null);
+    // const featureImage3Replace = useRef(null);
+    // const featureImage4 = useRef(null);
+    // const featureImage4Replace = useRef(null);
     const productsSectionTitle = useRef(null);
 
     useGSAP(() => {
@@ -120,6 +120,7 @@ const Welcome = ({
                 ease: "linear.inOut",
             }
         );
+
         gsap.fromTo(
             aboutSectionTitle.current,
             {
@@ -160,77 +161,77 @@ const Welcome = ({
             }
         );
 
-        gsap.fromTo(
-            featureImage1.current,
-            {
-                height: '100%',
-            },
-            {
-                height: 0,
-                duration: 3,
-                ease: "liner.inOut",
-                scrollTrigger: {
-                    trigger: featureImage1.current,
-                    toggleActions: "play none none reverse",
-                    start: "top center",
-                    end: "bottom top",
-                },
-            }
-        );
+        // gsap.fromTo(
+        //     featureImage1.current,
+        //     {
+        //         height: '100%',
+        //     },
+        //     {
+        //         height: 0,
+        //         duration: 3,
+        //         ease: "liner.inOut",
+        //         scrollTrigger: {
+        //             trigger: featureImage1.current,
+        //             toggleActions: "play none none reverse",
+        //             start: "top center",
+        //             end: "bottom top",
+        //         },
+        //     }
+        // );
 
-        gsap.fromTo(
-            featureImage2.current,
-            {
-                height: '100%',
-            },
-            {
-                height: 0,
-                duration: 3,
-                ease: "liner.inOut",
-                scrollTrigger: {
-                    trigger: featureImage2.current,
-                    toggleActions: "play none none reverse",
-                    start: "top center",
-                    end: "bottom top",
-                },
-            }
-        );
+        // gsap.fromTo(
+        //     featureImage2.current,
+        //     {
+        //         height: '100%',
+        //     },
+        //     {
+        //         height: 0,
+        //         duration: 3,
+        //         ease: "liner.inOut",
+        //         scrollTrigger: {
+        //             trigger: featureImage2.current,
+        //             toggleActions: "play none none reverse",
+        //             start: "top center",
+        //             end: "bottom top",
+        //         },
+        //     }
+        // );
 
-        gsap.fromTo(
-            featureImage3.current,
-            {
-                height: '100%',
-            },
-            {
-                height: 0,
-                duration: 3,
-                ease: "liner.inOut",
-                scrollTrigger: {
-                    trigger: featureImage3.current,
-                    toggleActions: "play none none reverse",
-                    start: "top center",
-                    end: "bottom top",
-                },
-            }
-        );
+        // gsap.fromTo(
+        //     featureImage3.current,
+        //     {
+        //         height: '100%',
+        //     },
+        //     {
+        //         height: 0,
+        //         duration: 3,
+        //         ease: "liner.inOut",
+        //         scrollTrigger: {
+        //             trigger: featureImage3.current,
+        //             toggleActions: "play none none reverse",
+        //             start: "top center",
+        //             end: "bottom top",
+        //         },
+        //     }
+        // );
 
-        gsap.fromTo(
-            featureImage4.current,
-            {
-                height: '100%',
-            },
-            {
-                height: 0,
-                duration: 3,
-                ease: "liner.inOut",
-                scrollTrigger: {
-                    trigger: featureImage4.current,
-                    toggleActions: "play none none reverse",
-                    start: "top center",
-                    end: "bottom top",
-                },
-            }
-        );
+        // gsap.fromTo(
+        //     featureImage4.current,
+        //     {
+        //         height: '100%',
+        //     },
+        //     {
+        //         height: 0,
+        //         duration: 3,
+        //         ease: "liner.inOut",
+        //         scrollTrigger: {
+        //             trigger: featureImage4.current,
+        //             toggleActions: "play none none reverse",
+        //             start: "top center",
+        //             end: "bottom top",
+        //         },
+        //     }
+        // );
 
         gsap.fromTo(
             productsSectionTitle.current,
@@ -256,11 +257,8 @@ const Welcome = ({
     });
     return (
         <>
-            <Head title="Welcome">
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
-                <meta name="author" content="" />
-            </Head>
+            <Head title="Welcome" />
+
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}  >
                 {/* Is Electrik ve Muhendislik Hero Section */}
                 <section
@@ -288,22 +286,27 @@ const Welcome = ({
                 </section>
 
                 {/* our clients */}
-                <section className="flex flex-col items-center justify-center bg-white py-16 px-16" >
-                    <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
-                    <hr width="30%" className="border-2 border-green-500 " />
-                    <div className="flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8 pt-12 items-center justify-between "  >
-                        {
-                            our_clients.map((client, idx) => (
-                                <div key={idx} className="px-2 py-2 flex flex-col items-center justify-center hover:-translate-y-4 duration-300 transition-all ease-in-out" >
-                                    <img src={`../../images/clients/orignial/${client.image_name}`} className="rounded-full shadow shadow-blue-700 w-32 h-32 lg:w-64 lg:h-64 " alt={client.name} />
-                                </div>
-                            ))
-                        }
-                    </div>
-                </section>
+                {
+                    our_clients.length > 0 &&
+                    (
+                        <section className="flex flex-col items-center min-h-[30vh] justify-center bg-white py-16 px-16" >
+                            <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">Our Clients</h3>
+                            <hr width="30%" className="border-2 border-green-500 " />
+                            <div className="flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8 pt-12 items-center justify-between "  >
+                                {
+                                    our_clients.map((client, idx) => (
+                                        <div key={idx} className="px-2 py-2 flex flex-col items-center justify-center hover:-translate-y-4 duration-300 transition-all ease-in-out" >
+                                            <img src={`/storage/${client.image_name}`} className="rounded-full shadow shadow-blue-700 w-32 h-32 lg:w-64 lg:h-64 " alt={client.name} />
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </section>
+                    )
+                }
 
                 {/* about */}
-                <section className="flex flex-col items-center justify-center pb-32 -16 lg:px-12 px-7 text-center bg-white min-h-[30vh]" ref={aboutSection} >
+                <section className="flex flex-col items-center lg: min-h-[30vh] justify-center pb-32 -16 lg:px-12 px-7 text-center bg-white min-h-[70vh]" ref={aboutSection} >
                     <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
                     <hr width="30%" className="border-2 border-green-500 " />
                     <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text bg-gradient-to-r from-green-500 to-green-900  bg-fixed " ref={aboutSectionTitle}>
@@ -318,7 +321,7 @@ const Welcome = ({
                     </h2>
                 </section>
 
-                <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh]" >
+                {/* <section className="flex flex-col items-center justify-center text-center bg-white min-h-[90vh]" >
                     <div className="w-full flex flex-wrap flex-col lg:flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col flex-wrap items-center justify-center min-h-[70vh]">
                             <p className="text-2xl first-letter:text-3xl text-start lg:text-3xl lg:first-letter:text-7xl first-letter:text-green-500 text-transparent lg:px-8 px-3 text-justify  bg-clip-text bg-gradient-to-r from-green-500 to-green-900" ref={featureSection1} >
@@ -346,12 +349,12 @@ const Welcome = ({
                             </p>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* Our Missions Section */}
                 <section className="flex flex-col items-center justify-center text-center bg-white lg:min-h-[90vh] " >
                     <div className="w-[90%] h-[80vh] flex items-center justify-center bg-[url('../../images/94c650ec-1f12-4dea-94ed-dcd4e719f6ac.jpeg')] bg-cover bg-center bg-no-repeat" ref={missionSection} >
-                        <h2 className="lg:text-4xl text-3xl text-transparent flex flex-col lg:space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-white to-green-200">
+                        <h2 className="lg:text-4xl text-3xl text-transparent flex flex-col lg:space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-green-900 to-green-200 drop-shadow-lg shadow-black ">
                             <div className="lg:text-6xl text-3xl">
                                 Our missions are to:
                             </div>
@@ -361,7 +364,7 @@ const Welcome = ({
                         </h2>
                     </div>
                 </section>
-
+                {/* 
                 <section className="flex flex-col items-center justify-center  text-center bg-white min-h-[90vh] " >
                     <div className="w-full flex flex-wrap flex-row justify-center">
                         <div className="w-full lg:w-1/2 p-4 flex flex-col items-center justify-center min-h-[70vh]">
@@ -392,7 +395,7 @@ const Welcome = ({
                             </p>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* Our Projects Section */}
                 <section className="flex flex-col items-center justify-center py-8 text-center bg-white  ">
@@ -402,12 +405,12 @@ const Welcome = ({
                             show All
                         </Link>
                     </div>
-                    <div className="grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-y-5 lg:space-x-5  lg:space-y-0 px-5">
+                    <div className="grid lg:grid-cols-5 lg:gap-8 grid-cols-1 space-y-5 lg:space-y-0 px-5 w-full">
                         {our_projects.map((project, index) =>
                         (
-                            <Link href={`/project-details/${project.slug}`} key={index} className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
-                                <img src={`../../images/projects/orignial/${project.image}`} alt={project.name} className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
-                                <h2 className="text-lg font-bold absolute bottom-3 left-3 text-white drop-shadow shadow-black  ">{project.name}</h2>
+                            <Link href={`/project-details/${project.slug}`} key={index} className="w-full relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                                <img src={`/storage/${project.image}`} alt={project.name} className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
+                                <h2 className="text-lg font-bold absolute bottom-3 left-0 text-white drop-shadow shadow-black bg-black/70 px-4 py-2 rounded-r-lg  ">{project.name}</h2>
                             </Link>
                         ))
 
