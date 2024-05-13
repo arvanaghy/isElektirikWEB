@@ -59,7 +59,7 @@ const OurServices = ({
                 </div>
                 <section className="py-20 flex flex-row flex-wrap items-center justify-between" >
                     <div className="w-full lg:w-1/2 py-3">
-                        <h3 className="text-4xl font-bold mb-5 text-center">Elektirik Hizmetleri</h3>
+                        <h3 className="text-4xl font-bold mb-5 text-center">Elektrik Hizmetleri</h3>
                         <ul className=" text-center lg:mx-24 lg:p-5 space-y-4 " id="electrical" >
                             {electrical_services && electrical_services.map((element) => (
                                 <li className="px-5  " key={element.id}>
