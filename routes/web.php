@@ -16,26 +16,26 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('about-us', [HomeController::class, 'about_us'])->name('about-us');
-Route::get('contact-us', [HomeController::class, 'contact_us'])->name('contact-us');
-Route::get('our-services', [HomeController::class, 'our_services'])->name('our-services');
-Route::get('e-catalog', [ECatalogController::class, 'index'])->name('e-catalog');
-Route::get('projects', [ProjectsController::class, 'index'])->name('projects');
-Route::get('project-details/{slug}', [ProjectsController::class, 'details']);
-Route::get('/search', [ProjectsController::class, 'search']);
+Route::get('/', [HomeController::class, 'tr_index'])->name('tr-home');
+Route::get('about-us', [HomeController::class, 'tr_about_us'])->name('tr-about-us');
+Route::get('contact-us', [HomeController::class, 'tr_contact_us'])->name('tr-contact-us');
+Route::get('our-services', [HomeController::class, 'tr_our_services'])->name('tr-our-services');
+Route::get('e-catalog', [ECatalogController::class, 'tr_index'])->name('tr-e-catalog');
+Route::get('projects', [ProjectsController::class, 'tr_index'])->name('tr-projects');
+Route::get('project-details/{slug}', [ProjectsController::class, 'tr_details']);
+Route::get('search', [ProjectsController::class, 'search_tr']);
 
-Route::get('/tr/', [HomeController::class, 'tr_index'])->name('tr-home');
-Route::get('/tr/about-us', [HomeController::class, 'tr_about_us'])->name('tr-about-us');
-Route::get('/tr/contact-us', [HomeController::class, 'tr_contact_us'])->name('tr-contact-us');
-Route::get('/tr/our-services', [HomeController::class, 'tr_our_services'])->name('tr-our-services');
-Route::get('/tr/e-catalog', [ECatalogController::class, 'tr_index'])->name('tr-e-catalog');
-Route::get('/tr/projects', [ProjectsController::class, 'tr_index'])->name('tr-projects');
-Route::get('/tr/project-details/{slug}', [ProjectsController::class, 'tr_details']);
-Route::get('/tr/search', [ProjectsController::class, 'search_tr']);
+
+Route::get('/en/', [HomeController::class, 'index'])->name('home');
+Route::get('/en/about-us', [HomeController::class, 'about_us'])->name('about-us');
+Route::get('/en/contact-us', [HomeController::class, 'contact_us'])->name('contact-us');
+Route::get('/en/our-services', [HomeController::class, 'our_services'])->name('our-services');
+Route::get('/en/e-catalog', [ECatalogController::class, 'index'])->name('e-catalog');
+Route::get('/en/projects', [ProjectsController::class, 'index'])->name('projects');
+Route::get('/en/project-details/{slug}', [ProjectsController::class, 'details']);
+Route::get('/en/search', [ProjectsController::class, 'search']);
 
 Route::get('/site-map', [SitemapController::class, 'generateSitemap']);
-
 
 
 Route::get('/dashboard', function () {
@@ -48,7 +48,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/projects-admin', [AdminProjectController::class, 'index'])->name('projectsAdmin');
     Route::get('/edit-project/{id}', [AdminProjectController::class, 'edit']);
     Route::delete('/deleteProject/{id}', [AdminProjectController::class, 'destroy']);
-    Route::get('/add-project', [AdminProjectController::class, 'create'] )->name('addProject');
+    Route::get('/add-project', [AdminProjectController::class, 'create'])->name('addProject');
     Route::post('/submit-project', [AdminProjectController::class, 'store']);
     Route::post('/update-project/{id}', [AdminProjectController::class, 'update']);
     Route::post('/update-project-images/{id}', [AdminProjectController::class, 'updateImages']);
@@ -62,7 +62,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/edit-service/{id}', [AdminServicesController::class, 'edit']);
     Route::post('/update-service/{id}', [AdminServicesController::class, 'update']);
 
-    
+
     Route::get('/contacts-admin', [GeneralController::class, 'list_tickets'])->name('contactsAdmin');
 
     Route::get('/edit-call-info', [GeneralController::class, 'editCallInfo'])->name('EditCallInfo');
@@ -92,7 +92,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/add-catalog', [AdminCatalog::class, 'create']);
     Route::post('/submit-catalog', [AdminCatalog::class, 'store']);
     Route::delete('/delete-catalog/{id}', [AdminCatalog::class, 'destroy']);
-
 });
 
 Route::middleware('auth')->group(function () {

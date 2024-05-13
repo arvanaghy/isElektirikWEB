@@ -12,7 +12,7 @@ const NavBarTR = () => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        Inertia.get(`/tr/search?q=${search.value}`);
+        Inertia.get(`/search?q=${search.value}`);
         search.value = "";
     }
 
@@ -39,7 +39,7 @@ const NavBarTR = () => {
                     className={`flex flex-row items-center mt-3 mb-4 justify-center space-x-4 transition-all duration-900  ${isPageScrolledDown ? " scale-90" : " scale-100"
                         }`}
                 >
-                    <Link href="/tr" className="w-64">
+                    <Link href="/" className="w-64">
                         <div>
                             <img
                                 src={logo}
@@ -86,15 +86,15 @@ const NavBarTR = () => {
                     >
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/tr/about-us"
+                                href="/about-us"
                                 className="inline-block pb-1"
                             >
                                 Hakkımızda
                             </Link>
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
-                        <Link
-                                href="/tr/our-services"
+                            <Link
+                                href="/our-services"
                                 className="inline-block pb-1"
                             >
                                 Hizmetlerimiz
@@ -102,7 +102,7 @@ const NavBarTR = () => {
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/tr/projects"
+                                href="/projects"
                                 className="inline-block pb-1"
                             >
                                 Projelerimiz
@@ -110,7 +110,7 @@ const NavBarTR = () => {
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/tr/contact-us"
+                                href="/contact-us"
                                 className="inline-block pb-1"
                             >
                                 İletişim
@@ -231,16 +231,16 @@ const NavBarTR = () => {
                     <div className="relative top-2 flex flex-col flex-wrap md:hidden w-full min-h-[95vh] bg-gray-300 p-2 z-50">
                         <ul className="w-full space-y-2">
                             <li>
-                                <Link href="/tr/about-us">Hakkimizda</Link>
+                                <Link href="/about-us">Hakkimizda</Link>
                             </li>
                             <li>
-                                <Link href="/tr/our-services">Hizmetlerimiz</Link>
+                                <Link href="/our-services">Hizmetlerimiz</Link>
                             </li>
                             <li>
-                                <Link href="/tr/projects">Projelerimiz</Link>
+                                <Link href="/projects">Projelerimiz</Link>
                             </li>
                             <li>
-                                <Link href="/tr/contact-us">Iletisim</Link>
+                                <Link href="/contact-us">Iletisim</Link>
                             </li>
                             {/* <li>
                                 <Link href="/tr/e-catalog">E-Katalog</Link>
@@ -279,13 +279,14 @@ const NavBarTR = () => {
                             </li>
                             {isLanguageToggled && (
                                 <li className="px-3 text-sm py-2"><Link href={
-                                    "" + url.replace("/tr", "") == ""
-                                        ? "/"
-                                        : url.replace("/tr", "")
-                                } >  English</Link> </li>
+                                    "" + url.replace("/", "") == ""
+                                        ? "/en"
+                                        : "/en/" + url.replace("/", "")
+                                }
+                                >  English</Link> </li>
 
                             )}
-                            <li className="flex flex-row mt-3">
+                            {/* <li className="flex flex-row mt-3">
                                 <svg
                                     className="w-6 h-6 mx-2"
                                     viewBox="-0.5 0 25 25"
@@ -316,7 +317,7 @@ const NavBarTR = () => {
                                         ></path>{" "}
                                     </g>
                                 </svg>
-                                <p>Favori Projeler</p></li>
+                                <p>Favori Projeler</p></li> */}
                             <li className="flex flex-row mt-3">
                                 <Link href="/login" className="flex flex-row" >
                                     <svg

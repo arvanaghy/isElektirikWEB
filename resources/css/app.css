@@ -1,15 +1,81 @@
 @font-face {
     font-family: "ArialRounded";
-    src: url('../../public/fonts/ARLRDBD_0.TTF') format('truetype');
+    src: url('../../public/fonts/ArialRounded.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: "ArialRounded";
-    src: url('../../public/fonts/ARLRDBD_0.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+
+#electrical div {
+    @apply leading-normal;
 }
+
+#electrical div ol {
+    @apply list-decimal list-inside;
+}
+
+#electrical div ul {
+    @apply list-disc list-inside;
+}
+
+
+#electrical div h1 {
+    @apply text-2xl font-bold;
+}
+
+#electrical div h2 {
+    @apply text-xl font-bold;
+}
+
+#electrical div h3 {
+    @apply text-lg font-bold;
+}
+
+
+#electrical div ol li {
+    @apply py-1;
+}
+
+#electrical div ul li {
+    @apply py-1;
+}
+
+#mechanical div {
+    @apply leading-normal;
+}
+
+#mechanical div h1 {
+    @apply text-2xl font-bold;
+}
+
+#mechanical div h2 {
+    @apply text-xl font-bold;
+}
+
+#mechanical div h3 {
+    @apply list-decimal list-inside;
+}
+
+#mechanical div h3 {
+    @apply text-lg font-bold;
+}
+
+
+#mechanical div ol {
+    @apply list-decimal list-inside;
+}
+
+#mechanical div ol li {
+    @apply py-1;
+}
+
+#mechanical div ul {
+    @apply list-disc list-inside;
+}
+
+#mechanical div ul li {
+    @apply py-1;
+}
+
 
 @tailwind base;
 @tailwind components;

@@ -63,7 +63,7 @@ const TopBarTR = () => {
                                     ></path>{" "}
                                 </g>
                             </svg>
-                            {url.startsWith("/tr") ? "Turkce" : "English"}
+                            {!url.startsWith("/en") ? "Turkce" : "English"}
                         </span>
                         {isLanguageSelectorOpen ? (
                             <span className="transition-all duration-200">
@@ -170,11 +170,14 @@ const TopBarTR = () => {
                         <li className="p-2 transition-all duration-200 hover:font-extrabold hover:bg-slate-200">
                             <Link
                                 className="px-2 font-bold"
+
                                 href={
-                                    "" + url.replace("/tr", "") == ""
-                                        ? "/"
-                                        : url.replace("/tr", "")
+                                    "" + url.replace("/", "") == ""
+                                        ? "/en"
+                                        : "/en/" + url.replace("/", "")
                                 }
+
+                         
                             >
                                 English
                             </Link>

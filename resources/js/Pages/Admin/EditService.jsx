@@ -1,9 +1,38 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 import React, { useState } from 'react';
-import { Inertia } from '@inertiajs/inertia'
+import { Inertia } from '@inertiajs/inertia';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 export default function EditService({ auth, service }) {
+
+
+    const modules = {
+        toolbar: [
+            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+            ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+            [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }, 
+            {'align': []},],
+            [{ 'font': [] }, ],
+            [{ 'script': 'sub' },{'script':'super' }],
+            [{ 'color': [] }, { 'background': [] }],
+            ['link', 'image'],
+            ['clean']
+        ],
+    }
+    const formats = [
+        'header',
+        'bold', 'italic', 'underline', 'strike', 'blockquote',
+        'list', 'bullet', 'indent',
+        'align','font','script',
+        'color', 'background',
+        'link', 'image',
+        'clean'
+    ]
+
+    const [contentEN, setContentEN] = useState(service?.description_en || '');
+    const [contentTR, setContentTR] = useState(service?.description_tr || '');
 
 
     const handleSubmit = (e) => {
@@ -11,8 +40,8 @@ export default function EditService({ auth, service }) {
         const formData = new FormData();
         formData.append('title_en', titleEn.value);
         formData.append('title_tr', titleTr.value);
-        formData.append('description_en', descriptionEn.value);
-        formData.append('description_tr', descriptionTr.value);
+        formData.append('description_en', contentEN);
+        formData.append('description_tr', contentTR);
         formData.append('type', type.value);
         Inertia.post('/update-service/' + service.id, formData);
     }
@@ -38,18 +67,18 @@ export default function EditService({ auth, service }) {
                                 <div className="text-sm">
                                     Description english : (english keyboard) * required
                                 </div>
-                                <textarea required defaultValue={service.description_en} className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='descriptionEn' />
-                                <div className="text-sm">
+                                <ReactQuill theme="snow" formats={formats} modules={modules} value={contentEN} onChange={setContentEN} className=" p-2.5 w-full text-sm text-gray-900   h-64 " />
+                                <div className="text-sm mt-10">
                                     Description turkish : (turkish keyboard) * required
                                 </div>
-                                <textarea required defaultValue={service.description_tr} className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='descriptionTr' />
-                                <div className="text-sm flex flex-col">
+                                <ReactQuill theme="snow" formats={formats} modules={modules} value={contentTR} onChange={setContentTR} className=" p-2.5 w-full text-sm text-gray-900   h-64 " />
+                                <div className="text-sm flex flex-col mt-10">
                                     <label htmlFor="type" className='mb-2'>
                                         Select Type
                                     </label>
-                                    <select id='type'>
-                                        <option defaultValue="Electrical" selected={service?.type == 'Electrical'}>Electrical</option>
-                                        <option defaultValue="Mechanical" selected={service?.type == 'Mechanical'}>Mechanical</option>
+                                    <select id='type' className='border border-green-400 rounded-md hover:rounded-xl duration-500' >
+                                        <option value="Electrical" selected={service?.type == 'Electrical'}>Electrical</option>
+                                        <option value="Mechanical" selected={service?.type == 'Mechanical'}>Mechanical</option>
                                     </select>
                                 </div>
 

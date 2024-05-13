@@ -171,9 +171,9 @@ const TopBar = () => {
                             <Link
                                 className="px-2 font-bold"
                                 href={
-                                    "" + url.replace("/", "") == ""
-                                        ? "/tr"
-                                        : "/tr/" + url.replace("/", "")
+                                    "" + url.replace("/en", "") == ""
+                                        ? "/"
+                                        : url.replace("/en", "")
                                 }
                             >
                                 Turkce

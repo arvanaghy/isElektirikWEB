@@ -93,8 +93,10 @@ const Welcome = ({
         ).fromTo(
             heroSectioTitle4.current,
             {
+                display: "inline-block",
                 y: 100,
                 opacity: 0,
+
             },
             {
                 opacity: 1,
@@ -266,15 +268,16 @@ const Welcome = ({
                     className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('/storage/mainHome.jpeg')] bg-cover bg-center bg-no-repeat"
                     ref={heroContainer}
                 >
-                    <div className="min-h-[90vh] lg:min-h-[73vh] flex flex-col items-center justify-center">
+                    <div className="min-h-[90vh] lg:min-h-[73vh] ">
                         <h1
-                            className="z-10 text-5xl font-extrabold tracking-tight flex flex-col lg:flex-row text-center leading-relaxed text-white lg:text-8xl drop-shadow-md shadow-black text-pretty lg:mt-0 mt-28"
+                            className="absolute left-4 lg:left-16 text-left mt-32 z-10 text-5xl md:text-6xl font-extrabold tracking-tight  items-start justify-beteween  leading-normal  lg:leading-relaxed text-white lg:text-6xl xl:text-7xl drop-shadow-md shadow-black text-pretty"
                             ref={heroSectioTitle}
                         >
-                            <span className="mx-1" ref={heroSectioTitle1}> is </span>
-                            <span className="mx-1 text-green-500 drop-shadow-lg shadow-green-900" ref={heroSectioTitle2}>Elektrik</span>
-                            <span className="mx-1" ref={heroSectioTitle3}> & </span>
-                            <span className="" ref={heroSectioTitle4}> Mühendislik</span>
+                            <span className="mx-1" ref={heroSectioTitle1}> İs </span>
+                            <span className="mx-1 text-green-500 drop-shadow-lg shadow-green-900 block" ref={heroSectioTitle2}>Elektrik</span>
+                            <br />
+                            <span className="lg:ml-6 lg:my-4 " ref={heroSectioTitle3}> Mühendislik</span>
+                            <span className="mx-1 lg:my-4" ref={heroSectioTitle4}> Taahhüt</span>
                         </h1>
                     </div>
                     <div

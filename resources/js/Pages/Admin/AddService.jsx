@@ -2,8 +2,28 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 import React, { useState } from 'react';
 import { Inertia } from '@inertiajs/inertia'
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 export default function AddService({ auth }) {
+
+    const modules = {
+        toolbar: [
+            [{ header: [1, 2, false] }],
+            ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+            [
+                { list: 'ordered' },
+                { list: 'bullet' },
+                { indent: '-1' },
+                { indent: '+1' },
+            ],
+            ['link', 'image'],
+            ['clean'],
+        ],
+    };
+
+    const [contentEN, setContentEN] = useState('');
+    const [contentTR, setContentTR] = useState('');
 
 
     const handleSubmit = (e) => {
@@ -11,8 +31,8 @@ export default function AddService({ auth }) {
         const formData = new FormData();
         formData.append('title_en', titleEn.value);
         formData.append('title_tr', titleTr.value);
-        formData.append('description_en', descriptionEn.value);
-        formData.append('description_tr', descriptionTr.value);
+        formData.append('description_en', contentEN);
+        formData.append('description_tr', contentTR);
         formData.append('type', type.value);
         Inertia.post('/submit-services', formData);
     }
@@ -39,12 +59,14 @@ export default function AddService({ auth }) {
                                 <div className="text-sm">
                                     Description english : (english keyboard) * required
                                 </div>
-                                <textarea required className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='descriptionEn' />
-                                <div className="text-sm">
+                                <ReactQuill theme="snow" modules={modules} value={contentEN} onChange={setContentEN} className=" p-2.5 w-full text-sm text-gray-900 h-64   rounded-md hover:rounded-xl duration-500 " />
+                                <div className="text-sm mt-10 ">
                                     Description turkish : (turkish keyboard) * required
                                 </div>
-                                <textarea required className='border border-green-400 rounded-md hover:rounded-xl duration-500' type="text" id='descriptionTr' />
-                                <div className="text-sm flex flex-col">
+
+                                <ReactQuill theme="snow" modules={modules} value={contentTR} onChange={setContentTR} className=" p-2.5 w-full text-sm text-gray-900 h-64   rounded-md hover:rounded-xl duration-500 " />
+
+                                <div className="text-sm flex flex-col mt-10">
                                     <label htmlFor="type" className='mb-2'>
                                         Select Type
                                     </label>

@@ -14,7 +14,7 @@ const NavBar = () => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        Inertia.get(`/search?q=${search.value}`);
+        Inertia.get(`/en/search?q=${search.value}`);
         search.value = "";
     }
 
@@ -40,7 +40,7 @@ const NavBar = () => {
                     className={`flex flex-row items-center mt-3 mb-4 justify-center space-x-4 transition-all duration-900  ${isPageScrolledDown ? " scale-90" : " scale-100"
                         }`}
                 >
-                    <Link href="/" className="w-64">
+                    <Link href="/en" className="w-64">
                         <div>
                             <img src={logo} alt="is elektirik" />
                         </div>
@@ -84,7 +84,7 @@ const NavBar = () => {
                     >
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/about-us"
+                                href="/en/about-us"
                                 className="inline-block pb-1"
                             >
                                 About Us
@@ -92,7 +92,7 @@ const NavBar = () => {
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/our-services"
+                                href="/en/our-services"
                                 className="inline-block pb-1"
                             >
                                 Our Services
@@ -100,7 +100,7 @@ const NavBar = () => {
                         </li>
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
-                                href="/projects"
+                                href="/en/projects"
                                 className="inline-block pb-1"
                             >
                                 Our Projects
@@ -114,7 +114,7 @@ const NavBar = () => {
                                 E-Catalog
                             </Link> */}
                             <Link
-                                href="/contact-us"
+                                href="/en/contact-us"
                                 className="inline-block pb-1"
                             >
                                 Contact Us
@@ -227,19 +227,19 @@ const NavBar = () => {
                     <div className="relative top-2 flex flex-col flex-wrap md:hidden w-full min-h-[95vh] bg-gray-300 p-2 z-50">
                         <ul className="w-full space-y-2">
                             <li>
-                                <Link href="/about-us">About Us</Link>
+                                <Link href="/en/about-us">About Us</Link>
                             </li>
                             <li>
-                                <Link href="/our-services">Our Services</Link>
+                                <Link href="/en/our-services">Our Services</Link>
                             </li>
                             <li>
-                                <Link href="/projects">Projects</Link>
+                                <Link href="/en/projects">Projects</Link>
                             </li>
                             {/* <li>
                                 <Link href="/e-catalog">E-Catalog</Link>
                             </li> */}
                             <li>
-                                <Link href="/contact-us">Contact Us</Link>
+                                <Link href="/en/contact-us">Contact Us</Link>
                             </li>
                         </ul>
                         <ul className="w-full text-white bg-gray-600 mt-2 px-1 py-2 rounded">
@@ -276,13 +276,14 @@ const NavBar = () => {
                             {isLanguageToggled && (
                                 <li className="px-3 text-sm py-2">
                                     <Link href={
-                                        "" + url.replace("/", "") == ""
-                                            ? "/tr"
-                                            : "/tr/" + url.replace("/", "")
-                                    } >  Turkce</Link> </li>
+                                        "" + url.replace("/en", "") == ""
+                                            ? "/"
+                                            : url.replace("/en", "")
+                                    }
+                                    >  Turkce</Link> </li>
 
                             )}
-                            <li className="flex flex-row mt-3">
+                            {/* <li className="flex flex-row mt-3">
                                 <svg
                                     className="w-6 h-6 mx-2"
                                     viewBox="-0.5 0 25 25"
@@ -313,7 +314,7 @@ const NavBar = () => {
                                         ></path>{" "}
                                     </g>
                                 </svg>
-                                <p>Favorite Projects</p></li>
+                                <p>Favorite Projects</p></li> */}
                             <li className="flex flex-row mt-3">
                                 <Link href="/login" className=" flex flex-row" >
                                     <svg
