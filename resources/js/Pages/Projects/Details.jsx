@@ -37,8 +37,6 @@ const Details = ({
                                     </div>
                                 ))
                                 }
-
-
                             </Carousel>
                         </div>
                     </div>
@@ -86,7 +84,7 @@ const Details = ({
                     <div className="w-full grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-y-5 lg:space-x-5  lg:space-y-0 px-5">
                         {other_projects.map((project, index) =>
                         (
-                            <Link href={`/project-details/${project.slug}`} key={index} className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <Link href={`/en/project-details/${project.slug}`} key={index} className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
                                 <img src={`/storage/${project.image}`} alt={project.name} className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
                                 <h2 className="text-lg font-bold absolute bottom-3 left-0 text-white drop-shadow shadow-black bg-black/70 px-4 py-2 rounded-r-lg  ">{project.name}</h2>
                             </Link>

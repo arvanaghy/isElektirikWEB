@@ -49,10 +49,9 @@ const OurServices = ({
         <>
             <Head title="Our Services" />
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}  >
-                {/* sirket profili */}
-                <div className="bg-[url('/storage/contact-us.jpg')] py-16 bg-auto bg-no-repeat text-center flex flex-col lg:mt-0 mt-20">
+                <div className="bg-black py-16 bg-auto bg-no-repeat text-center flex flex-col lg:mt-0 mt-28">
                     <h5 ref={headTitle} className="text-3xl font-bold lg:text-6xl space-x-5">
-                        <span className="inline-block first-letter:text-5xl lg:first-letter:text-7xl first-letter:text-green-500">Our Services</span>
+                        <span className="inline-block first-letter:text-5xl lg:first-letter:text-7xl text-white">Our Services</span>
                     </h5>
                 </div>
                 <section className="py-20 flex flex-row flex-wrap items-center justify-between" >

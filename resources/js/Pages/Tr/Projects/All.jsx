@@ -18,11 +18,11 @@ const All = ({
 }) => {
 
     gsap.registerPlugin(useGSAP);
-    const ourProjects = useRef(null);
+    const headTitle = useRef(null);
 
     useGSAP(() => {
         gsap.from(
-            ourProjects.current,
+            headTitle.current,
             {
                 duration: 2.5,
                 ease: "power4.out",
@@ -43,9 +43,11 @@ const All = ({
             <Head title="Projelerimiz">
             </Head>
             <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value}>
-                <div className="flex flex-col bg-[url('/storage/contact-us.jpg')] py-16 text-center bg-auto bg-no-repeat">
-                    <h5 ref={ourProjects} className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">
-                        <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Projelerimiz</span>
+
+
+            <div className="bg-black py-16 bg-auto bg-no-repeat text-center flex flex-col lg:mt-0 mt-28">
+                    <h5 ref={headTitle} className="text-3xl font-bold lg:text-6xl space-x-5">
+                        <span className="inline-block first-letter:text-5xl lg:first-letter:text-7xl text-white">Projelerimiz</span>
                     </h5>
                 </div>
                 <div className=" flex flex-col items-center justify-center px-10 py-20 ">
@@ -58,7 +60,7 @@ const All = ({
                     <div className="flex flex-col lg:flex-row lg:flex-wrap items-center justify-center w-full lg:px-24 space-y-6">
 
                         {projects.length > 0 && projects.map(project =>
-                            <Link href={`/tr/project-details/${project.slug}`} key={project.id} className="border-b-2 lg:border-0 border-green-500 group w-full flex flex-col lg:flex-row items-center justify-center lg:justify-start cursor-pointer hover:bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-800/60 hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <Link href={`/project-details/${project.slug}`} key={project.id} className="border-b-2 lg:border-0 border-green-500 group w-full flex flex-col lg:flex-row items-center justify-center lg:justify-start cursor-pointer hover:bg-gray-100 rounded-lg hover:shadow hover:shadow-gray-800/60 hover:scale-105 transition-all duration-300 ease-in-out ">
                                 <img src={`/storage/${project.image}`} alt={project.name} className="w-full lg:w-52 h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
                                 <div className="flex flex-col lg:px-8 py-3 space-y-2">
                                     <h2 className="text-lg font-bold  drop-shadow shadow-black text-black flex flex-row ">
@@ -76,15 +78,15 @@ const All = ({
                     {lastPage > 1 && (
                         <div className="flex flex-col items-center w-full py-3">
                             <div className="flex flex-row w-full h-32 items-center justify-center space-x-3 ">
-                                <Link href="/tr/projects?page=1" className="hover:text-green-800 transition-all duration-300  text-green-500">
+                                <Link href="/projects?page=1" className="hover:text-green-800 transition-all duration-300  text-green-500">
                                     FitrstPage
                                 </Link>
                                 {range.map((page) => (
                                     <Link
-                                        href={`/tr/projects?page=${page}`}
+                                        href={`/projects?page=${page}`}
                                         className={`mx-2 border-2 border-green-400 p-2 rounded-md hover:text-green-800 transition-all duration-300 text-green-500 ${page === currentPage ? "bg-green-500 text-white" : ""} `}>{page}</Link>
                                 ))}
-                                <Link href={`/tr/projects?page=${lastPage}`} className="hover:text-green-800 transition-all duration-300 text-green-500">
+                                <Link href={`/projects?page=${lastPage}`} className="hover:text-green-800 transition-all duration-300 text-green-500">
                                     lastPage
                                 </Link>
                             </div>

@@ -39,13 +39,14 @@ const NavBarTR = () => {
                     className={`flex flex-row items-center mt-3 mb-4 justify-center space-x-4 transition-all duration-900  ${isPageScrolledDown ? " scale-90" : " scale-100"
                         }`}
                 >
-                    <Link href="/" className="w-64">
+                    <Link href="/" className="w-80">
                         <div>
                             <img
                                 src={logo}
                                 alt="is elektirik"
                                 className="backdrop-filter backdrop-hue-rotate-90" />
                         </div>
+                        {/* <div className="text-sm text-center text-gray-700 mt-1 ">Mühendislik mekanik taahhüt</div> */}
                     </Link>
 
                     <form onSubmit={handleSearch} className="flex flex-row w-full">
@@ -87,7 +88,7 @@ const NavBarTR = () => {
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/about-us"
-                                className="inline-block pb-1"
+                                className="inline-block pb-1 font-semibold" 
                             >
                                 Hakkımızda
                             </Link>
@@ -95,7 +96,7 @@ const NavBarTR = () => {
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/our-services"
-                                className="inline-block pb-1"
+                                className="inline-block pb-1 font-semibold"
                             >
                                 Hizmetlerimiz
                             </Link>
@@ -103,7 +104,7 @@ const NavBarTR = () => {
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/projects"
-                                className="inline-block pb-1"
+                                className="inline-block pb-1 font-semibold"
                             >
                                 Projelerimiz
                             </Link>
@@ -111,7 +112,7 @@ const NavBarTR = () => {
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/contact-us"
-                                className="inline-block pb-1"
+                                className="inline-block pb-1 font-semibold"
                             >
                                 İletişim
                             </Link>
@@ -127,12 +128,12 @@ const NavBarTR = () => {
             </div>
             <div className="fixed flex flex-col w-screen overflow-hidden top-0 bg-gray-300 shadow-lg md:hidden shadow-gray-500/50 min-h-[5vh] p-2 z-50">
                 <div className="z-50 flex flex-row flex-wrap items-center justify-between w-full">
-                    <div className="flex flex-row items-center justify-start w-2/5">
-                        <Link href="/tr">
+                    <div className="flex flex-row items-center justify-start w-3/5">
+                        <Link href="/">
                             <img src={logo} alt="is elektiric" />
                         </Link>
                     </div>
-                    <div className="flex flex-row flex-wrap items-center justify-end w-3/5">
+                    <div className="flex flex-row flex-wrap items-center justify-end w-2/5">
                         <button
                             onClick={() => setIsNavbarMenuOpen((prev) => !prev)}
                         >
@@ -231,7 +232,7 @@ const NavBarTR = () => {
                     <div className="relative top-2 flex flex-col flex-wrap md:hidden w-full min-h-[95vh] bg-gray-300 p-2 z-50">
                         <ul className="w-full space-y-2">
                             <li>
-                                <Link href="/about-us">Hakkimizda</Link>
+                                <Link href="/about-us"  >Hakkimizda</Link>
                             </li>
                             <li>
                                 <Link href="/our-services">Hizmetlerimiz</Link>
@@ -246,7 +247,7 @@ const NavBarTR = () => {
                                 <Link href="/tr/e-catalog">E-Katalog</Link>
                             </li> */}
                         </ul>
-                        <ul className="w-full text-white bg-gray-600 mt-2 px-1 py-2 rounded">
+                        <ul className="w-full flex flex-col text-white bg-gray-600 my-2 px-1 py-4 space-y-6 rounded">
                             <li className="flex flex-row mt-3"
                                 onClick={() => setIsLanguageToggled((prev) => !prev)} >
                                 <svg

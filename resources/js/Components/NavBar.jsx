@@ -40,10 +40,11 @@ const NavBar = () => {
                     className={`flex flex-row items-center mt-3 mb-4 justify-center space-x-4 transition-all duration-900  ${isPageScrolledDown ? " scale-90" : " scale-100"
                         }`}
                 >
-                    <Link href="/en" className="w-64">
+                    <Link href="/en" className="w-80">
                         <div>
                             <img src={logo} alt="is elektirik" />
                         </div>
+                        {/* <div className="text-sm text-center text-gray-700 mt-1 "></div> */}
                     </Link>
 
                     <form onSubmit={handleSearch} className="flex flex-row w-full">
@@ -85,7 +86,7 @@ const NavBar = () => {
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/en/about-us"
-                                className="inline-block pb-1"
+                                className="inline-block pb-1 font-semibold"
                             >
                                 About Us
                             </Link>
@@ -93,7 +94,7 @@ const NavBar = () => {
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/en/our-services"
-                                className="inline-block pb-1"
+                                className="inline-block pb-1 font-semibold"
                             >
                                 Our Services
                             </Link>
@@ -101,7 +102,7 @@ const NavBar = () => {
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-b-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/en/projects"
-                                className="inline-block pb-1"
+                                className="inline-block pb-1  font-semibold"
                             >
                                 Our Projects
                             </Link>
@@ -115,7 +116,7 @@ const NavBar = () => {
                             </Link> */}
                             <Link
                                 href="/en/contact-us"
-                                className="inline-block pb-1"
+                                className="inline-block pb-1 font-semibold"
                             >
                                 Contact Us
                             </Link>
@@ -125,10 +126,11 @@ const NavBar = () => {
             </div>
             <div className="fixed flex flex-col w-screen bg-gray-300 shadow-lg md:hidden shadow-gray-500/50 min-h-[5vh] p-2 z-50">
                 <div className="z-50 flex flex-row flex-wrap items-center justify-between w-full">
-                    <Link href="/" className="flex flex-row items-center justify-start w-2/5">
+                    <Link href="/" className="flex flex-col items-center justify-start w-3/5">
                         <img src={logo} alt="is elektiric" />
+                        {/* <div className="text-xs text-center text-gray-700 mt-1 ">Mühendislik mekanik taahhüt</div> */}
                     </Link>
-                    <div className="flex flex-row flex-wrap items-center justify-end w-3/5">
+                    <div className="flex flex-row flex-wrap items-center justify-end w-2/5">
                         <button
                             onClick={() => setIsNavbarMenuOpen((prev) => !prev)}
                         >
@@ -242,7 +244,7 @@ const NavBar = () => {
                                 <Link href="/en/contact-us">Contact Us</Link>
                             </li>
                         </ul>
-                        <ul className="w-full text-white bg-gray-600 mt-2 px-1 py-2 rounded">
+                        <ul className="w-full flex flex-col text-white bg-gray-600 my-2 px-1 py-4 space-y-6 rounded">
                             <li className="flex flex-row mt-3"
                                 onClick={() => setIsLanguageToggled((prev) => !prev)} >
                                 <svg

@@ -14,14 +14,14 @@ const FooterTR = ({
 
     return (
         <>
-            <div className="relative min-h-[15vh] py-8 px-6 bg-black w-full flex flex-col justify-center items-center text-white">
-                <div className="flex lg:flex-row flex-col w-full lg:space-x-8 space-y-5">
-                    <div className="w-full lg:w-4/12 lg:ps-8">
+            <div className="relative min-h-[15vh] py-8 px-6 bg-black w-full flex flex-col justify-center items-center  text-white">
+                <div className="flex lg:flex-row  mx-auto text-center flex-col justify-center items-center w-full lg:space-x-8 space-y-5">
+                    {/* <div className="w-full lg:w-4/12 lg:ps-8">
                         <img src={logo} className="w-[30%] invert" />
                         <p className="py-4 text-justify">{about_tr}</p>
-                    </div>
+                    </div> */}
 
-                    <div className="w-full lg:w-4/12 lg:space-y-5 text-center z-10">
+                    <div className="flex flex-col items-center justify-center w-full mx-auto lg:w-8/12 lg:space-y-5 text-center z-10">
                         <p className="text-xl font-extrabold w-10/12 lg:w-4/12 m-auto pb-2 border-b-[1px]  mb-4">Ulasim</p>
                         <p className="mt-3 lg:mt-1">  <span className=" font-bold text-lg">Adres: {address}</span>  </p>
                         <p className="mt-3 lg:mt-1"> <span className=" font-bold text-lg">Email: {email}</span>  </p>

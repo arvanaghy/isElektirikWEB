@@ -1,5 +1,5 @@
 import React from "react";
-import WebSiteENLayout from "@/Components/WebSiteENLayout";
+import WebSiteTRLayout from "@/Components/WebSiteTRLayout";
 import { Head, Link } from "@inertiajs/react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -24,10 +24,8 @@ const Details = ({ project_detail,
         <>
             <Head title={project_detail.name}>
                 <meta name="description" content={project_detail.description_tr} />
-                <meta name="keywords" content="" />
-                <meta name="author" content="" />
             </Head>
-            <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value} >
+            <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value} >
                 <div className=" flex flex-row w-full flex-wrap items-center justify-center lg:px-10 py-20 ">
                     <div className="w-full lg:w-3/5">
                         <div className=" lg:px-10 ">
@@ -39,8 +37,6 @@ const Details = ({ project_detail,
                                     </div>
                                 ))
                                 }
-
-
                             </Carousel>
                         </div>
                     </div>
@@ -88,7 +84,7 @@ const Details = ({ project_detail,
                     <div className="w-full grid lg:grid-cols-6 lg:gap-4 grid-cols-1 space-y-5 lg:space-x-5  lg:space-y-0 px-5">
                         {other_projects.map((project, index) =>
                         (
-                            <Link href={`/tr/project-details/${project.slug}`} key={index} className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
+                            <Link href={`/project-details/${project.slug}`} key={index} className="col-span-1  relative cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out ">
                                 <img src={`/storage/${project.image}`} alt={project.name} className="w-full h-52 rounded-lg shadow shadow-black hover:filter hover:grayscale" />
                                 <h2 className="text-lg font-bold absolute bottom-3 left-0 text-white drop-shadow shadow-black bg-black/70 px-4 py-2 rounded-r-lg  ">{project.name}</h2>
                             </Link>
@@ -98,7 +94,7 @@ const Details = ({ project_detail,
 
                 </section>
 
-            </WebSiteENLayout>
+            </WebSiteTRLayout>
         </>
     );
 };

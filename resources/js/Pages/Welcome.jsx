@@ -4,6 +4,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Head, Link } from "@inertiajs/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Welcome = ({
     address,
@@ -25,10 +27,10 @@ const Welcome = ({
     const heroSectioTitle2 = useRef(null);
     const heroSectioTitle3 = useRef(null);
     const heroSectioTitle4 = useRef(null);
-    const scrollDown = useRef(null);
+    // const scrollDown = useRef(null);
     const heroContainer = useRef(null);
-    const aboutSection = useRef(null);
-    const aboutSectionTitle = useRef(null);
+    // const aboutSection = useRef(null);
+    // const aboutSectionTitle = useRef(null);
     const missionSection = useRef(null);
     // const featureImage1 = useRef(null);
     // const featureImage1Replace = useRef(null);
@@ -42,7 +44,7 @@ const Welcome = ({
     // const featureImage4 = useRef(null);
     // const featureImage4Replace = useRef(null);
     const productsSectionTitle = useRef(null);
-
+    // 8H1pZNpgcYMa
     useGSAP(() => {
 
         heroTimeLine.fromTo(
@@ -107,41 +109,41 @@ const Welcome = ({
             }
         );
 
-        gsap.fromTo(
-            scrollDown.current,
-            {
-                y: -5,
-                opacity: 0.9,
-            },
-            {
-                opacity: 1,
-                duration: 2.2,
-                y: 20,
-                repeat: -1,
-                yoyo: true,
-                ease: "linear.inOut",
-            }
-        );
+        // gsap.fromTo(
+        //     scrollDown.current,
+        //     {
+        //         y: -5,
+        //         opacity: 0.9,
+        //     },
+        //     {
+        //         opacity: 1,
+        //         duration: 2.2,
+        //         y: 20,
+        //         repeat: -1,
+        //         yoyo: true,
+        //         ease: "linear.inOut",
+        //     }
+        // );
 
-        gsap.fromTo(
-            aboutSectionTitle.current,
-            {
-                opacity: 0,
-                y: 200,
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 3,
-                ease: "elastic.inOut",
-                scrollTrigger: {
-                    trigger: aboutSectionTitle.current,
-                    toggleActions: "play none none reverse",
-                    start: "top bottom",
-                    end: "bottom top",
-                },
-            }
-        );
+        // gsap.fromTo(
+        //     aboutSectionTitle.current,
+        //     {
+        //         opacity: 0,
+        //         y: 200,
+        //     },
+        //     {
+        //         opacity: 1,
+        //         y: 0,
+        //         duration: 3,
+        //         ease: "elastic.inOut",
+        //         scrollTrigger: {
+        //             trigger: aboutSectionTitle.current,
+        //             toggleActions: "play none none reverse",
+        //             start: "top bottom",
+        //             end: "bottom top",
+        //         },
+        //     }
+        // );
 
         gsap.fromTo(
             missionSection.current,
@@ -263,29 +265,35 @@ const Welcome = ({
 
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}  >
                 {/* Is Electrik ve Muhendislik Hero Section */}
-                <section
-                    className="flex flex-col items-center justify-center w-full lg:min-h-[70vh] min-h-[85vh] bg-[url('/storage/mainHome.jpeg')] bg-cover bg-center bg-no-repeat"
-                    ref={heroContainer}
-                >
-                    <div className="min-h-[90vh] lg:min-h-[73vh] ">
+
+                <section className="bg-white relative lg:max-h-[80vh] lg:overflow-hidden mt-10 lg:mt-0 " ref={heroContainer}>
+                    <Carousel autoFocus autoPlay showArrows showThumbs={false} infiniteLoop  >
+                        <div className=" w-full h-full " >
+                            <img src={`/storage/mainHome.jpeg`} className="object-cover object-center lg:object-contain w-full h-[90vh] lg:h-full" />
+                        </div>
+                        <div className=" w-full  " >
+                            <img src={`/storage/qwe.jpeg`} className="object-cover object-center lg:object-contain w-full h-[90vh] lg:h-full" />
+                        </div>
+                    </Carousel>
+                    <div className="w-full absolute top-0">
                         <h1
-                            className="absolute left-4 lg:left-16 text-left mt-32 z-10 text-5xl md:text-6xl font-extrabold tracking-tight  items-start justify-beteween  leading-normal  lg:leading-relaxed text-white lg:text-6xl xl:text-7xl drop-shadow-md shadow-black text-pretty"
+                            className="absolute left-4 lg:left-16 text-left mt-32 z-10 text-2xl md:text-3xl font-extrabold tracking-tight items-start justify-beteween leading-normal lg:leading-relaxed text-white lg:text-4xl xl:text-5xl drop-shadow-md shadow-black text-pretty"
                             ref={heroSectioTitle}
                         >
-                            <span className="mx-1" ref={heroSectioTitle1}> İs </span>
-                            <span className="mx-1 text-green-500 drop-shadow-lg shadow-green-900 block" ref={heroSectioTitle2}>Elektrik</span>
+                            <span className="mx-1" ref={heroSectioTitle1}> H-MAK </span>
                             <br />
-                            <span className="lg:ml-6 lg:my-4 " ref={heroSectioTitle3}> Mühendislik</span>
-                            <span className="mx-1 lg:my-4" ref={heroSectioTitle4}> Taahhüt</span>
+                            <span className="lg:ml-6 lg:my-4 text-green-500 drop-shadow-lg shadow-green-900 block" ref={heroSectioTitle3}> Arnavutköy</span>
+                            <br />
+                            <span className="mx-1 lg:my-4" ref={heroSectioTitle4}> 20 villa - 16 daire</span>
                         </h1>
                     </div>
-                    <div
-                        className="text-white min-h-[10vh] font-extrabold text-xl text-center hover:text-pink-500 transition-colors duration-300 cursor-pointer"
-                        ref={scrollDown}
-                        onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth", inline: "nearest", top: 500 })}
-                    >
-                        Scroll Down
-                    </div>
+                </section>
+
+                <section className="flex flex-col items-center bg-white text-black lg:min-h-[50vh] justify-center lg:px-12 px-7 text-center"  >
+                    <h3 className="first-letter:text-green-500 lg:first-letter:text-7xl first-letter:text-4xl lg:text-6xl text-3xl pb-5 font-bold ">
+                        Mühendislik - Mekanik - Taahhüt
+                    </h3>
+                    <hr width="60%" className="border-2 border-green-500 " />
                 </section>
 
                 {/* our clients */}
@@ -309,17 +317,17 @@ const Welcome = ({
                 }
 
                 {/* about */}
-                <section className="flex flex-col items-center lg: min-h-[30vh] justify-center pb-32 -16 lg:px-12 px-7 text-center bg-white min-h-[70vh]" ref={aboutSection} >
-                    <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl lg:pt-12 pb-5 ">About Us</h3>
-                    <hr width="30%" className="border-2 border-green-500 " />
-                    <p className="text-xl text-left lg:text-center lg:text-3xl text-transparent pt-8 bg-clip-text  bg-clip-text bg-gradient-to-r from-green-500 to-green-900  bg-fixed " ref={aboutSectionTitle}>
+                <section className="flex flex-col items-center bg-black text-white lg: min-h-[30vh] justify-center lg:px-12 px-7 text-center  min-h-[50vh]"  >
+                    <h3 className="first-letter:text-green-500 lg:first-letter:text-5xl first-letter:text-4xl lg:text-4xl text-3xl pb-5 font-bold ">About Us</h3>
+                    {/* <hr width="30%" className="border-2 border-green-500 " /> */}
+                    <p className="text-xl text-left lg:text-center lg:text-3xl pt-8 text-white " >
                         {about_us_text_en?.general_value}
                     </p>
                 </section>
 
                 {/* Slogan Section */}
-                <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-[url('../../images/_ce21b521-0085-47dc-bb9c-5649120210a8.jpeg')] bg-cover bg-center bg-no-repeat">
-                    <h2 className="lg:text-7xl text-5xl  lg:px-8 lg:pb-8 text-transparent  text-white" >
+                <section className=" flex flex-col items-center justify-center p-8 text-center bg-white min-h-[90vh] bg-white text-black">
+                    <h2 className="lg:text-5xl text-2xl text-left font-semibold leading-relaxed lg:px-8 lg:pb-8 text-black" >
                         {slogan_text_en?.general_value}
                     </h2>
                 </section>
@@ -356,15 +364,14 @@ const Welcome = ({
 
                 {/* Our Missions Section */}
                 <section className="flex flex-col items-center justify-center text-center bg-white lg:min-h-[90vh] " >
-                    <div className="w-[90%] h-[80vh] flex items-center justify-center bg-[url('../../images/94c650ec-1f12-4dea-94ed-dcd4e719f6ac.jpeg')] bg-cover bg-center bg-no-repeat" ref={missionSection} >
-                    <div className="bg-white/60 p-6 rounded-xl text-center w-[90%] shadow-2xl shadow-gray-500/70 ">
-                            <h2 className="lg:text-4xl text-3xl text-transparent flex flex-col lg:space-y-6 items-center justify-center flex-wrap bg-clip-text bg-gradient-to-r from-green-900 to-green-200 drop-shadow-lg shadow-black ">
-                                <div className="lg:text-6xl text-3xl">
+                    <div className="w-[90%] h-[80vh] flex items-center justify-center bg-black text-white bg-cover bg-center bg-no-repeat" ref={missionSection} >
+                        <div className=" p-6 rounded-xl text-center w-[90%]   ">
+                            <h2 className="lg:text-4xl text-3xl flex flex-col lg:space-y-6 items-center justify-center flex-wrap  ">
+                                <div className="lg:text-6xl text-3xl text-white font-bold">
                                     Our missions are to:
                                 </div>
-                                <div className="lg:text-4xl text-2xl lg:mx-10 mx-4">
+                                <div className="lg:text-4xl text-2xl lg:mx-10 text-left mt-8 text-white">
                                     {hero_section_text_en?.general_value}
-
                                 </div>
                             </h2>
                         </div>
@@ -419,10 +426,7 @@ const Welcome = ({
                                 <h2 className="text-lg font-bold absolute bottom-3 left-0 text-white drop-shadow shadow-black bg-black/70 px-4 py-2 rounded-r-lg  ">{project.name}</h2>
                             </Link>
                         ))
-
                         }
-
-
                     </div>
                     <div className="pt-8 lg:hidden w-full flex-wrap bg-white flex flex-row items-center justify-center px-12 py-4">
                         <Link href="/projects" className="border border-green-500 hover:text-green-800 transition-all duration-300 p-3 rounded-lg text-2xl text-green-500">

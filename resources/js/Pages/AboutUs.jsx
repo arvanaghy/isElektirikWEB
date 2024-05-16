@@ -16,14 +16,14 @@ const AboutUs = ({
     hero_section_text_en
 }) => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
-    const sirketProfili = useRef(null);
+    const headTitle = useRef(null);
     const kesfedin = useRef(null);
     const farkimiz = useRef(null);
     // const ourTeam = useRef(null);
 
     useGSAP(() => {
         gsap.from(
-            sirketProfili.current,
+            headTitle.current,
             {
                 duration: 2.5,
                 ease: "power4.out",
@@ -74,18 +74,14 @@ const AboutUs = ({
         <>
             <Head title="About Us" />
             <WebSiteENLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_en={about_us_text_en?.general_value}  >
-                {/* sirket profili */}
-                <div className="bg-[url('/storage/contact-us.jpg')] py-16 bg-auto bg-no-repeat text-center flex flex-col lg:mt-0 mt-20">
-                    <h5 ref={sirketProfili} className="text-6xl space-x-5">
-                        <span className="inline-block first-letter:text-7xl first-letter:text-green-500">Company</span>
-                        <span className="inline-block first-letter:text-7xl first-letter:text-green-500"> Profile </span>
+                <div className="bg-black py-16 bg-auto bg-no-repeat text-center flex flex-col lg:mt-0 mt-28">
+                    <h5 ref={headTitle} className="text-3xl font-bold lg:text-6xl space-x-5">
+                        <span className="inline-block first-letter:text-5xl lg:first-letter:text-7xl text-white">Company Profile</span>
                     </h5>
-                    <h3 className="text-transparent bg-clip-text bg-gradient-to-br
-                      from-green-500 to-green-900 drop-shadow-xl text-7xl lg:text-9xl "></h3>
                 </div>
 
                 {/* iselektriki kesfedin */}
-                <div className="text-black flex flex-col space-y-10 lg:p-20 p-10 bg-black text-white">
+                <div className="flex flex-col space-y-10 lg:p-20 p-10 bg-white text-black">
                     <h3 ref={kesfedin} className="text-5xl first-letter:text-green-500 first-letter:text-6xl mx-5">Discover Iselekrik</h3>
                     <p className="text-2xl leading-10 lg:mx-10">{about_us_text_en?.general_value}</p>
                 </div>

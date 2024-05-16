@@ -16,7 +16,7 @@ const AboutUs = ({
     hero_section_text_tr
 }) => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
-    const sirketProfili = useRef(null);
+    const headTitle = useRef(null);
     const kesfedin = useRef(null);
     const farkimiz = useRef(null);
     // const teamImage = useRef(null);
@@ -25,7 +25,7 @@ const AboutUs = ({
 
     useGSAP(() => {
         gsap.from(
-            sirketProfili.current,
+            headTitle.current,
             {
                 duration: 2.5,
                 ease: "power4.out",
@@ -56,7 +56,7 @@ const AboutUs = ({
                 },
             }
         );
-       
+
         // gsap.from(
         //     ourTeam.current,
         //     {
@@ -69,7 +69,7 @@ const AboutUs = ({
         //         },
         //     }
         // );
-        
+
     })
 
     return (
@@ -77,18 +77,15 @@ const AboutUs = ({
             <Head title="Hakkımızda">
             </Head>
             <WebSiteTRLayout address={address?.general_value} phone={phone?.general_value} email={email?.general_value} telegram={telegram?.general_value} linkdin={linkdin?.general_value} insta={insta?.general_value} about_tr={about_us_text_tr?.general_value}>
-                {/* sirket profili */}
-                <div className="bg-[url('/storage/contact-us.jpg')] py-16 bg-auto bg-no-repeat text-center flex flex-col lg:mt-0 mt-20">
-                    <h5 ref={sirketProfili} className="text-6xl space-x-5">
-                        <span className="inline-block first-letter:text-7xl first-letter:text-green-500">Sirket</span>
-                        <span className="inline-block first-letter:text-7xl first-letter:text-green-500"> Profili </span>
+
+                <div className="bg-black py-16 bg-auto bg-no-repeat text-center flex flex-col lg:mt-0 mt-28">
+                    <h5 ref={headTitle} className="text-3xl font-bold lg:text-6xl space-x-5">
+                        <span className="inline-block first-letter:text-5xl lg:first-letter:text-7xl text-white">Sirket Profili</span>
                     </h5>
-                    <h3 className="text-transparent bg-clip-text bg-gradient-to-br
-                      from-green-500 to-green-900 drop-shadow-xl text-7xl lg:text-9xl "></h3>
                 </div>
 
                 {/* iselektriki kesfedin */}
-                <div className="text-white flex flex-col space-y-10 lg:p-20 p-10 bg-black">
+                <div className="text-black flex flex-col space-y-10 lg:p-20 p-10 bg-white">
                     <h3 ref={kesfedin} className="text-5xl first-letter:text-green-500 first-letter:text-6xl mx-5">Iselekrik'i kesfedin</h3>
                     <p className="text-2xl leading-10 lg:mx-10">{about_us_text_tr?.general_value}</p>
                 </div>
@@ -98,7 +95,6 @@ const AboutUs = ({
                     <h3 className="text-4xl lg:text-5xl mx-5 first-letter:text-5xl lg:first-letter:text-6xl first-letter:text-green-500" ref={farkimiz}>Farkimiz ve Misyonumuz </h3>
                     <p className="text-lg lg:text-2xl text-center lg:text-left leading-8 lg:leading-10 px-1 lg:mx-10">{hero_section_text_tr?.general_value}</p>
                 </div>
-
                 {/* Our team */}
                 {/* <section className="text-black">
                     <div className="lg:p-10 flex flex-wrap shrink-0 lg:flex-nowrap lg:justify-between lg:items-center lg:px-16  h-full">

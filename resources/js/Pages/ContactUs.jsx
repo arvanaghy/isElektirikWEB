@@ -18,11 +18,11 @@ const ContactUs = ({
     about_us_text_en,
 }) => {
     gsap.registerPlugin(useGSAP);
-    const contactUs = useRef(null);
+    const headTitle = useRef(null);
 
     useGSAP(() => {
         gsap.from(
-            contactUs.current,
+            headTitle.current,
             {
                 duration: 2.5,
                 ease: "power4.out",
@@ -50,10 +50,10 @@ const ContactUs = ({
                 </Head>
 
                 <div className=" flex flex-col">
-                    <div className="flex flex-col bg-[url('/storage/contact-us.jpg')] py-16 text-center bg-auto bg-no-repeat">
-                        <h5 ref={contactUs} className="lg:text-6xl text-4xl space-x-5 mt-16 lg:mt-0">
-                            <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500">Contact</span>
-                            <span className="inline-block lg:first-letter:text-7xl first-letter:text-5xl first-letter:text-green-500"> Us </span>
+
+                    <div className="bg-black py-16 bg-auto bg-no-repeat text-center flex flex-col lg:mt-0 mt-28">
+                        <h5 ref={headTitle} className="text-3xl font-bold lg:text-6xl space-x-5">
+                            <span className="inline-block first-letter:text-5xl lg:first-letter:text-7xl text-white">Contact Us</span>
                         </h5>
                     </div>
                     <div className="flex lg:flex-row flex-col lg:m-10 lg:space-x-10">
