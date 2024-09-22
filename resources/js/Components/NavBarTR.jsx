@@ -46,7 +46,7 @@ const NavBarTR = () => {
                                 alt="is elektirik"
                                 className="backdrop-filter backdrop-hue-rotate-90" />
                         </div>
-                        {/* <div className="text-sm text-center text-gray-700 mt-1 ">Mühendislik mekanik taahhüt</div> */}
+                        <div className="text-sm text-center text-gray-700 mt-1 ">Mühendislik mekanik taahhüt</div>
                     </Link>
 
                     <form onSubmit={handleSearch} className="flex flex-row w-full">
@@ -88,7 +88,7 @@ const NavBarTR = () => {
                         <li className="transition-all duration-300 ease-in-out border-b-4 border-[#f3f2f2] hover:border-b-green-600">
                             <Link
                                 href="/about-us"
-                                className="inline-block pb-1 font-semibold" 
+                                className="inline-block pb-1 font-semibold"
                             >
                                 Hakkımızda
                             </Link>
@@ -131,6 +131,7 @@ const NavBarTR = () => {
                     <div className="flex flex-row items-center justify-start w-3/5">
                         <Link href="/">
                             <img src={logo} alt="is elektiric" />
+                            <div className="text-xs text-center text-gray-700 mt-1 ">Mühendislik mekanik taahhüt</div>
                         </Link>
                     </div>
                     <div className="flex flex-row flex-wrap items-center justify-end w-2/5">

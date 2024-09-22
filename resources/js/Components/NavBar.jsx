@@ -44,7 +44,7 @@ const NavBar = () => {
                         <div>
                             <img src={logo} alt="is elektirik" />
                         </div>
-                        {/* <div className="text-sm text-center text-gray-700 mt-1 "></div> */}
+                        <div className="text-sm text-center text-gray-700 mt-1 ">Mühendislik mekanik taahhüt</div>
                     </Link>
 
                     <form onSubmit={handleSearch} className="flex flex-row w-full">
@@ -126,9 +126,9 @@ const NavBar = () => {
             </div>
             <div className="fixed flex flex-col w-screen bg-gray-300 shadow-lg md:hidden shadow-gray-500/50 min-h-[5vh] p-2 z-50">
                 <div className="z-50 flex flex-row flex-wrap items-center justify-between w-full">
-                    <Link href="/" className="flex flex-col items-center justify-start w-3/5">
+                    <Link href="/en" className="flex flex-col items-center justify-start w-3/5">
                         <img src={logo} alt="is elektiric" />
-                        {/* <div className="text-xs text-center text-gray-700 mt-1 ">Mühendislik mekanik taahhüt</div> */}
+                        <div className="text-xs text-center text-gray-700 mt-1 ">Mühendislik mekanik taahhüt</div>
                     </Link>
                     <div className="flex flex-row flex-wrap items-center justify-end w-2/5">
                         <button
